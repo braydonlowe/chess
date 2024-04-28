@@ -11,3 +11,7 @@ V
 &src/main/java/chess/ChessPosition.java,1\2\12180158e3ed9f2b7cf9588a38f33fca071ee26a
 R
 "src/main/java/chess/ChessGame.java,7\3\73bf4fdc57c71c6f70f600b9fea515a646b27eef
+R
+"src/main/java/chess/ChessMove.java,4\2\429c55da8253d8ee02138d80d1951c5e7d4a468c
+c
+3src/test/java/passoff/chess/ChessPositionTests.java,c\3\c371a040b06a32a5bf06438336091c09e48d3325

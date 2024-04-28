@@ -9,6 +9,8 @@ package chess;
 public class ChessBoard {
     private ChessPiece[][] board;
 
+    //We might need to add some dataset so that we can keep track of each players peices.
+
     public ChessBoard() {
         board = new ChessPiece[8][8]; //The game board is an 8 by 8 collection of pieces.
     }
@@ -41,6 +43,14 @@ public class ChessBoard {
      * (How the game of chess normally starts)
      */
     public void resetBoard() {
-        throw new RuntimeException("Not implemented");
+        //Reset board
+        this.board = new ChessPiece[8][8];
+
+        //Add pawns
+        //for(int i = 0; i < board.length; i++) {
+        //    this.addPiece();
+        //}
+
+        //Add pieces.
     }
 }

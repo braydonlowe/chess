@@ -9,3 +9,5 @@ S
 #src/main/java/chess/ChessPiece.java,8\5\85a88ea4958ed1b3e2cc2a545a3ad992329e985a
 V
 &src/main/java/chess/ChessPosition.java,1\2\12180158e3ed9f2b7cf9588a38f33fca071ee26a
+R
+"src/main/java/chess/ChessGame.java,7\3\73bf4fdc57c71c6f70f600b9fea515a646b27eef

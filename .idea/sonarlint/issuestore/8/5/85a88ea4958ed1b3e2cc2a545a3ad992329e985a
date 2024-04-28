@@ -1,4 +1,4 @@
 
-b	java:S1128"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8€»Ë•ò1
-v	java:S116"URename this field "piece_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Şºşÿÿÿÿ8‡»Ë•ò1
-w	java:S116"VRename this field "piece_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ÈËµıÿÿÿÿ8ˆ»Ë•ò1
+ˆ	java:S1128"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8€»Ë•ò1J$eb2f5bef-d867-4c67-b8d4-a3386917d9e9
+œ	java:S116"URename this field "piece_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Şºşÿÿÿÿ8‡»Ë•ò1J$4393f772-0e20-4ea5-ba87-cd0d7c963315
+	java:S116"VRename this field "piece_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ÈËµıÿÿÿÿ8ˆ»Ë•ò1J$d83056ff-f3e9-496b-bba0-a796a6cc2e42

@@ -21,6 +21,7 @@ public class ChessBoard {
      */
     public void addPiece(ChessPosition position, ChessPiece piece) {
         //We might have to add a check to make sure we can add the piece here.
+        //If and when we do use getPiece to implement it.
         board[position.getRow()][position.getColumn()] = piece;
     }
 
@@ -32,7 +33,7 @@ public class ChessBoard {
      * position
      */
     public ChessPiece getPiece(ChessPosition position) {
-        throw new RuntimeException("Not implemented");
+        return board[position.getRow()][position.getColumn()];
     }
 
     /**

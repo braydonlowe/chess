@@ -8,9 +8,15 @@ import java.util.Collection;
  * Note: You can add to this class, but you may not alter
  * signature of the existing methods.
  */
+
 public class ChessPiece {
+    //Setting private variables
+    private final PieceType piece_type;
+    private final ChessGame.TeamColor piece_color; //I don't think that ChessGame.TeamColor is necesarry. Figure out a way to do without it without importing.
 
     public ChessPiece(ChessGame.TeamColor pieceColor, ChessPiece.PieceType type) {
+        this.piece_type = type;
+        this.piece_color = pieceColor;
     }
 
     /**
@@ -29,14 +35,14 @@ public class ChessPiece {
      * @return Which team this chess piece belongs to
      */
     public ChessGame.TeamColor getTeamColor() {
-        throw new RuntimeException("Not implemented");
+        return this.piece_color;
     }
 
     /**
      * @return which type of chess piece this piece is
      */
     public PieceType getPieceType() {
-        throw new RuntimeException("Not implemented");
+        return this.piece_type;
     }
 
     /**

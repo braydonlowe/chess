@@ -1,0 +1,4 @@
+
+b	java:S1128"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8€»Ë•ò1
+v	java:S116"URename this field "piece_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Şºşÿÿÿÿ8‡»Ë•ò1
+w	java:S116"VRename this field "piece_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ÈËµıÿÿÿÿ8ˆ»Ë•ò1

@@ -1,5 +1,7 @@
 package chess;
 
+import java.util.Objects;
+
 /**
  * Represents a single square position on a chess board
  * <p>
@@ -44,5 +46,10 @@ public class ChessPosition {
         //This is the real test to see if they are equal to eachother.
         ChessPosition other = (ChessPosition) obj;
         return row_pos == other.row_pos && column_pos == other.column_pos;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(row_pos, column_pos);
     }
 }

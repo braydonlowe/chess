@@ -1,6 +1,3 @@
 
-™	java:S116
-"RRename this field "row_pos" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ŸÙ¸úÿÿÿÿ8¥Ò¯—ò1J$473aaa76-09ac-4d01-b21a-a9a654521b3d
-–	java:S116"URename this field "column_pos" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šæ”n8¥Ò¯—ò1J$43ece019-672d-4980-8cd1-5892a480b529
-“
-java:S1206#"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã8¦Ò¯—ò1J$a1492274-f544-4d0e-9189-a95e14de1b2a
+s	java:S116"RRename this field "row_pos" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ŸÙ¸úÿÿÿÿ8ÅˆÉ—ò1
+p	java:S116"URename this field "column_pos" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šæ”n8ÆˆÉ—ò1

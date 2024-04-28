@@ -15,3 +15,5 @@ R
 "src/main/java/chess/ChessMove.java,4\2\429c55da8253d8ee02138d80d1951c5e7d4a468c
 c
 3src/test/java/passoff/chess/ChessPositionTests.java,c\3\c371a040b06a32a5bf06438336091c09e48d3325
+^
+.src/test/java/passoff/chess/TestUtilities.java,9\5\9545f8b4a46f33bc722576bac5bfe9c00702cdb3

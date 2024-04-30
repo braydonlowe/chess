@@ -7,23 +7,28 @@ package chess;
  * signature of the existing methods.
  */
 public class ChessMove {
+    private ChessPosition start;
+    private ChessPosition end;
+    private ChessPiece.PieceType promotion;
 
-    public ChessMove(ChessPosition startPosition, ChessPosition endPosition,
-                     ChessPiece.PieceType promotionPiece) {
+    public ChessMove(ChessPosition startPosition, ChessPosition endPosition, ChessPiece.PieceType promotionPiece) {
+        this.start = startPosition;
+        this.end = endPosition;
+        this.promotion = promotionPiece;
     }
 
     /**
      * @return ChessPosition of starting location
      */
     public ChessPosition getStartPosition() {
-        throw new RuntimeException("Not implemented");
+        return start;
     }
 
     /**
      * @return ChessPosition of ending location
      */
     public ChessPosition getEndPosition() {
-        throw new RuntimeException("Not implemented");
+        return end;
     }
 
     /**
@@ -33,6 +38,24 @@ public class ChessMove {
      * @return Type of piece to promote a pawn to, or null if no promotion
      */
     public ChessPiece.PieceType getPromotionPiece() {
-        throw new RuntimeException("Not implemented");
+        return promotion;
     }
-}
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        //Looks like we have to use casting when we access a method.
+        ChessMove moveObject = (ChessMove)obj;
+
+        if (moveObject.getPromotionPiece() != null && this.getPromotionPiece() != null) {
+            return moveObject.getStartPosition().equals(start) && moveObject.getEndPosition().equals(end) && moveObject.getPromotionPiece().equals(promotion);
+        }
+        //Edge case. If promotion piece is null for both of them.
+        if (moveObject.getPromotionPiece() == null && this.getPromotionPiece() == null) {
+            return moveObject.getStartPosition().equals(start) && moveObject.getEndPosition().equals(end);
+        }
+        return false;
+        }
+    }

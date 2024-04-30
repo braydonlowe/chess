@@ -1,3 +1,4 @@
 
-O
-java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8‚¼î™ò1
+˜	java:S117`"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õÿÁ«ùÿÿÿÿ8»¥±âò1J$b52878b8-81e5-42f2-8f14-25f1b6f32128
+“
+java:S1206Y"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã8ù¥±âò1J$ce53929c-d6ad-4ddc-850c-8bd8aca8a121

@@ -1,13 +1,13 @@
 
-à	java:S1122"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8¥Í√‚Ú1J$3852e377-c0bd-49b4-9b18-135e39f7ced5
-à	java:S112<"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$93f0c2d9-2b3b-40a9-ae25-fecc1c60a1a8
-à	java:S112F"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$5ac622ad-a60b-4a67-89ca-3b2cd9329725
-à	java:S112P"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$96ff2f85-151f-4de5-99d2-ac3903a629bb
-à	java:S112["FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$758773d7-ee1c-4d4f-9eba-ac31afebbdd7
-à	java:S112d"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$21caf2f3-22ff-451d-850d-25bb70fe99cd
-à	java:S112m"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$8105fefd-f4f8-49c9-90fc-a39d5bf7177d
+à	java:S1122"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8¥Í√‚Ú1J$285d4872-933d-4406-8a03-6c8e02c7f687
+à	java:S112<"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$51ca7eb6-3582-4650-987d-41beeaaef781
+à	java:S112F"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$1a97a6ef-f3a3-45c8-a81b-636c874b11ab
+à	java:S112P"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$faf0847e-2ecc-435f-9ac9-f3768be6444b
+à	java:S112["FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$c5dac7e2-013a-450f-aa9b-7158d55cf3af
+à	java:S112d"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$869c0fc7-b384-4a73-b35f-760eaec70c3c
+à	java:S112m"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$a853a3fd-4666-4b49-bda0-e03dfa60a123
 ì
-java:S11922"PDefine a constant instead of duplicating this literal "Not implemented" 7 times.(é÷ñÜ8∂Í√‚Ú1J$c7c2f4ea-84bd-4ede-ac25-b26c745c4324
-ú	java:S116"URename this field "turn_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê˜á‚˚ˇˇˇˇ8±àƒ‚Ú1J$cba60bf5-ab52-47a8-857b-20f0d5841ae5
+java:S11922"PDefine a constant instead of duplicating this literal "Not implemented" 7 times.(é÷ñÜ8∂Í√‚Ú1J$268622ae-71b2-4bf7-8202-35219063771a
+ú	java:S116"URename this field "turn_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê˜á‚˚ˇˇˇˇ8±àƒ‚Ú1J$db253779-d80d-4294-9cbc-0b5444c6e949
 …
-java:S1186"ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(⁄Ô÷∆˚ˇˇˇˇ8∫Í√‚Ú1J$e149191c-297d-450c-be7f-0215a1903009
+java:S1186"ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(⁄Ô÷∆˚ˇˇˇˇ8∫Í√‚Ú1J$1bb3a222-2ce8-4b3f-8ad1-018ded2f5074

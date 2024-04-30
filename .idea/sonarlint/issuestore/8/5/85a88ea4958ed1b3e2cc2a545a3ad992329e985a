@@ -1,7 +1,7 @@
 
-	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(Φ–†8«ίλ–ς1J$37885642-4666-4da9-a701-99e0c5271bc8
-	java:S116"URename this field "piece_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ήΊώÿÿÿÿ8―ίλ–ς1J$647da9b8-3044-46e9-a4a6-c635c6d0a285
-	java:S116"VRename this field "piece_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ΘΛµύÿÿÿÿ8―ίλ–ς1J$fc3ca126-ee49-42a5-b3bc-27d4493d227c
-›	java:S116"YRename this field "piece_Position" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ε•λ8έμ–ς1J$8f3d86d8-8086-49fb-b1fb-4292069dc862
+	java:S112;"FDefine and throw a dedicated exception instead of using a generic one.(Φ–†8«ίλ–ς1J$be18cf01-0b2c-4ae3-abc6-1de79630c779
+	java:S116"URename this field "piece_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ήΊώÿÿÿÿ8―ίλ–ς1J$856f8500-7d33-410f-b651-b505f4769ba9
+	java:S116"VRename this field "piece_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ΘΛµύÿÿÿÿ8―ίλ–ς1J$83e71a62-83b6-47bb-aca2-efe2188a3bf6
+›	java:S116"YRename this field "piece_Position" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ε•λ8έμ–ς1J$10c919c3-c05e-4652-b3a6-208ba9fe20ee
 u
-java:S1068"2Remove this unused "piece_Position" private field.(ε•λ8’έμ–ς1J$25b9d1e8-cf08-401d-a6ff-9ae4444687c4
+java:S1068"2Remove this unused "piece_Position" private field.(ε•λ8’έμ–ς1J$1b01ddde-5642-4a8b-8e7a-bc6e9bb13d00

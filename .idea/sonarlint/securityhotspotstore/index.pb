@@ -17,3 +17,13 @@ c
 3src/test/java/passoff/chess/ChessPositionTests.java,c\3\c371a040b06a32a5bf06438336091c09e48d3325
 ^
 .src/test/java/passoff/chess/TestUtilities.java,9\5\9545f8b4a46f33bc722576bac5bfe9c00702cdb3
+_
+/src/test/java/passoff/chess/ChessMoveTests.java,4\c\4caa1f49c8660a1fcde5ee5c0ce76b72000c0403
+d
+4src/test/java/passoff/chess/piece/KingMoveTests.java,3\8\38ebd7b9921639dfb1e79eae7f090973e8652e69
+f
+6src/test/java/passoff/chess/piece/KnightMoveTests.java,e\a\ea923ae5656d777ebbc1ce26adecb7338f8ba7dd
+d
+4src/test/java/passoff/chess/piece/PawnMoveTests.java,6\f\6fe1354a9b6f2adaebc86ce17c85f70c46d74e50
+d
+4src/test/java/passoff/chess/piece/RookMoveTests.java,6\9\69e9785f60de8da7a1625ee0a9db7af2bd25e7cb

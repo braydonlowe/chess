@@ -1,3 +1,15 @@
 
-Š
-java:S2094"BRemove this empty class, write its code or make it an "interface".(›è­éÿÿÿÿÿ8‰À»ìò1J$971280e1-92ef-4b32-86d3-953a37976e46
+¡
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Â§Âúÿÿÿÿ8• ¹ó1J$0f6964b9-b4a6-41cb-9f55-ad0b22a69adf
+‚
+java:S1118	":Add a private constructor to hide the implicit public one.(›è­éÿÿÿÿÿ8î¡¹ó1J$51c8e259-c708-4a1b-8117-b80cff5ed647
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¾ôÿıÿÿÿÿ8ï¡¹ó1J$e0c844b7-a41a-4e0d-8e4c-faf3363057bf
+š
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ĞÊŒ±ûÿÿÿÿ8ò¡¹ó1J$94d5e652-d914-405a-bc80-703293ce5488
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ĞÊŒ±ûÿÿÿÿ8ò¡¹ó1J$25202191-b5a1-434a-a00a-debf4394dc53
+ˆ
+java:S1124U"EReorder the modifiers to comply with the Java Language Specification.(şÎ½ƒ8ø¡¹ó1J$836fe94a-81f0-4120-a465-f8f551d9a639
+u
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8øñ¹ó1J$46d0fede-d035-4353-b6e4-552d283c4414

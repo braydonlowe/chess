@@ -2,6 +2,10 @@ package chess;
 
 import java.util.Collection;
 
+//Imports
+import static chess.MovesUtils.moveBishop;
+import static chess.MovesUtils.moveKing;
+
 /**
  * Represents a single chess piece
  * <p>
@@ -55,7 +59,15 @@ public class ChessPiece {
      */
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition) {
         //Needed to get the ChessBoard finished.
+        switch(piece_type) {
+            case BISHOP:
+                return moveBishop(board, myPosition);
+            case KING:
+                return moveKing(board, myPosition);
+            default:
+                System.out.println("Case not implemented in switch statement");
+                return null;
+        }
 
-        throw new RuntimeException("Not implemented");
     }
 }

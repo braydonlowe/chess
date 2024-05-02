@@ -4,7 +4,6 @@ package chess;
 import java.util.Collection;
 import java.util.HashSet;
 import chess.ChessGame.*;
-import java.util.Arrays;
 
 public class MovesUtils {
 
@@ -27,58 +26,45 @@ public class MovesUtils {
 
     }
 
+    /*
+    Let us write a recursive function here to check the desired direction recursively.
+    Hopefully this will let us get rid of a bunch of our code.
+    We need to take it a direction parameter. we'll do this by just taking in the increment in that direction.
+    for example directly up will take in +1 column +0 row.
+     */
+    static private Collection<ChessMove> moveRecurse(ChessBoard board, ChessPosition pos, int rowInc, int colInc) {
+        HashSet<ChessMove> moves = new HashSet<>();
+        ChessPiece piece = board.getPiece(pos);
+        int rowAt = pos.getRow() + rowInc;
+        int colAt = pos.getColumn() + colInc;
+
+        while (0 < rowAt && rowAt < 9 && 0 < colAt && colAt < 9) {
+            int space = spaceClear(board, rowAt, colAt, piece.getTeamColor());
+            if (space != 3) {
+                ChessPosition newPosition = new ChessPosition(rowAt,colAt);
+                ChessMove newMove = new ChessMove(pos, newPosition, null);
+                moves.add(newMove);
+            }
+            if (space == 2 || space == 3) {
+                break;
+            }
+            rowAt += rowInc;
+            colAt += colInc;
+        }
+        return moves;
+    }
+
     static public Collection<ChessMove> moveBishop(ChessBoard board, ChessPosition myPosition) {
         HashSet<ChessMove> moves = new HashSet<ChessMove>(); //Parenthesis are needed to construct
-        //Let us start from the Bishops starting spot and move diagonally
-        int row = myPosition.getRow();
-        int column = myPosition.getColumn();
+        //Quad1
+        moves.addAll(moveRecurse(board, myPosition, 1,1));
+        //Quad2
+        moves.addAll(moveRecurse(board, myPosition, 1,-1));
+        //Quad3
+        moves.addAll(moveRecurse(board, myPosition, -1,-1));
+        //Quad4
+        moves.addAll(moveRecurse(board, myPosition, -1,1));
 
-        //Initialize local variables.
-        int quad1 = 1;
-        int quad2 = 1;
-        int quad3 = 1;
-        int quad4 = 1;
-        TeamColor pieceColor = board.getPiece(myPosition).getTeamColor();
-
-        //Team color
-        for (int distFromOrigin = 1; distFromOrigin < 8; distFromOrigin++) {
-            //Quad1
-            if (quad1 == 1) {
-                quad1 = spaceClear(board,row + distFromOrigin, column + distFromOrigin, pieceColor);
-                if (quad1 != 3) {
-                    ChessPosition newPosition = new ChessPosition(row+distFromOrigin,column+distFromOrigin);
-                    ChessMove newMove = new ChessMove(myPosition, newPosition, null);
-                    moves.add(newMove);
-                }
-            }
-            //Quad2
-            if (quad2 == 1) {
-                quad2 = spaceClear(board,row + distFromOrigin, column - distFromOrigin, pieceColor);
-                if (quad2 != 3) {
-                    ChessPosition newPosition = new ChessPosition(row+distFromOrigin,column-distFromOrigin);
-                    ChessMove newMove = new ChessMove(myPosition, newPosition, null);
-                    moves.add(newMove);
-                }
-            }
-            //Quad3
-            if (quad3 == 1) {
-                quad3 = spaceClear(board,row - distFromOrigin, column - distFromOrigin, pieceColor);
-                if (quad3 != 3) {
-                    ChessPosition newPosition = new ChessPosition(row-distFromOrigin,column-distFromOrigin);
-                    ChessMove newMove = new ChessMove(myPosition, newPosition, null);
-                    moves.add(newMove);
-                }
-            }
-            //Quad4
-            if (quad4 == 1) {
-                quad4 = spaceClear(board,row - distFromOrigin, column + distFromOrigin, pieceColor);
-                if (quad4 != 3) {
-                    ChessPosition newPosition = new ChessPosition(row-distFromOrigin,column+distFromOrigin);
-                    ChessMove newMove = new ChessMove(myPosition, newPosition, null);
-                    moves.add(newMove);
-                }
-            }
-        }
         return moves;
     }
 
@@ -127,6 +113,12 @@ public class MovesUtils {
         boolean start = false;
         int[][] positions = {{1,0},{2,0},{1,-1},{1,1}};
         //Check to see if it's on the opening line.
+        //Promotion logic. If a piece is on the back row then it has to be promoted. No need to look after color.
+        ChessPiece.PieceType promo = null;
+        if (row == 1 || row == 8) {
+            //Just sample code because I don't want to do this now.
+            promo = ChessPiece.PieceType.QUEEN;
+        }
         if (row == 2) {
             start = true;
         }
@@ -143,7 +135,7 @@ public class MovesUtils {
         int forward = spaceClear(board, row + positions[0][0], column + positions[0][1], pieceColor);
         if (forward == 1) {
             ChessPosition newPosition = new ChessPosition(row + positions[0][0], column + positions[0][1]);
-            ChessMove newMove = new ChessMove(myPosition, newPosition, null);
+            ChessMove newMove = new ChessMove(myPosition, newPosition, promo);
             moves.add(newMove);
         }
         else {
@@ -153,14 +145,14 @@ public class MovesUtils {
         int forward2 = spaceClear(board, row + positions[1][0], column + positions[1][1], pieceColor);
         if (!blocked && (forward2 == 1) && start) {
             ChessPosition newPosition = new ChessPosition(row + positions[1][0], column + positions[1][1]);
-            ChessMove newMove = new ChessMove(myPosition, newPosition, null);
+            ChessMove newMove = new ChessMove(myPosition, newPosition, promo);
             moves.add(newMove);
         }
         //Attack right
         int attackRight = spaceClear(board, row + positions[2][0], column + positions[2][1], pieceColor);
         if (attackRight == 2) {
             ChessPosition newPosition = new ChessPosition(row + positions[2][0], column + positions[2][1]);
-            ChessMove newMove = new ChessMove(myPosition, newPosition, null);
+            ChessMove newMove = new ChessMove(myPosition, newPosition, promo);
             moves.add(newMove);
         }
 
@@ -168,17 +160,9 @@ public class MovesUtils {
         int attackLeft = spaceClear(board, row + positions[3][0], column + positions[3][1], pieceColor);
         if (attackLeft == 2) {
             ChessPosition newPosition = new ChessPosition(row + positions[3][0], column + positions[3][1]);
-            ChessMove newMove = new ChessMove(myPosition, newPosition, null);
+            ChessMove newMove = new ChessMove(myPosition, newPosition, promo);
             moves.add(newMove);
         }
-
-        //Promotion logic. If a piece is on the back row then it has to be promoted. No need to look after color.
-
-        if (row == 1 || row == 8) {
-            //Just sample code because I don't want to do this now.
-            row = row + row;
-        }
-
         return moves;
     }
 }

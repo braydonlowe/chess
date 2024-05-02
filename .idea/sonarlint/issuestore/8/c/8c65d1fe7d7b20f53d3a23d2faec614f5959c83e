@@ -1,15 +1,21 @@
 
 ¡
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Â§Âúÿÿÿÿ8• ¹ó1J$0f6964b9-b4a6-41cb-9f55-ad0b22a69adf
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Â§Âúÿÿÿÿ8™ÈÒºó1J$560439a7-8630-4f26-adfe-caa0c3567284
 ‚
-java:S1118	":Add a private constructor to hide the implicit public one.(›è­éÿÿÿÿÿ8î¡¹ó1J$51c8e259-c708-4a1b-8117-b80cff5ed647
+java:S1118	":Add a private constructor to hide the implicit public one.(›è­éÿÿÿÿÿ8õÉÒºó1J$6c74fc37-1333-4716-b4f2-bf093060a477
 
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¾ôÿıÿÿÿÿ8ï¡¹ó1J$e0c844b7-a41a-4e0d-8e4c-faf3363057bf
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¾ôÿıÿÿÿÿ8öÉÒºó1J$6ed3005b-a3a3-4c47-a3c6-5a12785c92fe
 š
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ĞÊŒ±ûÿÿÿÿ8ò¡¹ó1J$94d5e652-d914-405a-bc80-703293ce5488
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ĞÊŒ±ûÿÿÿÿ8øÉÒºó1J$5b35c1f2-8ea2-4408-b106-b042e8569638
 
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ĞÊŒ±ûÿÿÿÿ8ò¡¹ó1J$25202191-b5a1-434a-a00a-debf4394dc53
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ĞÊŒ±ûÿÿÿÿ8øÉÒºó1J$802090ea-c617-4d45-b3a0-cf9c9ee8ec6b
 ˆ
-java:S1124U"EReorder the modifiers to comply with the Java Language Specification.(şÎ½ƒ8ø¡¹ó1J$836fe94a-81f0-4120-a465-f8f551d9a639
+java:S1124U"EReorder the modifiers to comply with the Java Language Specification.(şÎ½ƒ8üÉÒºó1J$33740171-e63a-43dc-885b-661f367e7cbb
+ˆ
+java:S1124g"EReorder the modifiers to comply with the Java Language Specification.(¹û¿…8şÉÒºó1J$58631497-dec1-4c0c-ba96-2e36286b19b9
+{
+java:S1854³"7Remove this useless assignment to local variable "row".(›Öëµ8²Èúºó1J$825a8eb4-16bf-4336-9ac0-6e94a840be22
+ˆ
+java:S1124y"EReorder the modifiers to comply with the Java Language Specification.(ó™æÊ8ÿÉÒºó1J$0dc052e3-217e-4b99-83fa-77833269661d
 u
-java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8øñ¹ó1J$46d0fede-d035-4353-b6e4-552d283c4414
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8Îÿéºó1J$fe58ed17-3a8e-4094-804c-1669d375f02a

@@ -5,6 +5,8 @@ import java.util.Collection;
 //Imports
 import static chess.MovesUtils.moveBishop;
 import static chess.MovesUtils.moveKing;
+import static chess.MovesUtils.moveKnight;
+import static chess.MovesUtils.movePawn;
 
 /**
  * Represents a single chess piece
@@ -64,6 +66,10 @@ public class ChessPiece {
                 return moveBishop(board, myPosition);
             case KING:
                 return moveKing(board, myPosition);
+            case KNIGHT:
+                return moveKnight(board, myPosition);
+            case PAWN:
+                return movePawn(board, myPosition);
             default:
                 System.out.println("Case not implemented in switch statement");
                 return null;

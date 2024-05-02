@@ -33,3 +33,5 @@ O
 src/main/java/chess/Bishop.java,6\c\6cb815aae8e377af6ccd9b5f3867dc04573f9a80
 S
 #src/main/java/chess/MovesUtils.java,8\c\8c65d1fe7d7b20f53d3a23d2faec614f5959c83e
+e
+5src/test/java/passoff/chess/piece/QueenMoveTests.java,0\a\0a959e861aa739d9c24b9e29d313101dcb5e8325

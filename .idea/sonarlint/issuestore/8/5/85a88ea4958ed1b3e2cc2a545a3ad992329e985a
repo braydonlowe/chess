@@ -1,9 +1,9 @@
 
-	java:S116"URename this field "piece_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ήΊώÿÿÿÿ8†σΔΉσ1J$0ef98898-ad7c-44f1-9332-49624748eb94
-	java:S116"VRename this field "piece_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ΘΛµύÿÿÿÿ8†σΔΉσ1J$0e1559e9-a747-4de3-9c70-6d90d7756c1f
-›	java:S116"YRename this field "piece_Position" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ε•λ8†σΔΉσ1J$39361fc1-4fe5-44fa-89d3-f620a706e17a
-r	java:S106J"+Replace this use of System.out by a logger.(βλω΅ώÿÿÿÿ8σΔΉσ1J$0b930be5-cda3-452d-9317-5f5fa1f6eb26
+	java:S116"URename this field "piece_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ήΊώÿÿÿÿ8Μ½έσ1J$6c19d4c5-d46b-4117-8aa1-a634ae722948
+	java:S116"VRename this field "piece_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ΘΛµύÿÿÿÿ8Μ½έσ1J$dbf83b39-0ac4-4d8f-9515-f035c4411d48
+›	java:S116"YRename this field "piece_Position" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ε•λ8Μ½έσ1J$2f1d15a5-b47d-4443-880a-d10a9c5475b3
+r	java:S106P"+Replace this use of System.out by a logger.(βλω΅ώÿÿÿÿ8”Μ½έσ1J$344ade54-11ab-4286-9162-8ef8779c0b4b
 n
-java:S1168K"+Return an empty collection instead of null.(¥Ήο8‘σΔΉσ1J$a4b6b62b-47b1-484b-a6ae-f8903e464ee5
+java:S1168Q"+Return an empty collection instead of null.(¥Ήο8–Μ½έσ1J$8112b32d-cea9-4acf-902e-a8e5dbc3b7a6
 u
-java:S1068"2Remove this unused "piece_Position" private field.(ε•λ8’σΔΉσ1J$3f58cb50-add0-40e5-aeb3-f3bfbad946cc
+java:S1068"2Remove this unused "piece_Position" private field.(ε•λ8–Μ½έσ1J$04344d9e-c49c-4806-a0bc-91c03a7f4750

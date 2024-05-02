@@ -1,18 +1,22 @@
 
 ΅
-java:S2293:"YReplace the type specification in this constructor call with the diamond operator ("<>").(Β§Βϊÿÿÿÿ8Εµέσ1J$5d26ec94-2140-4e3a-89f7-d65002567ae3
+java:S2293:"YReplace the type specification in this constructor call with the diamond operator ("<>").(Β§Βϊÿÿÿÿ8ΠΊέσ1J$13c10049-37ca-416b-9e64-309bc47e0f03
 ‚
-java:S1118":Add a private constructor to hide the implicit public one.(›θ­ιÿÿÿÿÿ8έ¶έσ1J$cf3fb231-79cd-4e4d-9d3a-70560ec01f8a
+java:S1118":Add a private constructor to hide the implicit public one.(›θ­ιÿÿÿÿÿ8†‘Ίέσ1J$14d444b8-ed92-4c1a-9688-2fe7cc170dd7
 
 java:S1124
-"EReorder the modifiers to comply with the Java Language Specification.(Ύτÿύÿÿÿÿ8ή¶έσ1J$307f1056-aa63-4c81-944c-848c28b602b7
+"EReorder the modifiers to comply with the Java Language Specification.(Ύτÿύÿÿÿÿ8‡‘Ίέσ1J$9fdbaf22-c811-4338-933a-35201974d68c
 
-java:S1124#"EReorder the modifiers to comply with the Java Language Specification.(β§€ύ8ΰ¶έσ1J$9ff6199b-29c1-45d7-a961-fe19dd44df81
+java:S1124#"EReorder the modifiers to comply with the Java Language Specification.(β§€ύ8‘Ίέσ1J$ccf14238-0582-48eb-91bd-ecf328912b30
 
-java:S11249"EReorder the modifiers to comply with the Java Language Specification.(ΠΚ±ϋÿÿÿÿ8δ¶έσ1J$d807d9bb-558d-4343-bb67-220daf437a14
+java:S11249"EReorder the modifiers to comply with the Java Language Specification.(ΠΚ±ϋÿÿÿÿ8‘Ίέσ1J$d9c725c0-5384-470f-bbf4-009fc9b5cfad
 
-java:S1124G"EReorder the modifiers to comply with the Java Language Specification.(ώΞ½ƒ8΅Φέσ1J$b5393e73-aed0-434d-88ac-21b22c6b3188
+java:S1124G"EReorder the modifiers to comply with the Java Language Specification.(ώΞ½ƒ8‘Ίέσ1J$207c3c95-7a28-4831-8305-bb802ba6d966
 
-java:S1124Y"EReorder the modifiers to comply with the Java Language Specification.(ΉϋΏ…8ΆΦέσ1J$06fbd901-11af-4ada-9593-7dcd9efd6a39
+java:S1124Y"EReorder the modifiers to comply with the Java Language Specification.(ΉϋΏ…8‘Ίέσ1J$3b75b951-65ab-4955-9554-d0254ded8c36
 
-java:S1124k"EReorder the modifiers to comply with the Java Language Specification.(σ™ζΚ8¤Φέσ1J$0ad7d689-2573-41e6-ac77-000f4da65687
+java:S1124k"EReorder the modifiers to comply with the Java Language Specification.(σ™ζΚ8’‘Ίέσ1J$1db6eee1-1f69-4f6b-a040-208618c481cf
+
+java:S1124ª"EReorder the modifiers to comply with the Java Language Specification.(άέΗÿÿÿÿÿ8•‘Ίέσ1J$124c694b-073e-4e56-8eb6-cc10d05271e2
+
+java:S1124³"EReorder the modifiers to comply with the Java Language Specification.(σπª8–‘Ίέσ1J$9ebab3b6-4b04-4f30-a84c-0653e0f13ec0

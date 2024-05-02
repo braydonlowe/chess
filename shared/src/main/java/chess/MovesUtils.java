@@ -165,4 +165,22 @@ public class MovesUtils {
         }
         return moves;
     }
+
+
+    static public Collection<ChessMove> moveRook(ChessBoard board, ChessPosition myPosition) {
+        HashSet<ChessMove> moves = new HashSet<>();
+        moves.addAll(moveRecurse(board, myPosition, 1,0));
+        moves.addAll(moveRecurse(board, myPosition, -1,0));
+        moves.addAll(moveRecurse(board, myPosition, 0,1));
+        moves.addAll(moveRecurse(board, myPosition, 0,-1));
+        return moves;
+    }
+
+    static public Collection<ChessMove> moveQueen(ChessBoard board, ChessPosition myPosition) {
+        HashSet<ChessMove> moves = new HashSet<>();
+        moves.addAll(moveRook(board, myPosition));
+        moves.addAll(moveBishop(board, myPosition));
+        return moves;
+    }
+
 }

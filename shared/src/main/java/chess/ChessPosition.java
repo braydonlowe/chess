@@ -9,12 +9,12 @@ import java.util.Objects;
  * signature of the existing methods.
  */
 public class ChessPosition {
-    private int row_pos;
-    private int column_pos;
+    private int rowPos;
+    private int columnPos;
 
     public ChessPosition(int row, int col) {
-        this.row_pos = row;
-        this.column_pos = col;
+        this.rowPos = row;
+        this.columnPos = col;
     }
 
     /**
@@ -22,7 +22,7 @@ public class ChessPosition {
      * 1 codes for the bottom row
      */
     public int getRow() {
-        return row_pos;
+        return rowPos;
     }
 
     /**
@@ -30,26 +30,22 @@ public class ChessPosition {
      * 1 codes for the left row
      */
     public int getColumn() {
-        return column_pos;
+        return columnPos;
     }
 
     @Override
     public boolean equals(Object obj) {
-        //Reference to the object in the same memory location?
-        if (this == obj) {
-            return true;
-        }
         //Make sure that the objects are the same type of objects
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
         //This is the real test to see if they are equal to eachother.
         ChessPosition other = (ChessPosition) obj;
-        return row_pos == other.row_pos && column_pos == other.column_pos;
+        return rowPos == other.rowPos && columnPos == other.columnPos;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(row_pos, column_pos);
+        return Objects.hash(rowPos, columnPos);
     }
 }

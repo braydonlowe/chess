@@ -1,22 +1,27 @@
 
 ΅
-java:S2293:"YReplace the type specification in this constructor call with the diamond operator ("<>").(Β§Βϊÿÿÿÿ8ΠΊέσ1J$13c10049-37ca-416b-9e64-309bc47e0f03
+java:S2293:"YReplace the type specification in this constructor call with the diamond operator ("<>").(Β§Βϊÿÿÿÿ8Ξ†½ήσ1J$0211965d-8838-4eab-bc34-84699f3f9d52
+΅	java:S135ƒ"YReduce the total number of break and continue statements in this loop to use at most one.(άΌωϊÿÿÿÿ8ΉηΡήσ1J$a57b6b8e-1a05-4499-ae1a-12acbb1109b8
 ‚
-java:S1118":Add a private constructor to hide the implicit public one.(›θ­ιÿÿÿÿÿ8†‘Ίέσ1J$14d444b8-ed92-4c1a-9688-2fe7cc170dd7
+java:S1118":Add a private constructor to hide the implicit public one.(›θ­ιÿÿÿÿÿ8β‡½ήσ1J$aa0af7b3-d672-4384-957a-3af7b8419566
 
 java:S1124
-"EReorder the modifiers to comply with the Java Language Specification.(Ύτÿύÿÿÿÿ8‡‘Ίέσ1J$9fdbaf22-c811-4338-933a-35201974d68c
+"EReorder the modifiers to comply with the Java Language Specification.(Ύτÿύÿÿÿÿ8γ‡½ήσ1J$f59811e9-5159-4060-bf8d-2f7ccadbbcb4
 
-java:S1124#"EReorder the modifiers to comply with the Java Language Specification.(β§€ύ8‘Ίέσ1J$ccf14238-0582-48eb-91bd-ecf328912b30
+java:S1124#"EReorder the modifiers to comply with the Java Language Specification.(β§€ύ8δ‡½ήσ1J$4db20a2b-ada9-42ef-9544-b2c4015a862d
 
-java:S11249"EReorder the modifiers to comply with the Java Language Specification.(ΠΚ±ϋÿÿÿÿ8‘Ίέσ1J$d9c725c0-5384-470f-bbf4-009fc9b5cfad
+java:S11249"EReorder the modifiers to comply with the Java Language Specification.(ΠΚ±ϋÿÿÿÿ8ε‡½ήσ1J$6c5635d7-08b0-4771-8827-e83e045578df
 
-java:S1124G"EReorder the modifiers to comply with the Java Language Specification.(ώΞ½ƒ8‘Ίέσ1J$207c3c95-7a28-4831-8305-bb802ba6d966
+java:S1124G"EReorder the modifiers to comply with the Java Language Specification.(ώΞ½ƒ8ζ‡½ήσ1J$1a8847cf-4a3f-44b0-98f5-7c5570fe2fc3
 
-java:S1124Y"EReorder the modifiers to comply with the Java Language Specification.(ΉϋΏ…8‘Ίέσ1J$3b75b951-65ab-4955-9554-d0254ded8c36
+java:S1124Y"EReorder the modifiers to comply with the Java Language Specification.(ΉϋΏ…8η‡½ήσ1J$153b2827-0a9a-4933-bf5d-be79a518e3e4
+•
+java:S3776k"RRefactor this method to reduce its Cognitive Complexity from 35 to the 15 allowed.(σ™ζΚ8ι‡½ήσ1J$9bfebc50-eede-40df-8873-880182d1d433
 
-java:S1124k"EReorder the modifiers to comply with the Java Language Specification.(σ™ζΚ8’‘Ίέσ1J$1db6eee1-1f69-4f6b-a040-208618c481cf
+java:S1124k"EReorder the modifiers to comply with the Java Language Specification.(σ™ζΚ8λ‡½ήσ1J$ed3e3d56-bed7-49dd-9be1-7ccc8eb43f7e
 
-java:S1124ª"EReorder the modifiers to comply with the Java Language Specification.(άέΗÿÿÿÿÿ8•‘Ίέσ1J$124c694b-073e-4e56-8eb6-cc10d05271e2
+java:S1124²"EReorder the modifiers to comply with the Java Language Specification.(άέΗÿÿÿÿÿ8ν‡½ήσ1J$71a9c121-47d3-4d9d-9594-a269fbe2f39e
 
-java:S1124³"EReorder the modifiers to comply with the Java Language Specification.(σπª8–‘Ίέσ1J$9ebab3b6-4b04-4f30-a84c-0653e0f13ec0
+java:S1124»"EReorder the modifiers to comply with the Java Language Specification.(σπª8ο‡½ήσ1J$cb47ed58-11db-43e7-b23e-892583b4b426
+‰
+java:S6541k"ΕA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 65 to 64, Complexity from 16 to 14, Nesting Level from 4 to 2, Number of Variables from 27 to 6.(σ™ζΚ8ηθΡήσ1J$c8601181-b30c-4f99-8ede-292a8ec553ca

@@ -109,59 +109,67 @@ public class MovesUtils {
         int row = myPosition.getRow();
         int column = myPosition.getColumn();
         TeamColor pieceColor = board.getPiece(myPosition).getTeamColor();
-        boolean blocked = false;
         boolean start = false;
-        int[][] positions = {{1,0},{2,0},{1,-1},{1,1}};
+        int[][] forwardPositions = {{1,0},{2,0}};
+        int[][] attackPositions = {{1,-1},{1,1}};
+        ChessPiece.PieceType[] promotions = {ChessPiece.PieceType.QUEEN, ChessPiece.PieceType.ROOK, ChessPiece.PieceType.BISHOP, ChessPiece.PieceType.KNIGHT};
         //Check to see if it's on the opening line.
-        //Promotion logic. If a piece is on the back row then it has to be promoted. No need to look after color.
-        ChessPiece.PieceType promo = null;
-        if (row == 1 || row == 8) {
-            //Just sample code because I don't want to do this now.
-            promo = ChessPiece.PieceType.QUEEN;
-        }
         if (row == 2) {
             start = true;
         }
-        //Check to see if it's a black pawn.
+        //Check to see if it's a black pawn, if it is also change the opening line.
         if (pieceColor == TeamColor.BLACK) {
-            for (int i = 0; i < positions.length; i++) {
-                positions[i][0] = -1 * positions[i][0];
+            for (int i = 0; i < forwardPositions.length; i++) {
+                forwardPositions[i][0] = -1 * forwardPositions[i][0];
+                attackPositions[i][0] = -1 * attackPositions[i][0];
             }
             if (row == 7) {
                 start = true;
             }
         }
         //Forward
-        int forward = spaceClear(board, row + positions[0][0], column + positions[0][1], pieceColor);
-        if (forward == 1) {
-            ChessPosition newPosition = new ChessPosition(row + positions[0][0], column + positions[0][1]);
-            ChessMove newMove = new ChessMove(myPosition, newPosition, promo);
-            moves.add(newMove);
-        }
-        else {
-            blocked = true;
-        }
-        //Forward 2
-        int forward2 = spaceClear(board, row + positions[1][0], column + positions[1][1], pieceColor);
-        if (!blocked && (forward2 == 1) && start) {
-            ChessPosition newPosition = new ChessPosition(row + positions[1][0], column + positions[1][1]);
-            ChessMove newMove = new ChessMove(myPosition, newPosition, promo);
-            moves.add(newMove);
+        for (int i = 0; i < forwardPositions.length; i++) {
+            int forward = spaceClear(board, row + forwardPositions[i][0], column + forwardPositions[i][1], pieceColor);
+            int endPosition = row + forwardPositions[i][0];
+            if (forward == 1) {
+                if (endPosition != 8 && endPosition != 1) {
+                    ChessPosition newPosition = new ChessPosition(row + forwardPositions[i][0], column + forwardPositions[i][1]);
+                    ChessMove newMove = new ChessMove(myPosition, newPosition, null);
+                    moves.add(newMove);
+                    if (!start) {
+                        break;
+                    }
+                }
+                else {
+                    ChessPosition newPosition = new ChessPosition(row + forwardPositions[i][0], column + forwardPositions[i][1]);
+                    for (int j = 0; j < promotions.length; j++) {
+                        ChessMove newMove = new ChessMove(myPosition, newPosition, promotions[j]);
+                        moves.add(newMove);
+                    }
+                }
+            }
+            else {
+                break;
+            }
         }
         //Attack right
-        int attackRight = spaceClear(board, row + positions[2][0], column + positions[2][1], pieceColor);
-        if (attackRight == 2) {
-            ChessPosition newPosition = new ChessPosition(row + positions[2][0], column + positions[2][1]);
-            ChessMove newMove = new ChessMove(myPosition, newPosition, promo);
-            moves.add(newMove);
-        }
-
-        //Attack left
-        int attackLeft = spaceClear(board, row + positions[3][0], column + positions[3][1], pieceColor);
-        if (attackLeft == 2) {
-            ChessPosition newPosition = new ChessPosition(row + positions[3][0], column + positions[3][1]);
-            ChessMove newMove = new ChessMove(myPosition, newPosition, promo);
-            moves.add(newMove);
+        for (int i = 0; i < forwardPositions.length; i++) {
+            int attack = spaceClear(board, row + attackPositions[i][0], column + attackPositions[i][1], pieceColor);
+            int endPosition = row + attackPositions[i][0];
+            if (attack == 2) {
+                if (endPosition != 8 && endPosition != 1) {
+                    ChessPosition newPosition = new ChessPosition(row + attackPositions[i][0], column + attackPositions[i][1]);
+                    ChessMove newMove = new ChessMove(myPosition, newPosition, null);
+                    moves.add(newMove);
+                }
+                else {
+                    ChessPosition newPosition = new ChessPosition(row + attackPositions[i][0], column + attackPositions[i][1]);
+                    for (int j = 0; j < promotions.length; j++) {
+                        ChessMove newMove = new ChessMove(myPosition, newPosition, promotions[j]);
+                        moves.add(newMove);
+                    }
+                }
+            }
         }
         return moves;
     }

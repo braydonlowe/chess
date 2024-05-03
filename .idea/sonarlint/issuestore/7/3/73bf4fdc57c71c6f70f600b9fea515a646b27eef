@@ -1,13 +1,9 @@
 
-à	java:S1122"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8¥Í√‚Ú1J$18e7e2ce-208a-49d3-a9f6-ecb0d480a796
-à	java:S112<"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$469da436-ccad-4039-b664-63ecea4547c8
-à	java:S112F"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$7322caa5-2fe2-4e8f-8990-643f8c8dc0db
-à	java:S112P"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$9b6a596e-e1ca-469d-8225-c0b780633d36
-à	java:S112["FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$7f7dd96e-2a31-42e6-81d1-8a5a0c6b50f2
-à	java:S112d"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$856a4a0c-b791-43d2-bece-c050fbccddd8
-à	java:S112m"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8µÍ√‚Ú1J$7cd4648a-22b2-4422-8fe2-afd85c592fd5
+à	java:S112="FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8Œ≈à‚Û1J$e481a7d5-9e4f-4e90-ab67-e59416150d09
+à	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8Œ≈à‚Û1J$5a047607-1254-4e4e-a84f-18fd3f93f089
+à	java:S112Q"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8Œ≈à‚Û1J$68112dfe-2741-4b1d-92f7-c06faf5855c6
+à	java:S112\"FDefine and throw a dedicated exception instead of using a generic one.(é÷ñÜ8Œ≈à‚Û1J$28736249-52cb-4f68-830c-ae54614d7159
 ì
-java:S11922"PDefine a constant instead of duplicating this literal "Not implemented" 7 times.(é÷ñÜ8∂Í√‚Ú1J$b76369d5-ac8d-429f-a106-e960a03ae785
-ú	java:S116"URename this field "turn_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê˜á‚˚ˇˇˇˇ8±àƒ‚Ú1J$790bcb40-6cf4-4376-8a5b-3ae89f7a4faa
+java:S1192="PDefine a constant instead of duplicating this literal "Not implemented" 4 times.(é÷ñÜ8œ≈à‚Û1J$80d840ce-437a-4433-ac3c-d385d47c7cbf
 …
-java:S1186"ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(⁄Ô÷∆˚ˇˇˇˇ8∫Í√‚Ú1J$c931d710-02ee-4832-8720-bd9f9a29790c
+java:S1186"ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(⁄Ô÷∆˚ˇˇˇˇ8÷≈à‚Û1J$26154266-99c8-49b4-8385-921ff5c08c53

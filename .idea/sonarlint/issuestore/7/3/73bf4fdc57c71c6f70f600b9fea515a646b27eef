@@ -1,9 +1,8 @@
 
-ˆ	java:S112="FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8ÎÅˆâó1J$e481a7d5-9e4f-4e90-ab67-e59416150d09
-ˆ	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8ÎÅˆâó1J$5a047607-1254-4e4e-a84f-18fd3f93f089
-ˆ	java:S112Q"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8ÎÅˆâó1J$68112dfe-2741-4b1d-92f7-c06faf5855c6
-ˆ	java:S112\"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8ÎÅˆâó1J$28736249-52cb-4f68-830c-ae54614d7159
+ˆ	java:S112P"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8Ğ¢÷1J$407f57a4-fe02-4a08-9508-73614be90bc7
+ˆ	java:S112Z"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8Ñ¢÷1J$92666886-9add-48e2-8c71-8274585df484
+ˆ	java:S112e"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8Ñ¢÷1J$4f8cbf83-531f-4e2b-883a-fc6d86457de7
 “
-java:S1192="PDefine a constant instead of duplicating this literal "Not implemented" 4 times.(Ö–†8ÏÅˆâó1J$80d840ce-437a-4433-ac3c-d385d47c7cbf
-É
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÚïÖÆûÿÿÿÿ8ÖÅˆâó1J$26154266-99c8-49b4-8385-921ff5c08c53
+java:S1192P"PDefine a constant instead of duplicating this literal "Not implemented" 3 times.(Ö–†8Ó¢÷1J$d6cdb7e4-fafd-454d-bde7-3318df3b7e7e
+
+java:S1117"9Rename "board" which hides the field declared at line 13.(ü¶µ­ÿÿÿÿÿ8å¢÷1J$f015d50b-0b90-48d0-a5ab-1d69d45e12aa

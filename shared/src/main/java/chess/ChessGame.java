@@ -13,7 +13,8 @@ public class ChessGame {
     private ChessBoard board;
 
     public ChessGame() {
-
+        ChessBoard board = new ChessBoard();
+        setBoard(board);
     }
 
     /**
@@ -58,7 +59,15 @@ public class ChessGame {
      * @throws InvalidMoveException if move is invalid
      */
     public void makeMove(ChessMove move) throws InvalidMoveException {
-        throw new RuntimeException("Not implemented");
+        // Retrieve the piece at start position
+        ChessPosition startPos = move.getStartPosition();
+        ChessPosition endPos = move.getEndPosition();
+        ChessPiece piece = board.getPiece(startPos);
+
+        // Delete piece at start position
+        board.addPiece(startPos, null);
+        // Create piece at end position
+        board.addPiece(endPos, piece);
     }
 
     /**
@@ -99,6 +108,7 @@ public class ChessGame {
      */
     public void setBoard(ChessBoard board) {
         this.board = board;
+        board.resetBoard();
     }
 
     /**

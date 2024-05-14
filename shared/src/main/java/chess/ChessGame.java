@@ -62,7 +62,16 @@ public class ChessGame {
         // Retrieve the piece at start position
         ChessPosition startPos = move.getStartPosition();
         ChessPosition endPos = move.getEndPosition();
+
+        // Chess Piece information
         ChessPiece piece = board.getPiece(startPos);
+        ChessGame.TeamColor color = piece.getTeamColor();
+
+        //Check for a promotion piece:
+        if(move.getPromotionPiece() != null) {
+            ChessPiece.PieceType type = move.getPromotionPiece();
+            piece = new ChessPiece(color, type);
+        }
 
         // Delete piece at start position
         board.addPiece(startPos, null);

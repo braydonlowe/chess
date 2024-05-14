@@ -22,7 +22,6 @@ public class ChessPiece {
     private final PieceType piece_type;
     private final ChessGame.TeamColor piece_color; //I don't think that ChessGame.TeamColor is necesarry. Figure out a way to do without it without importing.
 
-    private ChessPosition piece_Position;
     public ChessPiece(ChessGame.TeamColor pieceColor, ChessPiece.PieceType type) {
         this.piece_type = type;
         this.piece_color = pieceColor;

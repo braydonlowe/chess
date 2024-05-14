@@ -31,3 +31,5 @@ S
 #src/main/java/chess/ChessBoard.java,1\3\139d0d4bb2b8e11a4e03dbed5b694452387fb52a
 c
 3src/test/java/passoff/chess/game/MakeMoveTests.java,f\4\f41142b0746248c4e66c6b17464a21c72843b730
+e
+5src/test/java/passoff/chess/game/ValidMovesTests.java,1\6\16949001d5638f5e744434108e132725a5f8b811

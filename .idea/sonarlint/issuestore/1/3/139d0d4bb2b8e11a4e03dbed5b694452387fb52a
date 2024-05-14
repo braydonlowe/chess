@@ -1,4 +1,4 @@
 
-k	java:S117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õÿÁ«ùÿÿÿÿ
-f
-java:S1206S"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã
+‘	java:S117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õÿÁ«ùÿÿÿÿJ$d2a903e8-c093-48b7-a49d-5b3e751bfd4f
+m
+java:S1206S"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã8ÍÒØ«÷1

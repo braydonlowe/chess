@@ -1,6 +1,7 @@
 package chess;
 
 import java.util.Collection;
+import java.util.Objects;
 
 //Imports
 import static chess.MovesUtils.moveBishop;
@@ -80,5 +81,17 @@ public class ChessPiece {
                 return null;
         }
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ChessPiece that)) return false;
+        return piece_type == that.piece_type && piece_color == that.piece_color;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(piece_type, piece_color);
     }
 }

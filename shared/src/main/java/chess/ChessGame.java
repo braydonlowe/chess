@@ -13,9 +13,13 @@ public class ChessGame {
     private TeamColor turnColor = TeamColor.WHITE;
     private ChessBoard board;
 
+
+
     public ChessGame() {
-        ChessBoard board = new ChessBoard();
-        setBoard(board);
+        //setting the gameboard at its initial gamestate.
+        this.board = new ChessBoard();
+        //We need to set the board as a reset board but it's interesting., we can't just set it equal to a reset board here.
+        //setBoard();
     }
 
     /**
@@ -65,7 +69,7 @@ public class ChessGame {
         ChessPosition endPos = move.getEndPosition();
 
         // Chess Piece information
-        ChessPiece piece = board.getPiece(startPos);
+        ChessPiece piece = this.board.getPiece(startPos);
         ChessGame.TeamColor color = piece.getTeamColor();
 
         //Check for a promotion piece:
@@ -75,9 +79,9 @@ public class ChessGame {
         }
 
         // Delete piece at start position
-        board.addPiece(startPos, null);
+        this.board.addPiece(startPos, null);
         // Create piece at end position
-        board.addPiece(endPos, piece);
+        this.board.addPiece(endPos, piece);
     }
 
     /**
@@ -118,7 +122,6 @@ public class ChessGame {
      */
     public void setBoard(ChessBoard board) {
         this.board = board;
-        board.resetBoard();
     }
 
     /**
@@ -136,13 +139,21 @@ public class ChessGame {
             return false;
         }
         ChessGame gameObject = (ChessGame)obj;
-        return Objects.equals(board, gameObject.board);
+        return this.board.equals(gameObject.board);
 
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(board, turnColor);
+    }
+
+    @Override
+    public String toString() {
+        return "ChessGame{" +
+                "turnColor=" + turnColor +
+                ", board=" + board +
+                '}';
     }
 
 }

@@ -1,8 +1,7 @@
 
-ˆ	java:S112Z"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8¾á†¬÷1J$950ec148-f42b-46f8-8e52-4fad37c83092
-ˆ	java:S112d"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8¿á†¬÷1J$e702d1ee-37b9-4996-8c9d-b9fe1ea013e3
-ˆ	java:S112o"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8¿á†¬÷1J$8068de13-4fa8-4667-9034-1143230f5e54
+ˆ	java:S112^"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8ÚÒß­÷1J$277f2eb8-2102-46b7-8e13-ee3d5cb614f1
+ˆ	java:S112h"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8ÛÒß­÷1J$226bd859-de89-428f-a97a-edbc557df327
+ˆ	java:S112s"FDefine and throw a dedicated exception instead of using a generic one.(Ö–†8ÛÒß­÷1J$72d0bd83-28a2-44a2-b4d0-c6d7e8cc3c36
 “
-java:S1192Z"PDefine a constant instead of duplicating this literal "Not implemented" 3 times.(Ö–†8Áá†¬÷1J$0cafa4fc-3449-44fe-9a53-063f09020311
-
-java:S1117"9Rename "board" which hides the field declared at line 14.(ü¶µ­ÿÿÿÿÿ8Ïá†¬÷1J$bfd48357-05c8-4340-8082-a52b5065c612
+java:S1192^"PDefine a constant instead of duplicating this literal "Not implemented" 3 times.(Ö–†8ÜÒß­÷1J$850cde59-3835-443f-846e-9b61ecf6c44e
+X	java:S125"<This block of commented-out lines of code should be removed.(¨¥ı8Ä¾®÷1

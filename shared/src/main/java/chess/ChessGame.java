@@ -2,6 +2,7 @@ package chess;
 
 import java.util.Collection;
 import java.util.Objects;
+import java.util.HashSet;
 
 /**
  * For a class that can manage a chess game, making moves on a board
@@ -99,7 +100,17 @@ public class ChessGame {
      * @return True if the specified team is in check
      */
     public boolean isInCheck(TeamColor teamColor) {
-        throw new RuntimeException("Not implemented");
+        Collection<ChessPosition> opositePositions;
+        // Retrieve peices of the opposite color:
+        if (teamColor == TeamColor.WHITE) {
+            opositePositions = board.getPositionColor(TeamColor.WHITE);
+        }
+        else {
+            opositePositions = board.getPositionColor(TeamColor.BLACK);
+        }
+        //Retrieve the position of the king.
+        ChessPosition kingPosition = board.getKingPosition(teamColor);
+        return opositePositions.contains(kingPosition);
     }
 
     /**

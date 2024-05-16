@@ -14,6 +14,8 @@ public class ChessBoard {
     private ChessPiece[][] board;
     private HashSet<ChessPosition> blackPosition;
     private HashSet<ChessPosition> whitePosition;
+    private ChessPosition whiteKing;
+    private ChessPosition blackKing;
 
     //We might need to add some dataset so that we can keep track of each players peices.
 
@@ -36,6 +38,13 @@ public class ChessBoard {
         return blackPosition;
     }
 
+    public ChessPosition getKingPosition(ChessGame.TeamColor color) {
+        if (color == ChessGame.TeamColor.WHITE) {
+            return whiteKing;
+        }
+        return blackKing;
+    }
+
     /**
      * Adds a chess piece to the chessboard
      *
@@ -50,6 +59,15 @@ public class ChessBoard {
         }
         else {
             blackPosition.add(position);
+        }
+        //I want to also keep track of where the king is:
+        if (piece.getPieceType() == ChessPiece.PieceType.KING) {
+            if (color == ChessGame.TeamColor.WHITE) {
+                whiteKing = position;
+            }
+            else {
+                blackKing = position;
+            }
         }
         board[position.getRow()][position.getColumn()] = piece;
     }

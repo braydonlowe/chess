@@ -1,6 +1,6 @@
 
-o	java:S116"URename this field "piece_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ήΊώÿÿÿÿ
-p	java:S116"VRename this field "piece_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ΘΛµύÿÿÿÿ
-E	java:S106P"+Replace this use of System.out by a logger.(βλω΅ώÿÿÿÿ
-A
-java:S1168Q"+Return an empty collection instead of null.(¥Ήο
+•	java:S116"URename this field "piece_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ήΊώÿÿÿÿJ$cc6ca42c-e974-4b5f-8cf5-a5f1a38b743b
+–	java:S116"VRename this field "piece_color" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ΘΛµύÿÿÿÿJ$d07e4be0-c572-495c-b8b8-d3e26e2e8526
+k	java:S106P"+Replace this use of System.out by a logger.(βλω΅ώÿÿÿÿJ$a759ec2f-2e3a-4894-b52c-c0e3ad1c73cd
+g
+java:S1168Q"+Return an empty collection instead of null.(¥ΉοJ$bc9dab68-d050-440c-9064-03a9190b6825

@@ -1,6 +1,7 @@
 package chess;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashSet;
 
 /**
@@ -24,6 +25,15 @@ public class ChessBoard {
         board = new ChessPiece[9][9];
         blackPosition = new HashSet<>();
         whitePosition = new HashSet<>();
+    }
+
+
+
+    public Collection<ChessPosition> getPositionColor(ChessGame.TeamColor color) {
+        if (color == ChessGame.TeamColor.WHITE) {
+            return whitePosition;
+        }
+        return blackPosition;
     }
 
     /**

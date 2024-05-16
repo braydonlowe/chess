@@ -84,8 +84,10 @@ public class ChessGame {
             piece = new ChessPiece(color, type);
         }
 
-        // Delete piece at start position
+        // Remove the start position from the board and collection where we keep the color positions.
         this.board.addPiece(startPos, null);
+        this.board.getPositionColor(color).remove(startPos);
+
         // Create piece at end position
         this.board.addPiece(endPos, piece);
     }

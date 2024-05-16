@@ -31,7 +31,7 @@ public class ChessBoard {
 
 
 
-    public Collection<ChessPosition> getPositionColor(ChessGame.TeamColor color) {
+    public HashSet<ChessPosition> getPositionColor(ChessGame.TeamColor color) {
         if (color == ChessGame.TeamColor.WHITE) {
             return whitePosition;
         }
@@ -53,20 +53,20 @@ public class ChessBoard {
      */
     public void addPiece(ChessPosition position, ChessPiece piece) {
         // When we add a piece I want to keep track of a list of pieces of that color.
-        ChessGame.TeamColor color = piece.getTeamColor();
-        if (color == ChessGame.TeamColor.WHITE) {
-            whitePosition.add(position);
-        }
-        else {
-            blackPosition.add(position);
-        }
-        //I want to also keep track of where the king is:
-        if (piece.getPieceType() == ChessPiece.PieceType.KING) {
+        if (piece != null) {
+            ChessGame.TeamColor color = piece.getTeamColor();
             if (color == ChessGame.TeamColor.WHITE) {
-                whiteKing = position;
+                whitePosition.add(position);
+            } else {
+                blackPosition.add(position);
             }
-            else {
-                blackKing = position;
+            //I want to also keep track of where the king is:
+            if (piece.getPieceType() == ChessPiece.PieceType.KING) {
+                if (color == ChessGame.TeamColor.WHITE) {
+                    whiteKing = position;
+                } else {
+                    blackKing = position;
+                }
             }
         }
         board[position.getRow()][position.getColumn()] = piece;

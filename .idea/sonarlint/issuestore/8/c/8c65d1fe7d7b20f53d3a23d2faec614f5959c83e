@@ -1,27 +1,27 @@
 
-t
-java:S2293:"YReplace the type specification in this constructor call with the diamond operator ("<>").(Â§Âúÿÿÿÿ
-t	java:S135ƒ"YReduce the total number of break and continue statements in this loop to use at most one.(Ü¼ùúÿÿÿÿ
-U
-java:S1118":Add a private constructor to hide the implicit public one.(›è­éÿÿÿÿÿ
-`
+š
+java:S2293:"YReplace the type specification in this constructor call with the diamond operator ("<>").(Â§ÂúÿÿÿÿJ$eeb7e282-ab71-4a2d-8920-842706206400
+š	java:S135ƒ"YReduce the total number of break and continue statements in this loop to use at most one.(Ü¼ùúÿÿÿÿJ$22640c01-14ba-4216-b82c-79eb1be9e4b3
+{
+java:S1118":Add a private constructor to hide the implicit public one.(›è­éÿÿÿÿÿJ$eda151e1-40a6-4b33-b642-43b763f4a487
+†
 java:S1124
-"EReorder the modifiers to comply with the Java Language Specification.(¾ôÿıÿÿÿÿ
-[
-java:S1124#"EReorder the modifiers to comply with the Java Language Specification.(â§€ı
-`
-java:S11249"EReorder the modifiers to comply with the Java Language Specification.(ĞÊŒ±ûÿÿÿÿ
-[
-java:S1124G"EReorder the modifiers to comply with the Java Language Specification.(şÎ½ƒ
-[
-java:S1124Y"EReorder the modifiers to comply with the Java Language Specification.(¹û¿…
-h
-java:S3776k"RRefactor this method to reduce its Cognitive Complexity from 35 to the 15 allowed.(ó™æÊ
-[
-java:S1124k"EReorder the modifiers to comply with the Java Language Specification.(ó™æÊ
-a
-java:S1124²"EReorder the modifiers to comply with the Java Language Specification.(ÜİÇˆÿÿÿÿÿ
-[
-java:S1124»"EReorder the modifiers to comply with the Java Language Specification.(óğª
-Ü
-java:S6541k"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 65 to 64, Complexity from 16 to 14, Nesting Level from 4 to 2, Number of Variables from 27 to 6.(ó™æÊ
+"EReorder the modifiers to comply with the Java Language Specification.(¾ôÿıÿÿÿÿJ$5194dfd6-8227-434c-b440-3917bb7d6754
+
+java:S1124#"EReorder the modifiers to comply with the Java Language Specification.(â§€ıJ$d851f0d2-942f-490d-8dc1-167dcaf937a6
+†
+java:S11249"EReorder the modifiers to comply with the Java Language Specification.(ĞÊŒ±ûÿÿÿÿJ$dc31cd35-67d1-407f-a841-3fa7062956ab
+
+java:S1124G"EReorder the modifiers to comply with the Java Language Specification.(şÎ½ƒJ$27f12901-f566-4aad-b305-65397b2f1fd1
+
+java:S1124Y"EReorder the modifiers to comply with the Java Language Specification.(¹û¿…J$4bea0f38-392d-45d5-a4ef-9f1c36d73f37
+
+java:S3776k"RRefactor this method to reduce its Cognitive Complexity from 35 to the 15 allowed.(ó™æÊJ$95be379f-7676-47ba-a98d-64ab6d7e9cae
+
+java:S1124k"EReorder the modifiers to comply with the Java Language Specification.(ó™æÊJ$1e7bdca3-eeae-4e23-a669-75e1069497f6
+‡
+java:S1124²"EReorder the modifiers to comply with the Java Language Specification.(ÜİÇˆÿÿÿÿÿJ$05760371-300d-46e2-95ac-1336f8fc8806
+
+java:S1124»"EReorder the modifiers to comply with the Java Language Specification.(óğªJ$42996df9-4cce-48dd-b054-fc039a18fbba
+‚
+java:S6541k"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 65 to 64, Complexity from 16 to 14, Nesting Level from 4 to 2, Number of Variables from 27 to 6.(ó™æÊJ$44a2293e-8eb7-4f19-b3cd-2f9260202f42

@@ -47,6 +47,67 @@ public class ChessGame {
         BLACK
     }
 
+    /*
+
+     */
+    public HashSet<ChessMove> otherTeamsMoves(ChessGame.TeamColor color) {
+        HashSet<ChessMove> allChessMoves = new HashSet<>();
+        HashSet<ChessPosition> positions = board.getPositionColor(color);
+        for (ChessPosition pos : positions) {
+            allChessMoves.addAll(board.getPiece(pos).pieceMoves(board, pos));
+        }
+        return allChessMoves;
+    }
+
+    /*
+    Takes in a move and checks to see if that move puts YOUR king into check.
+     */
+    public boolean moveChangeCheck(ChessMove move) {
+        //Positions
+        boolean inCheck = false;
+        ChessPosition startPosition = move.getStartPosition();
+        ChessPosition endPosition = move.getEndPosition();
+
+        //Grab pieces
+        ChessPiece pieceInQuestion = board.getPiece(startPosition);
+        ChessPiece capturedPiece = board.getPiece(endPosition);
+
+        ChessGame.TeamColor color = pieceInQuestion.getTeamColor();
+        ChessGame.TeamColor badColor;
+        //Set the other team color:
+        if (color == TeamColor.WHITE) {
+            badColor = TeamColor.BLACK;
+        }
+        else {
+            badColor = TeamColor.WHITE;
+        }
+
+        //Make the move
+        board.addPiece(startPosition, null);
+        board.getPositionColor(color).remove(startPosition);
+
+        board.addPiece(endPosition, pieceInQuestion);
+        if (capturedPiece != null) {
+            board.getPositionColor(badColor).remove(endPosition);
+        }
+
+        //Check to see if in check
+        HashSet<ChessMove> badGuyMoves = otherTeamsMoves(badColor);
+        if (badGuyMoves.contains(board.getKingPosition(color))) {
+            //If it is in check set inCheck to true
+            inCheck = true;
+        }
+        //Revert move
+        board.addPiece(endPosition, null);
+        board.getPositionColor(color).remove(endPosition);
+        if (capturedPiece != null) {
+            board.addPiece(endPosition, capturedPiece);
+        }
+
+        board.addPiece(startPosition, pieceInQuestion);
+        return inCheck;
+    }
+
     /**
      * Gets a valid moves for a piece at the given location
      *
@@ -55,13 +116,15 @@ public class ChessGame {
      * startPosition
      */
     public Collection<ChessMove> validMoves(ChessPosition startPosition) {
-        //We also need to consider if a move will put into check or checkmate.
-        return board.getPiece(startPosition).pieceMoves(board, startPosition);
-    }
+        HashSet<ChessMove> possibleMoves = new HashSet<>();
+        Collection<ChessMove> moves = board.getPiece(startPosition).pieceMoves(board, startPosition);
+        for (ChessMove move : moves) {
+            if (moveChangeCheck(move)) {
+                possibleMoves.add(move);
+            }
+        }
+        return possibleMoves;
 
-
-    public boolean goodMove() {
-        return true;
     }
 
     /**
@@ -75,8 +138,18 @@ public class ChessGame {
         ChessPosition startPos = move.getStartPosition();
         ChessPosition endPos = move.getEndPosition();
 
+        //Check to see if this is a valid move, if not throw an exception.
+        Collection<ChessMove> valid = validMoves(startPos);
+        if (!valid.contains(move)) {
+            throw new InvalidMoveException();
+        }
+
         // Chess Piece information
         ChessPiece piece = this.board.getPiece(startPos);
+        if (piece == null) {
+            throw new InvalidMoveException();
+        }
+
         ChessGame.TeamColor color = piece.getTeamColor();
 
         //Check for a promotion piece:

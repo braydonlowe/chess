@@ -22,6 +22,8 @@ public class ChessBoard {
          * However, the tests run it with a index starting at 1. So we have to make it 9 by 9.
          */
         board = new ChessPiece[9][9];
+        blackPosition = new HashSet<>();
+        whitePosition = new HashSet<>();
     }
 
     /**

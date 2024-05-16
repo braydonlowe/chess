@@ -11,3 +11,5 @@ S
 #src/main/java/chess/ChessBoard.java,1\3\139d0d4bb2b8e11a4e03dbed5b694452387fb52a
 S
 #src/main/java/chess/MovesUtils.java,8\c\8c65d1fe7d7b20f53d3a23d2faec614f5959c83e
+e
+5src/test/java/passoff/chess/piece/QueenMoveTests.java,0\a\0a959e861aa739d9c24b9e29d313101dcb5e8325

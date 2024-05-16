@@ -196,6 +196,7 @@ public class ChessGame {
      * @return True if the specified team is in checkmate
      */
     public boolean isInCheckmate(TeamColor teamColor) {
+        // Has to be in check, and the team would have no valid moves.
         return (validMoves(board.getKingPosition(teamColor)).isEmpty());
     }
 

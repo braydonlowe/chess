@@ -19,3 +19,5 @@ e
 5src/test/java/passoff/chess/game/GameStatusTests.java,9\5\95005f1bdbc430353aa32dd9ab73d0748d79c4b2
 e
 5src/test/java/passoff/chess/game/ValidMovesTests.java,1\6\16949001d5638f5e744434108e132725a5f8b811
+R
+"src/main/java/chess/GameUtils.java,7\5\7579a15e354d76f186dd4f163b5fb2e3be7ed694

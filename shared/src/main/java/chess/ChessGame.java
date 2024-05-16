@@ -93,10 +93,13 @@ public class ChessGame {
 
         //Check to see if in check
         HashSet<ChessMove> badGuyMoves = otherTeamsMoves(badColor);
-        if (badGuyMoves.contains(board.getKingPosition(color))) {
-            //If it is in check set inCheck to true
-            inCheck = true;
+
+        for (ChessMove badmoves : badGuyMoves) {
+            if (badmoves.getEndPosition().getRow() == board.getKingPosition(color).getRow() && badmoves.getEndPosition().getColumn() == board.getKingPosition(color).getColumn()) {
+                inCheck = true;
+            }
         }
+
         //Revert move
         board.addPiece(endPosition, null);
         board.getPositionColor(color).remove(endPosition);
@@ -119,7 +122,7 @@ public class ChessGame {
         HashSet<ChessMove> possibleMoves = new HashSet<>();
         Collection<ChessMove> moves = board.getPiece(startPosition).pieceMoves(board, startPosition);
         for (ChessMove move : moves) {
-            if (moveChangeCheck(move)) {
+            if (!moveChangeCheck(move)) {
                 possibleMoves.add(move);
             }
         }
@@ -193,7 +196,7 @@ public class ChessGame {
      * @return True if the specified team is in checkmate
      */
     public boolean isInCheckmate(TeamColor teamColor) {
-        throw new RuntimeException("Not implemented");
+        return (validMoves(board.getKingPosition(teamColor)).isEmpty());
     }
 
     /**

@@ -19,7 +19,7 @@ public class ChessGame {
         //setting the gameboard at its initial gamestate.
         this.board = new ChessBoard();
         //We need to set the board as a reset board but it's interesting., we can't just set it equal to a reset board here.
-        //setBoard();
+        resetBoard();
     }
 
     /**
@@ -54,7 +54,13 @@ public class ChessGame {
      * startPosition
      */
     public Collection<ChessMove> validMoves(ChessPosition startPosition) {
+        //We also need to consider if a move will put into check or checkmate.
         return board.getPiece(startPosition).pieceMoves(board, startPosition);
+    }
+
+
+    public boolean goodMove() {
+        return true;
     }
 
     /**
@@ -122,6 +128,13 @@ public class ChessGame {
      */
     public void setBoard(ChessBoard board) {
         this.board = board;
+    }
+
+    /**
+     * Used in the constructor. Calls the resetBoard function in board.
+     */
+    public void resetBoard() {
+        this.board.resetBoard();
     }
 
     /**

@@ -1,6 +1,7 @@
 package chess;
 
 import java.util.Arrays;
+import java.util.HashSet;
 
 /**
  * A chessboard that can hold and rearrange chess pieces.
@@ -10,6 +11,8 @@ import java.util.Arrays;
  */
 public class ChessBoard {
     private ChessPiece[][] board;
+    private HashSet<ChessPosition> blackPosition;
+    private HashSet<ChessPosition> whitePosition;
 
     //We might need to add some dataset so that we can keep track of each players peices.
 
@@ -28,8 +31,14 @@ public class ChessBoard {
      * @param piece    the piece to add
      */
     public void addPiece(ChessPosition position, ChessPiece piece) {
-        //We might have to add a check to make sure we can add the piece here.
-        //If and when we do use getPiece to implement it.
+        // When we add a piece I want to keep track of a list of pieces of that color.
+        ChessGame.TeamColor color = piece.getTeamColor();
+        if (color == ChessGame.TeamColor.WHITE) {
+            whitePosition.add(position);
+        }
+        else {
+            blackPosition.add(position);
+        }
         board[position.getRow()][position.getColumn()] = piece;
     }
 

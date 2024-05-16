@@ -1,0 +1,27 @@
+
+t
+java:S2293:"YReplace the type specification in this constructor call with the diamond operator ("<>").(Â§Âúÿÿÿÿ
+t	java:S135ƒ"YReduce the total number of break and continue statements in this loop to use at most one.(Ü¼ùúÿÿÿÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(›è­éÿÿÿÿÿ
+`
+java:S1124
+"EReorder the modifiers to comply with the Java Language Specification.(¾ôÿıÿÿÿÿ
+[
+java:S1124#"EReorder the modifiers to comply with the Java Language Specification.(â§€ı
+`
+java:S11249"EReorder the modifiers to comply with the Java Language Specification.(ĞÊŒ±ûÿÿÿÿ
+[
+java:S1124G"EReorder the modifiers to comply with the Java Language Specification.(şÎ½ƒ
+[
+java:S1124Y"EReorder the modifiers to comply with the Java Language Specification.(¹û¿…
+h
+java:S3776k"RRefactor this method to reduce its Cognitive Complexity from 35 to the 15 allowed.(ó™æÊ
+[
+java:S1124k"EReorder the modifiers to comply with the Java Language Specification.(ó™æÊ
+a
+java:S1124²"EReorder the modifiers to comply with the Java Language Specification.(ÜİÇˆÿÿÿÿÿ
+[
+java:S1124»"EReorder the modifiers to comply with the Java Language Specification.(óğª
+Ü
+java:S6541k"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 65 to 64, Complexity from 16 to 14, Nesting Level from 4 to 2, Number of Variables from 27 to 6.(ó™æÊ

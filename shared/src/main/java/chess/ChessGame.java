@@ -141,15 +141,25 @@ public class ChessGame {
         ChessPosition startPos = move.getStartPosition();
         ChessPosition endPos = move.getEndPosition();
 
-        //Check to see if this is a valid move, if not throw an exception.
-        Collection<ChessMove> valid = validMoves(startPos);
-        if (!valid.contains(move)) {
-            throw new InvalidMoveException();
-        }
-
         // Chess Piece information
         ChessPiece piece = this.board.getPiece(startPos);
         if (piece == null) {
+            throw new InvalidMoveException();
+        }
+
+        if (piece.getTeamColor() != turnColor) {
+            throw new InvalidMoveException();
+        }
+
+        //Check to see if this is a valid move, if not throw an exception.
+        Collection<ChessMove> valid = validMoves(startPos);
+        boolean validMove = false;
+        for (ChessMove move1 : valid) {
+            if (move1.getEndPosition().getRow() == move.getEndPosition().getRow() && move1.getEndPosition().getColumn() == move.getEndPosition().getColumn()) {
+                validMove = true;
+            }
+        }
+        if (!validMove) {
             throw new InvalidMoveException();
         }
 
@@ -196,8 +206,11 @@ public class ChessGame {
      * @return True if the specified team is in checkmate
      */
     public boolean isInCheckmate(TeamColor teamColor) {
-        // Has to be in check, and the team would have no valid moves.
-        return (validMoves(board.getKingPosition(teamColor)).isEmpty());
+        // Has to be in check, and the whole team would have no valid moves.
+        boolean inCheck = isInCheck(teamColor);
+        boolean kingNoMoves = validMoves(board.getKingPosition(teamColor)).isEmpty();
+        //One last case to check for other moves.
+        return (inCheck && kingNoMoves);
     }
 
     /**

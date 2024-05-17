@@ -1,8 +1,8 @@
 
-
-java:S1319""mThe return type of this method should be an interface such as "Set" rather than the implementation "HashSet".( ƒ²¹üÿÿÿÿ8ğñÉû÷1
-™	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õÿÁ«ùÿÿÿÿ8á€ïù÷1J$647c5012-2193-493f-805d-5a754e951df9
+µ
+java:S1319""mThe return type of this method should be an interface such as "Set" rather than the implementation "HashSet".( ƒ²¹üÿÿÿÿ8ğñÉû÷1J$e42cc18a-2d06-4d97-9c20-04aa61f51e01
+™	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õÿÁ«ùÿÿÿÿ8á€ïù÷1J$ecdc7cc8-1c38-4d5e-bc2c-bf62e59f911d
 “
-java:S1206|"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã8šïù÷1J$cbafa6fd-5578-4a0a-9d0f-a34bf81d87e1
-S
-java:S1128"1Remove this unused import 'java.util.Collection'.(¹ÉĞšùÿÿÿÿ8şòÉû÷1
+java:S1206|"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã8šïù÷1J$7139e13d-dac4-43cc-ba73-31ed7592d4db
+y
+java:S1128"1Remove this unused import 'java.util.Collection'.(¹ÉĞšùÿÿÿÿ8şòÉû÷1J$fb334284-b763-4a62-87ee-871c1870d0bf

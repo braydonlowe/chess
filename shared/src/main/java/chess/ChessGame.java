@@ -238,7 +238,7 @@ public class ChessGame {
         boolean inCheck = isInCheck(teamColor);
         boolean kingNoMoves = validMoves(board.getKingPosition(teamColor)).isEmpty();
         //One last case to check for other moves.
-        return (inCheck && kingNoMoves);
+        return (inCheck && kingNoMoves && isInStalemate(teamColor));
     }
 
     /**
@@ -249,7 +249,18 @@ public class ChessGame {
      * @return True if the specified team is in stalemate, otherwise false
      */
     public boolean isInStalemate(TeamColor teamColor) {
-        throw new RuntimeException("Not implemented");
+        HashSet<ChessPosition> pos = new HashSet<>(board.getPositionColor(teamColor));
+        for (ChessPosition p : pos) {
+            //Because of the way that I've implemented it i think I have to do this:
+            if (board.getPiece(p) == null) {
+                continue;
+            }
+
+            if (!validMoves(p).isEmpty()) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**

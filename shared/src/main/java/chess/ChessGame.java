@@ -238,7 +238,7 @@ public class ChessGame {
         boolean inCheck = isInCheck(teamColor);
         boolean kingNoMoves = validMoves(board.getKingPosition(teamColor)).isEmpty();
         //One last case to check for other moves.
-        return (inCheck && kingNoMoves && isInStalemate(teamColor));
+        return (inCheck && kingNoMoves && noMoreMoves(teamColor));
     }
 
     /**
@@ -249,13 +249,14 @@ public class ChessGame {
      * @return True if the specified team is in stalemate, otherwise false
      */
     public boolean isInStalemate(TeamColor teamColor) {
+        boolean inCheck = isInCheck(teamColor);
+        boolean noMoves = noMoreMoves(teamColor);
+        return (!inCheck && noMoves);
+    }
+
+    public boolean noMoreMoves(TeamColor teamColor) {
         HashSet<ChessPosition> pos = new HashSet<>(board.getPositionColor(teamColor));
         for (ChessPosition p : pos) {
-            //Because of the way that I've implemented it i think I have to do this:
-            if (board.getPiece(p) == null) {
-                continue;
-            }
-
             if (!validMoves(p).isEmpty()) {
                 return false;
             }

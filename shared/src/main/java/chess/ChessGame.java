@@ -47,17 +47,26 @@ public class ChessGame {
         BLACK
     }
 
+
+    public void switchTeamColor(TeamColor color) {
+        if (color == TeamColor.WHITE) {
+            this.turnColor = TeamColor.BLACK;
+            return;
+        }
+        this.turnColor = TeamColor.WHITE;
+    }
+
     /*
 
      */
-    public HashSet<ChessMove> otherTeamsMoves(ChessGame.TeamColor color) {
+    public HashSet<ChessMove> teamsMoves(ChessGame.TeamColor color) {
         HashSet<ChessMove> allChessMoves = new HashSet<>();
         HashSet<ChessPosition> positions = board.getPositionColor(color);
         for (ChessPosition pos : positions) {
             allChessMoves.addAll(board.getPiece(pos).pieceMoves(board, pos));
         }
-        return allChessMoves;
-    }
+            return allChessMoves;
+        }
 
     /*
     Takes in a move and checks to see if that move puts YOUR king into check.
@@ -66,6 +75,11 @@ public class ChessGame {
         //Positions
         boolean inCheck = false;
         ChessPosition startPosition = move.getStartPosition();
+        //Debugging values
+        int row = move.getEndPosition().getRow();
+        int column = move.getEndPosition().getColumn();
+
+
         ChessPosition endPosition = move.getEndPosition();
 
         //Grab pieces
@@ -92,9 +106,13 @@ public class ChessGame {
         }
 
         //Check to see if in check
-        HashSet<ChessMove> badGuyMoves = otherTeamsMoves(badColor);
+        HashSet<ChessMove> badGuyMoves = teamsMoves(badColor);
 
         for (ChessMove badmoves : badGuyMoves) {
+            //Aparently we need to make sure that the king is even on the board.
+            if (board.getKingPosition(color) == null) {
+                break;
+            }
             if (badmoves.getEndPosition().getRow() == board.getKingPosition(color).getRow() && badmoves.getEndPosition().getColumn() == board.getKingPosition(color).getColumn()) {
                 inCheck = true;
             }
@@ -157,6 +175,7 @@ public class ChessGame {
         for (ChessMove move1 : valid) {
             if (move1.getEndPosition().getRow() == move.getEndPosition().getRow() && move1.getEndPosition().getColumn() == move.getEndPosition().getColumn()) {
                 validMove = true;
+                break;
             }
         }
         if (!validMove) {
@@ -177,6 +196,10 @@ public class ChessGame {
 
         // Create piece at end position
         this.board.addPiece(endPos, piece);
+
+        //Change team color when the move is made:
+        switchTeamColor(color);
+
     }
 
     /**
@@ -186,17 +209,22 @@ public class ChessGame {
      * @return True if the specified team is in check
      */
     public boolean isInCheck(TeamColor teamColor) {
-        Collection<ChessPosition> opositePositions;
+        Collection<ChessMove> badMoves;
         // Retrieve peices of the opposite color:
         if (teamColor == TeamColor.WHITE) {
-            opositePositions = board.getPositionColor(TeamColor.WHITE);
+            badMoves = teamsMoves(TeamColor.BLACK);
         }
         else {
-            opositePositions = board.getPositionColor(TeamColor.BLACK);
+            badMoves = teamsMoves(TeamColor.WHITE);
         }
         //Retrieve the position of the king.
         ChessPosition kingPosition = board.getKingPosition(teamColor);
-        return opositePositions.contains(kingPosition);
+        for (ChessMove oneMove : badMoves) {
+            if (oneMove.getEndPosition().getRow() == kingPosition.getRow() && oneMove.getEndPosition().getColumn() == kingPosition.getColumn()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -273,7 +301,3 @@ public class ChessGame {
     }
 
 }
-
-
-
-

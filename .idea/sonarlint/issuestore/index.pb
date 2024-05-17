@@ -21,3 +21,5 @@ e
 5src/test/java/passoff/chess/game/ValidMovesTests.java,1\6\16949001d5638f5e744434108e132725a5f8b811
 R
 "src/main/java/chess/GameUtils.java,7\5\7579a15e354d76f186dd4f163b5fb2e3be7ed694
+R
+"src/main/java/chess/ChessMove.java,4\2\429c55da8253d8ee02138d80d1951c5e7d4a468c

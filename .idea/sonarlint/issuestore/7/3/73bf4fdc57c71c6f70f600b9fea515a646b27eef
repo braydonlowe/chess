@@ -1,11 +1,5 @@
 
 °
-java:S1319>"mThe return type of this method should be an interface such as "Set" rather than the implementation "HashSet".(ñˆœà8Õñª¦ø1J$bdb7ecf7-421c-4c07-afb4-054908c8b735
-‚
-java:S1854P":Remove this useless assignment to local variable "column".(¾Ê†îûÿÿÿÿ8£òª¦ø1J$99faded8-ef62-4cb3-9474-721b13472f1f
-z
-java:S1854O"7Remove this useless assignment to local variable "row".(æ«««8£òª¦ø1J$ca4d0ad9-2ec8-4f31-a9db-f5e061ac4828
-k
-java:S1481O"(Remove this unused "row" local variable.(æ«««8¨òª¦ø1J$46f63c11-0408-48a4-93bb-3a58dbc865f3
-s
-java:S1481P"+Remove this unused "column" local variable.(¾Ê†îûÿÿÿÿ8¨òª¦ø1J$463615b4-20ee-46e4-b5d1-c8280ad81221
+java:S1319>"mThe return type of this method should be an interface such as "Set" rather than the implementation "HashSet".(ñˆœà8Õñª¦ø1J$c13c4cad-b14a-453f-b8b0-713aa8023a7b
+K
+java:S1128".Remove this unused import 'java.util.Objects'.(¼¸õ›8œÈ´¦ø1

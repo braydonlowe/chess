@@ -75,11 +75,6 @@ public class ChessGame {
         //Positions
         boolean inCheck = false;
         ChessPosition startPosition = move.getStartPosition();
-        //Debugging values
-        int row = move.getEndPosition().getRow();
-        int column = move.getEndPosition().getColumn();
-
-
         ChessPosition endPosition = move.getEndPosition();
 
         //Grab pieces
@@ -288,28 +283,4 @@ public class ChessGame {
     public ChessBoard getBoard() {
         return board;
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null || obj.getClass() != this.getClass()) {
-            return false;
-        }
-        ChessGame gameObject = (ChessGame)obj;
-        return this.board.equals(gameObject.board);
-
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(board, turnColor);
-    }
-
-    @Override
-    public String toString() {
-        return "ChessGame{" +
-                "turnColor=" + turnColor +
-                ", board=" + board +
-                '}';
-    }
-
 }

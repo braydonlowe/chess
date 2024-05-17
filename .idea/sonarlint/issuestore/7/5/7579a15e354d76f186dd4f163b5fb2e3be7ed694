@@ -1,3 +1,5 @@
 
-^
-java:S2094"BRemove this empty class, write its code or make it an "interface".( ºw8éêĞø1
+µ
+java:S1319"mThe return type of this method should be an interface such as "Set" rather than the implementation "HashSet".(Ã€‘§øÿÿÿÿ8Âïâ¦ø1J$6ae989cd-5e93-4509-80d7-720b9ff41579
+|
+java:S1118":Add a private constructor to hide the implicit public one.( ºw8’òâ¦ø1J$8547b0b8-bdcb-4f89-b66d-74ec0011cbb2

@@ -23,3 +23,5 @@ R
 "src/main/java/chess/GameUtils.java,7\5\7579a15e354d76f186dd4f163b5fb2e3be7ed694
 R
 "src/main/java/chess/ChessMove.java,4\2\429c55da8253d8ee02138d80d1951c5e7d4a468c
+V
+&src/main/java/chess/ChessPosition.java,1\2\12180158e3ed9f2b7cf9588a38f33fca071ee26a

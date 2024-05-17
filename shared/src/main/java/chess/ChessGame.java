@@ -1,8 +1,9 @@
 package chess;
 
 import java.util.Collection;
-import java.util.Objects;
 import java.util.HashSet;
+import static chess.GameUtils.teamsMoves;
+import static chess.GameUtils.moveChangeCheck;
 
 /**
  * For a class that can manage a chess game, making moves on a board
@@ -56,73 +57,11 @@ public class ChessGame {
         this.turnColor = TeamColor.WHITE;
     }
 
-    /*
 
-     */
-    public HashSet<ChessMove> teamsMoves(ChessGame.TeamColor color) {
-        HashSet<ChessMove> allChessMoves = new HashSet<>();
-        HashSet<ChessPosition> positions = board.getPositionColor(color);
-        for (ChessPosition pos : positions) {
-            allChessMoves.addAll(board.getPiece(pos).pieceMoves(board, pos));
-        }
-            return allChessMoves;
-        }
 
     /*
     Takes in a move and checks to see if that move puts YOUR king into check.
      */
-    public boolean moveChangeCheck(ChessMove move) {
-        //Positions
-        boolean inCheck = false;
-        ChessPosition startPosition = move.getStartPosition();
-        ChessPosition endPosition = move.getEndPosition();
-
-        //Grab pieces
-        ChessPiece pieceInQuestion = board.getPiece(startPosition);
-        ChessPiece capturedPiece = board.getPiece(endPosition);
-
-        ChessGame.TeamColor color = pieceInQuestion.getTeamColor();
-        ChessGame.TeamColor badColor;
-        //Set the other team color:
-        if (color == TeamColor.WHITE) {
-            badColor = TeamColor.BLACK;
-        }
-        else {
-            badColor = TeamColor.WHITE;
-        }
-
-        //Make the move
-        board.addPiece(startPosition, null);
-        board.getPositionColor(color).remove(startPosition);
-
-        board.addPiece(endPosition, pieceInQuestion);
-        if (capturedPiece != null) {
-            board.getPositionColor(badColor).remove(endPosition);
-        }
-
-        //Check to see if in check
-        HashSet<ChessMove> badGuyMoves = teamsMoves(badColor);
-
-        for (ChessMove badmoves : badGuyMoves) {
-            //Aparently we need to make sure that the king is even on the board.
-            if (board.getKingPosition(color) == null) {
-                break;
-            }
-            if (badmoves.getEndPosition().getRow() == board.getKingPosition(color).getRow() && badmoves.getEndPosition().getColumn() == board.getKingPosition(color).getColumn()) {
-                inCheck = true;
-            }
-        }
-
-        //Revert move
-        board.addPiece(endPosition, null);
-        board.getPositionColor(color).remove(endPosition);
-        if (capturedPiece != null) {
-            board.addPiece(endPosition, capturedPiece);
-        }
-
-        board.addPiece(startPosition, pieceInQuestion);
-        return inCheck;
-    }
 
     /**
      * Gets a valid moves for a piece at the given location
@@ -135,7 +74,7 @@ public class ChessGame {
         HashSet<ChessMove> possibleMoves = new HashSet<>();
         Collection<ChessMove> moves = board.getPiece(startPosition).pieceMoves(board, startPosition);
         for (ChessMove move : moves) {
-            if (!moveChangeCheck(move)) {
+            if (!moveChangeCheck(move, board)) {
                 possibleMoves.add(move);
             }
         }
@@ -207,10 +146,10 @@ public class ChessGame {
         Collection<ChessMove> badMoves;
         // Retrieve peices of the opposite color:
         if (teamColor == TeamColor.WHITE) {
-            badMoves = teamsMoves(TeamColor.BLACK);
+            badMoves = teamsMoves(TeamColor.BLACK, board);
         }
         else {
-            badMoves = teamsMoves(TeamColor.WHITE);
+            badMoves = teamsMoves(TeamColor.WHITE, board);
         }
         //Retrieve the position of the king.
         ChessPosition kingPosition = board.getKingPosition(teamColor);

@@ -7,3 +7,15 @@ R
 "src/main/java/chess/GameUtils.java,7\5\7579a15e354d76f186dd4f163b5fb2e3be7ed694
 b
 2src/test/java/passoff/server/StandardAPITests.java,4\4\44865688478e7de6876fba6fab89c554392767d8
+P
+ src/main/java/server/Server.java,4\c\4c405aa622276106ee9ef8c3a2fbee4e76dcafbb
+a
+1src/main/java/dataaccess/DataAccessException.java,6\e\6e09ec32b48351089b4f11f02293c0f806a5c04f
+]
+-src/main/java/Handlers/StaticFileHandler.java,a\d\ad0387bd017963c419c343ed6e88163230e23ee6
+X
+(src/main/java/Handlers/ClearHandler.java,b\7\b78cff9ef5f13cc1a5c543fdcb8333342a1cddd2
+[
++src/main/java/Handlers/DatabaseHandler.java,0\b\0b8fcc6b756a757fb53a5befe26cba9a7a277025
+[
++src/main/java/Handlers/JoinGameHandler.java,2\e\2e342cb237b9f9383e716bded782db711a007604

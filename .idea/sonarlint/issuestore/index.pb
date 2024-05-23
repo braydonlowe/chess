@@ -19,3 +19,13 @@ X
 +src/main/java/Handlers/DatabaseHandler.java,0\b\0b8fcc6b756a757fb53a5befe26cba9a7a277025
 [
 +src/main/java/Handlers/JoinGameHandler.java,2\e\2e342cb237b9f9383e716bded782db711a007604
+]
+-src/main/java/Handlers/CreateGameHandler.java,a\5\a5339f9d96f47b01ebd7462fad5c0bc39d64f70e
+[
++src/main/java/Handlers/ListGameHandler.java,7\f\7f0f7fad5d83f79862e26e6362057c8467767d52
+Y
+)src/main/java/Handlers/LogoutHandler.java,f\a\fa6021a3c8c5bb42292c375a65608c49ac7189d9
+X
+(src/main/java/Handlers/LoginHandler.java,4\b\4b128e81d9072195549979d323d19c73e5bbaf8c
+_
+/src/main/java/Handlers/RegistrationHandler.java,2\3\23eb8e32b66b21fd25c3d1b95480944d89c7d0ea

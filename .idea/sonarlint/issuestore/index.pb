@@ -41,3 +41,5 @@ M
 src/main/java/Model/Auth.java,0\f\0fad622370b812bd96183b368cddb63cb5f317d5
 M
 src/main/java/Model/Game.java,b\8\b8f73c33c35231ee860ec3296387ccb264a7b549
+V
+&src/test/java/Service/MyJavaTests.java,c\5\c5ef55aaaa09c94905764e9e2845bbe1f1425bd8

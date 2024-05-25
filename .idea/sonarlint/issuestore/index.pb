@@ -29,3 +29,5 @@ X
 (src/main/java/Handlers/LoginHandler.java,4\b\4b128e81d9072195549979d323d19c73e5bbaf8c
 _
 /src/main/java/Handlers/RegistrationHandler.java,2\3\23eb8e32b66b21fd25c3d1b95480944d89c7d0ea
+R
+"src/main/java/server/JsonUtil.java,e\9\e9873aaa019c2a52ea8b434d8f1e51f9da05a95a

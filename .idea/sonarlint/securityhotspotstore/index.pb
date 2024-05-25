@@ -31,3 +31,9 @@ _
 /src/main/java/Handlers/RegistrationHandler.java,2\3\23eb8e32b66b21fd25c3d1b95480944d89c7d0ea
 R
 "src/main/java/server/JsonUtil.java,e\9\e9873aaa019c2a52ea8b434d8f1e51f9da05a95a
+W
+'src/main/java/DatabaseObjects/User.java,f\b\fbd07015e554eca938a29b01b8175d8e5fdabde3
+W
+'src/main/java/DatabaseObjects/Game.java,b\0\b0d12799b286b5da063f3722f619e2d0f1e69f8a
+W
+'src/main/java/DatabaseObjects/Auth.java,e\1\e1ea2716b05b5549a699f6be45667082a73b9a1d

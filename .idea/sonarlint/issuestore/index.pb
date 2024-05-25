@@ -37,3 +37,7 @@ W
 'src/main/java/DatabaseObjects/Game.java,b\0\b0d12799b286b5da063f3722f619e2d0f1e69f8a
 W
 'src/main/java/DatabaseObjects/Auth.java,e\1\e1ea2716b05b5549a699f6be45667082a73b9a1d
+M
+src/main/java/Model/Auth.java,0\f\0fad622370b812bd96183b368cddb63cb5f317d5
+M
+src/main/java/Model/Game.java,b\8\b8f73c33c35231ee860ec3296387ccb264a7b549

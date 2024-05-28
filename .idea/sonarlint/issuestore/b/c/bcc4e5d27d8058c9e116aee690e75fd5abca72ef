@@ -1,4 +1,4 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ò§†ùJ$0399dd2a-1bf5-4cbc-9d80-51cb8b90f818
-d
-java:S2094"BRemove this empty class, write its code or make it an "interface".(—»“£øÿÿÿÿ8—´öæû1
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ò§†ù8àí‘çû1J$b694067f-940e-4c0f-8650-8713414c03ff
+‚
+java:S1118	":Add a private constructor to hide the implicit public one.(—»“£øÿÿÿÿ8ãí‘çû1J$bcb319f6-b9ee-48ed-8001-9938a3bd9cb7

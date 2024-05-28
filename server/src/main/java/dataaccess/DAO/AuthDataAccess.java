@@ -6,6 +6,7 @@ import java.util.Map;
 
 public class AuthDataAccess implements DataAccessInterface<Auth> {
     private static final Map<String, Auth> authTable = new HashMap<>();
+    private int authNumber = 0;
     public void clear() {
         authTable.clear();
     }
@@ -31,6 +32,12 @@ public class AuthDataAccess implements DataAccessInterface<Auth> {
     //Delete
     public void delete(String authUniqueID) {
         authTable.remove(authUniqueID);
+    }
+
+
+    public String createAuth() {
+        authNumber++;
+        return Integer.toString(authNumber);
     }
 
 }

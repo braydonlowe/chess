@@ -5,30 +5,31 @@ import Model.Game;
 import java.util.HashMap;
 import java.util.Map;
 
-public class GameDataAccess {
+public class GameDataAccess implements DataAccessInterface<Game> {
     private static final Map<String, Game> gameTable = new HashMap<>();
 
-    public static void clearGameData() {
+
+    public void clear() {
         gameTable.clear();
     }
 
     //Create
-    public static void createGame(String ID, Game game) {
+    public void create(String ID, Game game) {
         gameTable.put(ID, game);
     }
 
     //Read
-    public static Game readGame(String ID) {
+    public Game read(String ID) {
         return gameTable.get(ID);
     }
 
     //Update
-    public static void updateGame(String ID, Game game) {
-        createGame(ID, game);
+    public void update(String ID, Game game) {
+        create(ID, game);
     }
 
     //Delete
-    public static void deleteGame(String ID) {
+    public void delete(String ID) {
         gameTable.remove(ID);
     }
 

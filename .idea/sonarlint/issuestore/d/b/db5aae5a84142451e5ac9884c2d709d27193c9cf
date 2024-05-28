@@ -1,2 +1,9 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ï¹ÈÔûÿÿÿÿ8ï‘ôéû1J$fa5e58d6-9a9c-4682-bbaf-a20abc053dcc
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ï¹ÈÔûÿÿÿÿ8é¦Çìû1J$9f29cf50-e50d-46ed-95c3-b7e9a3de7062
+~	java:S125"<This block of commented-out lines of code should be removed.(ˆëÚÌ8®êÊìû1J$b8ee2c40-959f-4017-9ba8-3ca70aeb7cdc
+r
+java:S1172"/Remove this unused method parameter "gameData".(¬¥Ï×8áÈËìû1J$34e39a77-1315-49de-bfca-8921c4fc3257
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(‰ÜáÖûÿÿÿÿ8áÈËìû1J$3fbb9bb7-3a92-49d5-8e86-734b5b207cf4
+t
+java:S1068
+",Remove this unused "authData" private field.(ª˜½áÿÿÿÿÿ8î¦Çìû1J$806e8e79-cfa6-4b84-83f4-78c770a978b4

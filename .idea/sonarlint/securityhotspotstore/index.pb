@@ -59,3 +59,9 @@ j
 :src/main/java/dataaccess/DAO/DataAccessImplementation.java,a\a\aa48b2ec0de484171b7b43bf00aa4b944d929b66
 e
 5src/main/java/dataaccess/DAO/DataAccessInterface.java,4\3\432276a33e41d58c50846e8f44364206c5ba7c9d
+W
+'src/main/java/Service/ClearService.java,7\8\78fc421b8d30c418affcc572aafb2778efdd946f
+X
+(src/main/java/Services/ClearService.java,5\2\525983faf1923b622837dd6ddaf378a68b55b5eb
+_
+/src/main/java/Services/RegistrationService.java,2\9\29674df38560b175d64f60c2e60ca801c461c0d1

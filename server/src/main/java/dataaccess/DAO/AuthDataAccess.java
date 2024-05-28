@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class AuthDataAccess {
     private static final Map<String, User> authTable = new HashMap<>();
-    public static void clearGameData() {
+    public static void clearAuthData() {
         authTable.clear();
     }
 

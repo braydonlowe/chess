@@ -13,6 +13,7 @@ public class ClearHandler {
         //Implement the clearing of the database.
         UserDataAccess.clearUserData();
         GameDataAccess.clearGameData();
+        AuthDataAccess.clearAuthData();
 
 
 

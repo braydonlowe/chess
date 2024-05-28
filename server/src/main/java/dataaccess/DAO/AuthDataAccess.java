@@ -33,5 +33,5 @@ public class AuthDataAccess {
     public static void deleteAuth(String authUniqueID) {
         authTable.remove(authUniqueID);
     }
-    
+
 }

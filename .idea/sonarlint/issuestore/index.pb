@@ -51,3 +51,7 @@ M
 0src/main/java/dataaccess/DAO/GameDataAccess.java,d\b\db5f5dadce00d2a50c4b3e76970e82d1e441fef8
 `
 0src/main/java/dataaccess/DAO/AuthDataAccess.java,4\6\469f0af0330b9fde95fe94f1aa77e4c872951757
+V
+&src/main/java/Service/UserService.java,7\b\7bbb25cda1aa280f27946df8d70fa9d601546333
+^
+.src/main/java/Service/RegistrationService.java,d\b\db5aae5a84142451e5ac9884c2d709d27193c9cf

@@ -1,4 +1,7 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ò§†ùJ$ca0e3686-fd7c-4dd5-b813-98ee8c7511aa
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÆ°8¡œèû1J$8abbcc4b-031e-49d6-9c2e-848791346912
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇïƒÆ8¨Üèû1J$0a7f76af-c3d1-4356-a149-481ff022d304
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ûç—šüÿÿÿÿ8Ø¬èû1J$42bbd5e9-7bc1-465b-a77a-c47f04f84d46
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ò§†ù8€·šèû1J$66651018-0e3e-48db-90a1-ba6b3fe44ce2
 ‚
-java:S1118":Add a private constructor to hide the implicit public one.(ÂÛ¾¹üÿÿÿÿ8ö¬Äçû1J$5be2cd05-e1d9-4500-9cea-d9aa4b2554e6
+java:S1118":Add a private constructor to hide the implicit public one.(ÂÛ¾¹üÿÿÿÿ8…·šèû1J$6e9a5162-7995-448b-a5b7-8cc70f6b9d3a

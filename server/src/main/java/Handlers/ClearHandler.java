@@ -15,10 +15,7 @@ public class ClearHandler {
         GameDataAccess.clearGameData();
         AuthDataAccess.clearAuthData();
 
-
-
         res.status(200);
-
         return JsonUtil.toJson(Map.of("message", "Database cleared"));
     }
 }

@@ -1,15 +1,17 @@
 
 ‰
-java:S1192$"FDefine a constant instead of duplicating this literal "/game" 3 times.(×ä™¶8ÖÊíû1J$a21ee61b-386e-43b5-bffc-a9078c08814d
+java:S1192%"FDefine a constant instead of duplicating this literal "/game" 3 times.(×ä™¶8ÖÊíû1J$394a40e4-e1c0-4dc8-92fc-f43534de9153
 v
-java:S2440".Remove this instantiation of "UserDataAccess".(şÜêøÿÿÿÿ8àÊíû1J$997b5f2a-56b3-4f91-a1f1-fe13c20a7db4
+java:S2440".Remove this instantiation of "UserDataAccess".(şÜêøÿÿÿÿ8àÊíû1J$40474663-0eaf-4461-9fd6-3a9054a39101
 v
-java:S2440".Remove this instantiation of "GameDataAccess".(ÎÎÍ¦ûÿÿÿÿ8äÊíû1J$469c9fef-14f8-4ebc-85ac-6fed7a120748
+java:S2440".Remove this instantiation of "GameDataAccess".(ÎÎÍ¦ûÿÿÿÿ8äÊíû1J$ef643201-b001-4f96-82e3-e37a63142be9
 v
-java:S2440".Remove this instantiation of "AuthDataAccess".(¡ÚÖêùÿÿÿÿ8åÊíû1J$df72419e-825b-4295-8b48-0828108fcf49
-t
-java:S1481",Remove this unused "regServ" local variable.(‡ô´ùùÿÿÿÿ8ôÊíû1J$041c14cc-d6f5-42a3-8f9d-19c42d85cfc6
-R
-java:S2209'"5Change this instance-reference to a static reference.(ßŞ¼Ì8Ğåíû1
+java:S2440".Remove this instantiation of "AuthDataAccess".(¡ÚÖêùÿÿÿÿ8åÊíû1J$fed1986f-a3ac-4c83-adb8-c7cec7ca8ee2
+W
+java:S2209""5Change this instance-reference to a static reference.(û·ó›ùÿÿÿÿ8ïìİíû1
+{
+java:S2440""3Remove this instantiation of "RegistrationHandler".(û·ó›ùÿÿÿÿ8„µÜíû1J$9cf110ba-efe0-4924-9a4a-24a9ff1cb667
+x
+java:S2209("5Change this instance-reference to a static reference.(ßŞ¼Ì8Ğåíû1J$cb7fb693-14c2-4b05-bf68-68c541fb16cd
 o
-java:S2440'",Remove this instantiation of "ClearHandler".(ßŞ¼Ì8÷Êíû1J$18845161-4834-4b5e-85ef-e3704586532e
+java:S2440(",Remove this instantiation of "ClearHandler".(ßŞ¼Ì8÷Êíû1J$f20ff48b-e0f5-4689-a060-00f3b061cd21

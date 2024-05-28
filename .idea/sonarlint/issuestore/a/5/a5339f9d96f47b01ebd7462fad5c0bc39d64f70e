@@ -1,12 +1,12 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8ş”œéû1J$c2c04720-a033-4b1f-bcef-003abac796bd
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8ş”œéû1J$7bc2afb8-80e7-4dab-bd5c-f37ae68d4bbf
 }
-java:S1118":Add a private constructor to hide the implicit public one.(íëúß8€•œéû1J$9a240d23-2383-41f7-a791-cf9c6b4aa1cb
+java:S1118":Add a private constructor to hide the implicit public one.(íëúß8€•œéû1J$41f532e9-2716-4bfe-a822-9989552eb236
 …
-java:S1854"=Remove this useless assignment to local variable "authToken".(¿‘ãçıÿÿÿÿ8•œéû1J$c8ba5796-8df8-4932-8b7d-f6505c05266c
+java:S1854"=Remove this useless assignment to local variable "authToken".(¿‘ãçıÿÿÿÿ8•œéû1J$140352c8-2aa6-45ae-bd25-09f9baeccc95
 m
-java:S1172	"*Remove this unused method parameter "res".(­¡Š±8‚•œéû1J$fc2e8fa0-d66f-4f9f-b59b-1e9d4ca5448b
+java:S1172	"*Remove this unused method parameter "res".(­¡Š±8‚•œéû1J$d1a62665-c97d-4529-b37b-3e58f1b2434f
 v
-java:S1481".Remove this unused "authToken" local variable.(¿‘ãçıÿÿÿÿ8„•œéû1J$05b7d35e-9dcd-41c9-b3b0-f86bee209544
+java:S1481".Remove this unused "authToken" local variable.(¿‘ãçıÿÿÿÿ8„•œéû1J$b6598687-9ca7-4765-8b10-ea2638c5e17a
 t
-java:S1128",Remove this unused import 'server.JsonUtil'.(¸—àÁÿÿÿÿÿ8…•œéû1J$90d14d9a-5c49-40bb-a3c4-4f7c28839c4c
+java:S1128",Remove this unused import 'server.JsonUtil'.(¸—àÁÿÿÿÿÿ8…•œéû1J$298fb3c2-9860-436e-aadb-cd5452354859

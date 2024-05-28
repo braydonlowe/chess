@@ -1,11 +1,10 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8çÿ®íû1J$dc3e780f-6881-4d6a-a437-a92f94bdad34
-‚
-java:S1118	":Add a private constructor to hide the implicit public one.(ÅôÒøÿÿÿÿ8éÿ®íû1J$10209e3b-8ac9-403e-b68b-e19482cb6c9d
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8íäÕíû1J$2d60c2f5-7832-448e-b71e-62193ca20b91
 €
-java:S1854"8Remove this useless assignment to local variable "user".(–¥¼Üÿÿÿÿÿ8êÿ®íû1J$1fe9ccfd-682b-4f52-919f-6c3e420e7b5e
+java:S1854"8Remove this useless assignment to local variable "user".(–¥¼Üÿÿÿÿÿ8ğäÕíû1J$8959797c-29c1-4cc6-aad2-91ab242b36c2
 m
-java:S1172
-"*Remove this unused method parameter "res".(ÖüÙë8ëÿ®íû1J$a9fffabe-1a3d-4fbb-be07-7a1e7b02a160
+java:S1172"*Remove this unused method parameter "res".(ÖüÙë8ğäÕíû1J$7a0f4377-d404-484b-841e-5e9aefe2cbf3
 q
-java:S1481")Remove this unused "user" local variable.(–¥¼Üÿÿÿÿÿ8ìÿ®íû1J$3fde2577-bcea-475c-bbae-34f0c880eb07
+java:S1481")Remove this unused "user" local variable.(–¥¼Üÿÿÿÿÿ8ñäÕíû1J$de70a72d-f9ef-42f1-aa2c-a5e541f9cd09
+n
+java:S1068"+Remove this unused "regServ" private field.(õòıÁ8òäÕíû1J$50a58512-379e-43df-a194-dbbe3bced120

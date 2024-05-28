@@ -11,6 +11,7 @@ public class Server {
     //Private variables
 
     private final ClearService clearService;
+    private final RegistrationService regService;
 
 
     public Server() {
@@ -19,7 +20,7 @@ public class Server {
         AuthDataAccess authData = new AuthDataAccess();
 
         //Instantiate the services with the data.
-        RegistrationService regServ = new RegistrationService(authData, gameData, userData);
+        regService = new RegistrationService(authData, gameData, userData);
         clearService = new ClearService(authData, gameData, userData);
 
     }
@@ -30,7 +31,7 @@ public class Server {
         Spark.staticFiles.location("web");
 
         // Register your endpoints and handle exceptions here.
-        Spark.post("/user", RegistrationHandler::registerUser);
+        Spark.post("/user", (req, res) -> new RegistrationHandler(regService).registerUser(req, res));
         Spark.post("/session", LoginHandler::login);
         Spark.delete("/session", LogoutHandler::logout);
         Spark.get("/game", ListGameHandler::listGames);

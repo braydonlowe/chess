@@ -1,10 +1,3 @@
 
-Ь	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(†зХ—8нд’ны1J$2d60c2f5-7832-448e-b71e-62193ca20b91
-А
-java:S1854"8Remove this useless assignment to local variable "user".(Ц•Љ№€€€€€8рд’ны1J$8959797c-29c1-4cc6-aad2-91ab242b36c2
-m
-java:S1172"*Remove this unused method parameter "res".(÷ьўл8рд’ны1J$7a0f4377-d404-484b-841e-5e9aefe2cbf3
-q
-java:S1481")Remove this unused "user" local variable.(Ц•Љ№€€€€€8сд’ны1J$de70a72d-f9ef-42f1-aa2c-a5e541f9cd09
-n
-java:S1068"+Remove this unused "regServ" private field.(хтэЅ8тд’ны1J$50a58512-379e-43df-a194-dbbe3bced120
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(“В“йь€€€€8бныны1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(†зХ—8гныны1

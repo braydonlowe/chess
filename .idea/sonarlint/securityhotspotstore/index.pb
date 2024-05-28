@@ -65,3 +65,5 @@ X
 (src/main/java/Services/ClearService.java,5\2\525983faf1923b622837dd6ddaf378a68b55b5eb
 _
 /src/main/java/Services/RegistrationService.java,2\9\29674df38560b175d64f60c2e60ca801c461c0d1
+X
+(src/main/java/Services/LoginService.java,6\b\6b454c2a40b3bf9da02d8e377b63fb142eb887ac

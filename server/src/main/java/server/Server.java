@@ -12,6 +12,7 @@ public class Server {
 
     private final ClearService clearService;
     private final RegistrationService regService;
+    private final LoginService loginService;
 
 
     public Server() {
@@ -22,6 +23,8 @@ public class Server {
         //Instantiate the services with the data.
         regService = new RegistrationService(authData, gameData, userData);
         clearService = new ClearService(authData, gameData, userData);
+        loginService = new LoginService(authData, gameData, userData);
+
 
     }
 
@@ -32,7 +35,7 @@ public class Server {
 
         // Register your endpoints and handle exceptions here.
         Spark.post("/user", (req, res) -> new RegistrationHandler(regService).registerUser(req, res));
-        Spark.post("/session", LoginHandler::login);
+        Spark.post("/session", (req, res) -> new LoginHandler(loginService).login(req, res));
         Spark.delete("/session", LogoutHandler::logout);
         Spark.get("/game", ListGameHandler::listGames);
         Spark.post("/game", CreateGameHandler::createGame);

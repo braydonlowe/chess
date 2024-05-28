@@ -30,4 +30,7 @@ public class UserDataAccess {
     }
 
     //Delete
+    public static void deleteUser(String ID) {
+        userTable.remove(ID);
+    }
 }

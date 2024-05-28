@@ -45,3 +45,9 @@ V
 &src/test/java/Service/MyJavaTests.java,c\5\c5ef55aaaa09c94905764e9e2845bbe1f1425bd8
 M
 src/main/java/Model/User.java,a\4\a4a024c000f0299377044efbf7bdd3dfe84936aa
+`
+0src/main/java/dataaccess/DAO/UserDataAccess.java,b\c\bcc4e5d27d8058c9e116aee690e75fd5abca72ef
+`
+0src/main/java/dataaccess/DAO/GameDataAccess.java,d\b\db5f5dadce00d2a50c4b3e76970e82d1e441fef8
+`
+0src/main/java/dataaccess/DAO/AuthDataAccess.java,4\6\469f0af0330b9fde95fe94f1aa77e4c872951757

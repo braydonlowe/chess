@@ -1,4 +1,8 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ò§†ù8Ü¡¼çû1J$620855cb-f67a-4c80-861a-03983e6d24d6
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Ó¿€øÿÿÿÿ8¿¯Óèû1J$2b40d7f0-226f-42b9-b77b-b9c084365c68
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ŒðÒýÿÿÿÿ8¿¯Óèû1J$f2c46892-985a-41b0-8fa3-bfa60ce74b38
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°öë…þÿÿÿÿ8¿¯Óèû1J$e52f93b5-4353-40ba-9570-51580fa7ba30
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûî¯·8‹¢Ôèû1J$ac927b05-28ff-435d-ac14-95e8e7cc027b
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ò§†ù8À¯Óèû1J$6baf15ca-5b85-45da-be4b-0d3e02d1f90b
 ‚
-java:S1118":Add a private constructor to hide the implicit public one.(Ù¾Í¥ÿÿÿÿÿ8Þ¡¼çû1J$56fd253a-906c-41db-90eb-7e2e63541995
+java:S1118":Add a private constructor to hide the implicit public one.(Ù¾Í¥ÿÿÿÿÿ8Ä¯Óèû1J$1be374d3-aad5-4d77-8440-bbb9555b0a58

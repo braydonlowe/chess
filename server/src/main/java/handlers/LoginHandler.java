@@ -23,11 +23,11 @@ public class LoginHandler {
             res.status(200);
             return JsonUtil.toJson(auth);
         } catch (DataAccessException e) {
-            if (e.getMessage() == "unauthorized") {
-                res.status(401);
+            if (!(e.getMessage() == "unauthorized")) {
+                res.status(500);
             }
             else {
-                res.status(500);
+                res.status(401);
             }
             return JsonUtil.toJson(new ErrorRespone("Error: " +  e.getMessage()));
         }

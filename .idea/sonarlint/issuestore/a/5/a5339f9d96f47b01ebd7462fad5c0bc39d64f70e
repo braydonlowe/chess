@@ -1,12 +1,6 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8ş”œéû1J$7bc2afb8-80e7-4dab-bd5c-f37ae68d4bbf
-}
-java:S1118":Add a private constructor to hide the implicit public one.(íëúß8€•œéû1J$41f532e9-2716-4bfe-a822-9989552eb236
-…
-java:S1854"=Remove this useless assignment to local variable "authToken".(¿‘ãçıÿÿÿÿ8•œéû1J$140352c8-2aa6-45ae-bd25-09f9baeccc95
-m
-java:S1172	"*Remove this unused method parameter "res".(­¡Š±8‚•œéû1J$d1a62665-c97d-4529-b37b-3e58f1b2434f
-v
-java:S1481".Remove this unused "authToken" local variable.(¿‘ãçıÿÿÿÿ8„•œéû1J$b6598687-9ca7-4765-8b10-ea2638c5e17a
-t
-java:S1128",Remove this unused import 'server.JsonUtil'.(¸—àÁÿÿÿÿÿ8…•œéû1J$298fb3c2-9860-436e-aadb-cd5452354859
+„
+java:S4973"<Strings and Boxed types should be compared using "equals()".(À±ï‰ıÿÿÿÿ8ó«‚‘ü1J$87c525ee-2fec-4f53-8f68-f29874054e13
+~
+java:S4973"<Strings and Boxed types should be compared using "equals()".(Ù£§b8ô«‚‘ü1J$650bd9c9-97df-4c35-b922-8a66278a6437
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8õ«‚‘ü1J$a4a5c74f-5cf4-41b0-b210-80f4c00fc77b

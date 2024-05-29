@@ -29,7 +29,7 @@ public class CreateGameService {
             throw new DataAccessException("bad request");
         }
         String gameID = authData.createAuth();
-        gameData.create(gameID, new Game(Integer.parseInt(gameID), null, null, gameName, new ChessGame()));
+        gameData.create(gameID, new Game(gameID, null, null, gameName, new ChessGame()));
         return new CreateGameRecord(gameID);
     }
 }

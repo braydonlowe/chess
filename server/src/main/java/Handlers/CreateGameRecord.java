@@ -1,4 +1,4 @@
 package Handlers;
 
-public record CreateGameRecord(String GameID) {
+public record CreateGameRecord(String gameID) {
 }

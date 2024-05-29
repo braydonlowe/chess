@@ -4,7 +4,7 @@ package Handlers;
 import dataaccess.DataAccessException;
 import spark.Request;
 import spark.Response;
-import Services.CreateGameService;
+import service.CreateGameService;
 import server.JsonUtil;
 
 public class CreateGameHandler {

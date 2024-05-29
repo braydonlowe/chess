@@ -4,7 +4,7 @@ package Handlers;
 import dataaccess.DataAccessException;
 import spark.Request;
 import spark.Response;
-import Services.JoinGameService;
+import service.JoinGameService;
 import server.JsonUtil;
 
 public class JoinGameHandler {

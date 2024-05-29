@@ -40,4 +40,8 @@ public class AuthDataAccess implements DataAccessInterface<Auth> {
         return Integer.toString(authNumber);
     }
 
+    public int size() {
+        return authTable.size();
+    }
+
 }

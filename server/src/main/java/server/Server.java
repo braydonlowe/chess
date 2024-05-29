@@ -5,7 +5,7 @@ package server;
 import spark.*;
 import Handlers.*;
 import dataaccess.DAO.*;
-import Services.*;
+import service.*;
 
 public class Server {
     //Private variables

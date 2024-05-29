@@ -4,9 +4,8 @@ package Handlers;
 import dataaccess.DataAccessException;
 import spark.Request;
 import spark.Response;
-import Services.ListGameService;
+import service.ListGameService;
 import server.JsonUtil;
-import Model.Game;
 
 public class ListGameHandler {
     private final ListGameService listServ;

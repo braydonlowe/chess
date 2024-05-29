@@ -43,4 +43,8 @@ public class GameDataAccess implements DataAccessInterface<Game> {
         return gameList;
     }
 
+    public int size() {
+        return gameTable.size();
+    }
+
 }

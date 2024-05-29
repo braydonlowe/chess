@@ -1,8 +1,6 @@
-package Services;
+package service;
 
 //Imports
-import Model.Auth;
-import Model.User;
 import dataaccess.DataAccessException;
 import dataaccess.DAO.*;
 

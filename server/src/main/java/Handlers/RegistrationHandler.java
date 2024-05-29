@@ -7,8 +7,7 @@ import spark.Response;
 import Model.User;
 import Model.Auth;
 import server.JsonUtil;
-import Services.RegistrationService;
-import Handlers.ErrorRespone;
+import service.RegistrationService;
 
 public class RegistrationHandler {
     private final RegistrationService regServ;

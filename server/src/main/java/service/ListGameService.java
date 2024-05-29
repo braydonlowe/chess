@@ -1,4 +1,4 @@
-package Services;
+package service;
 
 //Imports
 import Model.Game;

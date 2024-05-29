@@ -5,7 +5,7 @@ import dataaccess.DataAccessException;
 import spark.Request;
 import spark.Response;
 import java.util.Map;
-import Services.ClearService;
+import service.ClearService;
 import server.JsonUtil;
 
 public class ClearHandler {

@@ -3,7 +3,7 @@ package Handlers;
 
 //Imports
 import dataaccess.DataAccessException;
-import Services.LogoutService;
+import service.LogoutService;
 import server.JsonUtil;
 import spark.Request;
 import spark.Response;

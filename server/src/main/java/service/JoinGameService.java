@@ -1,11 +1,9 @@
-package Services;
+package service;
 
 //Imports
-import Handlers.CreateGameRecord;
 import Model.Auth;
 import Model.Game;
 import Model.User;
-import chess.ChessGame;
 import dataaccess.DataAccessException;
 import dataaccess.DAO.*;
 
@@ -31,7 +29,7 @@ public class JoinGameService {
         }
         Game gameToBeJoined = gameData.read(gameID);
         User currentUser = userData.read(currentAuth.username());
-        if (playerColor == "WHITE") {
+        if (playerColor.equals("WHITE")) {
             if (gameToBeJoined.whiteUsername() == null) {
                 Game updatedGame = new Game(gameID, currentUser.username(), gameToBeJoined.blackUsername(), gameToBeJoined.gameName(), gameToBeJoined.game());
                 gameData.update(gameID, updatedGame);

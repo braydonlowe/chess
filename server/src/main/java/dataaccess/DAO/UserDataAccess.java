@@ -36,4 +36,8 @@ public class UserDataAccess implements DataAccessInterface<User> {
     public void delete(String ID) {
         userTable.remove(ID);
     }
+
+    public int size() {
+        return userTable.size();
+    }
 }

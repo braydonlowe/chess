@@ -25,7 +25,7 @@ public class RegistrationService {
         //If an input field is missing throw a 400 error.
         if (currentUser == null) {
             if (oneUsersData.username() == null || oneUsersData.password() == null || oneUsersData.email() == null) {
-                throw new DataAccessException("Missing information");
+                throw new DataAccessException("bad request");
             }
             userData.create(oneUsersData.username(), oneUsersData);
             //Create an auth token
@@ -36,7 +36,7 @@ public class RegistrationService {
             //Login
         }
         else {
-            throw new DataAccessException("Username taken");
+            throw new DataAccessException("already taken");
         }
     }
 }

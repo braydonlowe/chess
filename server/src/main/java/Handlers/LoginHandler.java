@@ -30,7 +30,7 @@ public class LoginHandler {
             else {
                 res.status(500);
             }
-            return JsonUtil.toJson(new ErrorRespone("Error", e.getMessage()));
+            return JsonUtil.toJson(new ErrorRespone("Error: " +  e.getMessage()));
         }
 
     }

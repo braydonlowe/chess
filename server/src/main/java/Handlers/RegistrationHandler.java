@@ -8,6 +8,7 @@ import Model.User;
 import Model.Auth;
 import server.JsonUtil;
 import Services.RegistrationService;
+import Handlers.ErrorRespone;
 
 public class RegistrationHandler {
     private final RegistrationService regServ;
@@ -24,16 +25,16 @@ public class RegistrationHandler {
             res.status(200);
             return JsonUtil.toJson(auth);
         } catch (DataAccessException e) {
-            if (e.getMessage() == "Missing Information") {
+            if (e.getMessage() == "bad request") {
                 res.status(400);
             }
-            else if (e.getMessage() == "Username taken") {
+            else if (e.getMessage() == "already taken") {
                 res.status(403);
             }
             else {
                 res.status(500);
             }
-            return JsonUtil.toJson(e);
+            return JsonUtil.toJson(new ErrorRespone("Error:" + e.getMessage()));
         }
     }
 }

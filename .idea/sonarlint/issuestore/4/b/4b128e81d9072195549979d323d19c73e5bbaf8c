@@ -1,6 +1,6 @@
 
 „
-java:S4973"<Strings and Boxed types should be compared using "equals()".(À±ï‰ıÿÿÿÿ8³‰ãü1J$72b2965f-995f-4436-a677-172c07cfadc3
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8»‰ãü1J$b7f49d67-0b2b-4caf-ad69-d0dc31220f8a
+java:S4973"<Strings and Boxed types should be compared using "equals()".(À±ï‰ıÿÿÿÿ8³‰ãü1J$3287bdb4-bdbf-4a94-9fa2-80b02d95fa97
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8»‰ãü1J$9860cd87-d92f-4459-8b75-e86d9f7447d8
 —
-java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(¢ïÄ8´«íü1J$49873f39-fd5c-4499-bf93-5ac3a8064bab
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(¢ïÄ8¤Ø·ü1J$13db5c3d-f060-4f59-9169-97b13704b0b0

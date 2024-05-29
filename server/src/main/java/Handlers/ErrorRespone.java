@@ -1,3 +1,3 @@
 package Handlers;
 
-public record ErrorRespone(String type, String message) {}
+public record ErrorRespone(String message) {}

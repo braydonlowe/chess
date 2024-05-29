@@ -1,12 +1,12 @@
 package service;
 
 //Imports
-import Handlers.CreateGameRecord;
-import Model.Auth;
-import Model.Game;
+import handlers.CreateGameRecord;
+import model.Auth;
+import model.Game;
 import chess.ChessGame;
 import dataaccess.DataAccessException;
-import dataaccess.DAO.*;
+import dataaccess.dao.*;
 
 public class CreateGameService {
     private final AuthDataAccess authData;

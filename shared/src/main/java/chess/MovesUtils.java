@@ -74,11 +74,11 @@ public class MovesUtils {
         int column = myPosition.getColumn();
         TeamColor pieceColor = board.getPiece(myPosition).getTeamColor();
         int[][] positions = {{1,-1},{1,0},{1,1},{0,-1},{0,1},{-1,-1},{-1,0},{-1,1}};
-        for (int i = 0; i < positions.length; i++) {
-            int space = spaceClear(board, row + positions[i][0],column + positions[i][1], pieceColor);
+        for (int[] position : positions) {
+            int space = spaceClear(board, row + position[0], column + position[1], pieceColor);
             if (space != 3) {
                 //Except the king can only move into spaces that aren't into check....
-                ChessPosition newPosition = new ChessPosition(row + positions[i][0], column + positions[i][1]);
+                ChessPosition newPosition = new ChessPosition(row + position[0], column + position[1]);
                 ChessMove newMove = new ChessMove(myPosition, newPosition, null);
                 moves.add(newMove);
             }

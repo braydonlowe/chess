@@ -3,8 +3,8 @@ package server;
 
 //Imports
 import spark.*;
-import Handlers.*;
-import dataaccess.DAO.*;
+import handlers.*;
+import dataaccess.dao.*;
 import service.*;
 
 public class Server {

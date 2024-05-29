@@ -20,12 +20,12 @@ import static chess.MovesUtils.moveRook;
 
 public class ChessPiece {
     //Setting private variables
-    private final PieceType piece_type;
-    private final ChessGame.TeamColor piece_color; //I don't think that ChessGame.TeamColor is necesarry. Figure out a way to do without it without importing.
+    private final PieceType pieceType;
+    private final ChessGame.TeamColor pieceColor; //I don't think that ChessGame.TeamColor is necesarry. Figure out a way to do without it without importing.
 
     public ChessPiece(ChessGame.TeamColor pieceColor, ChessPiece.PieceType type) {
-        this.piece_type = type;
-        this.piece_color = pieceColor;
+        this.pieceType = type;
+        this.pieceColor = pieceColor;
     }
 
     /**
@@ -44,14 +44,14 @@ public class ChessPiece {
      * @return Which team this chess piece belongs to
      */
     public ChessGame.TeamColor getTeamColor() {
-        return this.piece_color;
+        return this.pieceColor;
     }
 
     /**
      * @return which type of chess piece this piece is
      */
     public PieceType getPieceType() {
-        return this.piece_type;
+        return this.pieceType;
     }
 
     /**
@@ -63,7 +63,7 @@ public class ChessPiece {
      */
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition) {
         //Needed to get the ChessBoard finished.
-        switch(piece_type) {
+        switch(pieceType) {
             case BISHOP:
                 return moveBishop(board, myPosition);
             case KING:
@@ -87,11 +87,11 @@ public class ChessPiece {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof ChessPiece that)) return false;
-        return piece_type == that.piece_type && piece_color == that.piece_color;
+        return pieceType == that.pieceType && pieceColor == that.pieceColor;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(piece_type, piece_color);
+        return Objects.hash(pieceType, pieceColor);
     }
 }

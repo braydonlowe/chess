@@ -2,15 +2,15 @@ package service;
 
 
 //Import
-import Handlers.CreateGameRecord;
-import Handlers.ListOfGamesRecord;
-import Model.Auth;
-import Model.Game;
-import Model.User;
+import handlers.CreateGameRecord;
+import handlers.ListOfGamesRecord;
+import model.Auth;
+import model.Game;
+import model.User;
 import chess.ChessGame;
-import dataaccess.DAO.AuthDataAccess;
-import dataaccess.DAO.GameDataAccess;
-import dataaccess.DAO.UserDataAccess;
+import dataaccess.dao.AuthDataAccess;
+import dataaccess.dao.GameDataAccess;
+import dataaccess.dao.UserDataAccess;
 import dataaccess.DataAccessException;
 import org.junit.jupiter.api.*;
 

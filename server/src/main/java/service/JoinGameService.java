@@ -1,11 +1,11 @@
 package service;
 
 //Imports
-import Model.Auth;
-import Model.Game;
-import Model.User;
+import model.Auth;
+import model.Game;
+import model.User;
 import dataaccess.DataAccessException;
-import dataaccess.DAO.*;
+import dataaccess.dao.*;
 
 public class JoinGameService {
     private final AuthDataAccess authData;

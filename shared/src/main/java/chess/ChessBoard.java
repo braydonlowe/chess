@@ -125,18 +125,18 @@ public class ChessBoard {
         if (obj == null || obj.getClass() != this.getClass()) {
             return false;
         }
-        ChessBoard new_board = (ChessBoard) obj;
+        ChessBoard newBoard = (ChessBoard) obj;
         //Check individual spaces:
         for (int y = 1; y <= 8; y ++) {
             for (int z = 1; z <= 8; z++) {
-                if (board[y][z] == null && new_board.board[y][z] == null) {
+                if (board[y][z] == null && newBoard.board[y][z] == null) {
                     continue;
                 }
-                if (board[y][z] == null || new_board.board[y][z] == null) {
+                if (board[y][z] == null || newBoard.board[y][z] == null) {
                     return false;
                 }
 
-                if (!board[y][z].getPieceType().equals(new_board.board[y][z].getPieceType())) {
+                if (!board[y][z].getPieceType().equals(newBoard.board[y][z].getPieceType())) {
                     return false;
                 }
             }

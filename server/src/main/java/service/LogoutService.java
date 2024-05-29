@@ -2,7 +2,7 @@ package service;
 
 //Imports
 import dataaccess.DataAccessException;
-import dataaccess.DAO.*;
+import dataaccess.dao.*;
 
 public class LogoutService {
     private final AuthDataAccess authData;

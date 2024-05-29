@@ -1,10 +1,10 @@
 package service;
 
 //Imports
-import Model.Auth;
-import Model.User;
+import model.Auth;
+import model.User;
 import dataaccess.DataAccessException;
-import dataaccess.DAO.*;
+import dataaccess.dao.*;
 
 public class LoginService{
     private final AuthDataAccess authData;

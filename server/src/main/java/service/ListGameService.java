@@ -1,11 +1,11 @@
 package service;
 
 //Imports
-import Model.Game;
-import Model.Auth;
-import Handlers.ListOfGamesRecord;
+import model.Game;
+import model.Auth;
+import handlers.ListOfGamesRecord;
 import dataaccess.DataAccessException;
-import dataaccess.DAO.*;
+import dataaccess.dao.*;
 
 public class ListGameService {
     private final AuthDataAccess authData;

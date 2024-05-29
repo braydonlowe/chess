@@ -15,6 +15,7 @@ public class Server {
     private final LoginService loginService;
     private final LogoutService logoutService;
     private final CreateGameService createService;
+    private final JoinGameService joinService;
 
 
     public Server() {
@@ -28,6 +29,7 @@ public class Server {
         loginService = new LoginService(authData, gameData, userData);
         logoutService = new LogoutService(authData, gameData, userData);
         createService = new CreateGameService(authData, gameData, userData);
+        joinService = new JoinGameService(authData, gameData, userData);
 
 
     }
@@ -43,7 +45,7 @@ public class Server {
         Spark.delete("/session", (req, res) -> new LogoutHandler(logoutService).logout(req, res));
         Spark.get("/game", ListGameHandler::listGames);
         Spark.post("/game", (req, res) -> new CreateGameHandler(createService).createGame(req, res));
-        Spark.put("/game", JoinGameHandler::joinGame);
+        Spark.put("/game", (req, res) -> new JoinGameHandler(joinService).joinGame(req, res));
         Spark.delete("/db", (req, res) -> new ClearHandler(clearService).handleClear(req, res));
 
         Spark.awaitInitialization();

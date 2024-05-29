@@ -1,0 +1,10 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñ¶‘–8ã‡Šü1J$9c7354c5-d607-4acd-83e1-03a6cb38a94f
+j
+java:S1128"'Remove this unused import 'Model.Auth'.(¾¤¯8ğ‡Šü1J$f1483bbf-20e8-4dff-a484-ee8c3f2dfc5d
+j
+java:S1128"'Remove this unused import 'Model.User'.(×ÈğŠ8ğ‡Šü1J$be12e7af-dad6-46aa-9a55-40ca5507f4e8
+t
+java:S1068",Remove this unused "gameData" private field.(°Ì¥İÿÿÿÿÿ8ñ‡Šü1J$f2811050-4119-4035-b6c1-a1e08779b38f
+t
+java:S1068",Remove this unused "userData" private field.(´ÓÑñøÿÿÿÿ8ñ‡Šü1J$3bf989f7-7e03-41c9-9b52-bbbed7f30140

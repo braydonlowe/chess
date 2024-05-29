@@ -1,6 +1,4 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8·±Øšú1J$4d3b425d-7328-4abb-9174-e97a3f1f1506
-‚
-java:S1118":Add a private constructor to hide the implicit public one.(’”óÌüÿÿÿÿ8»±Øšú1J$ae3de938-acf3-4e3d-adfd-7870097ba0e1
-v
-java:S1172"3Remove these unused method parameters "req", "res".(ÿàÀ8°…Úšú1J$0aeedc3b-e49f-4721-9226-2f9ac51cb182
+„
+java:S4973"<Strings and Boxed types should be compared using "equals()".(À±ï‰ıÿÿÿÿ8é÷’ü1J$cf8b1d45-df14-45fd-9ad0-13096c7c5121
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8ë÷’ü1J$54cffc35-f202-48e1-8e6b-76d811ccf8ca

@@ -16,18 +16,16 @@ public class LoginService{
         this.userData = userData;
     }
     public Auth loginUser(User oneUsersData) throws DataAccessException {
-        //Check to see if the user is in the database if not throw a 403 error
         User currentUser = userData.read(oneUsersData.username());
         if (currentUser == null) {
             throw new DataAccessException("User not found");
         }
         //Check to see if passwords match
-        if (currentUser.password() != oneUsersData.password()) {
+        if (!currentUser.password().equals(oneUsersData.password())) {
             throw new DataAccessException("Incorrect password");
         }
         else {
-            Auth newAuth = new Auth("replaceMeString", currentUser.username());
-            //In this case we have our unique identifier as our auth string
+            Auth newAuth = new Auth(authData.createAuth(), currentUser.username());
             authData.create(newAuth.authToken(), newAuth);
             return newAuth;
         }

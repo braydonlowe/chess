@@ -23,6 +23,12 @@ public class LoginHandler {
             res.status(200);
             return JsonUtil.toJson(auth);
         } catch (DataAccessException e) {
+            if (e.getMessage() == "User not found" || e.getMessage() == "Incorrect password") {
+                res.status(400);
+            }
+            else {
+                res.status(500);
+            }
             throw new RuntimeException(e);
         }
 

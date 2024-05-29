@@ -1,3 +1,7 @@
 
-	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ƒ’›οϋ1J$de2f7a3e-6c1e-4898-85b7-ae3d3d37b354
-	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( η•Ρ8„’›οϋ1J$5bf91a0f-f8d9-4638-8c20-49f2f0f396e2
+	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8¦¬ό1J$3921b34f-e97b-4586-8104-90da0cc3954e
+„
+java:S4973"<Strings and Boxed types should be compared using "equals()".(ΟΰÒ”όÿÿÿÿ8§¬ό1J$d56c66b2-438f-419b-8888-528f4d5caee7
+„
+java:S4973"<Strings and Boxed types should be compared using "equals()".(ΟΰÒ”όÿÿÿÿ8Κ«“ό1J$435e287b-c412-40cf-976b-b9588f591b5a
+	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( η•Ρ8¨¬ό1J$0a59a6f5-38ec-4bf7-809e-d647b2653e79

@@ -1,3 +1,6 @@
 
-g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8áíûíû1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8ãíûíû1
+Y
+java:S4973"<Strings and Boxed types should be compared using "equals()".(ª£É£8µÈşü1
+^
+java:S4973"<Strings and Boxed types should be compared using "equals()".(÷İÉµüÿÿÿÿ8µÈşü1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8¶Èşü1

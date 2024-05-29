@@ -24,7 +24,16 @@ public class RegistrationHandler {
             res.status(200);
             return JsonUtil.toJson(auth);
         } catch (DataAccessException e) {
-            throw new RuntimeException(e);
+            if (e.getMessage() == "Missing Information") {
+                res.status(400);
+            }
+            else if (e.getMessage() == "Username taken") {
+                res.status(403);
+            }
+            else {
+                res.status(500);
+            }
+            return JsonUtil.toJson(e);
         }
     }
 }

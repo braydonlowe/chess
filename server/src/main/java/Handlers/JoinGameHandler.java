@@ -16,17 +16,20 @@ public class JoinGameHandler {
 
     public Object joinGame(Request req, Response res) throws DataAccessException {
         String authToken = req.headers("authorization");
-        String gameName = req.body();
+        JoinGameRecord gameInformation = JsonUtil.fromJson(req.body(), JoinGameRecord.class);
         try {
-            CreateGameRecord gameID = joinServ.joinGame(authToken, gameName);
+            joinServ.joinGame(authToken, gameInformation.gameID(), gameInformation.playerColor());
             res.status(200);
-            return JsonUtil.toJson(gameID);
+            return "{}";
         } catch(DataAccessException e) {
             if (e.getMessage() == "unauthorized") {
                 res.status(401);
             }
             else if(e.getMessage() == "bad request") {
                 res.status(400);
+            }
+            else if(e.getMessage() == "color already taken") {
+                res.status(403);
             }
             else {
                 res.status(500);

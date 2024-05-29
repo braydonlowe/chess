@@ -4,6 +4,7 @@ package Services;
 import Handlers.CreateGameRecord;
 import Model.Auth;
 import Model.Game;
+import Model.User;
 import chess.ChessGame;
 import dataaccess.DataAccessException;
 import dataaccess.DAO.*;
@@ -20,17 +21,29 @@ public class JoinGameService {
         this.gameData = gameData;
         this.userData = userData;
     }
-    public CreateGameRecord joinGame(String authToken, String gameName) throws DataAccessException {
+    public void joinGame(String authToken, String gameID, String playerColor) throws DataAccessException {
         Auth currentAuth = authData.read(authToken);
         if (currentAuth == null) {
             throw new DataAccessException("unauthorized");
         }
-        if(gameName == null) {
+        if (gameID == "0" || gameID == null || playerColor == null) {
             throw new DataAccessException("bad request");
         }
-        String gameID = authData.createAuth();
-        gameData.create(gameID, new Game(gameID, null, null, gameName, new ChessGame()));
-        return new CreateGameRecord(gameID);
+        Game gameToBeJoined = gameData.read(gameID);
+        User currentUser = userData.read(currentAuth.username());
+        if (playerColor == "WHITE") {
+            if (gameToBeJoined.whiteUsername() == null) {
+                Game updatedGame = new Game(gameID, currentUser.username(), gameToBeJoined.blackUsername(), gameToBeJoined.gameName(), gameToBeJoined.game());
+                gameData.update(gameID, updatedGame);
+            } else {
+                throw new DataAccessException("color already taken");
+            }
+        } else if (gameToBeJoined.blackUsername() == null) {
+            Game updatedGame = new Game(gameID, gameToBeJoined.whiteUsername(), currentUser.username(), gameToBeJoined.gameName(), gameToBeJoined.game());
+            gameData.update(gameID, updatedGame);
+        } else {
+            throw new DataAccessException("color already taken");
+        }
     }
 }
 

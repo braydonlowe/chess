@@ -1,6 +1,8 @@
 
-„
-java:S4973"<Strings and Boxed types should be compared using "equals()".(À±ï‰ıÿÿÿÿ8©¨ê‘ü1J$8d0a2164-9012-4432-b3b5-91cbd4e4c82e
-~
-java:S4973"<Strings and Boxed types should be compared using "equals()".(Ù£§b8ª¨ê‘ü1J$b5e0e267-f82c-450b-9d05-c2d9587f7ab4
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•ÑJ$97ac49c0-b806-46f8-af5b-a3957391773a
+^
+java:S4973"<Strings and Boxed types should be compared using "equals()".(À±ï‰ıÿÿÿÿ8íöÅ’ü1
+X
+java:S4973"<Strings and Boxed types should be compared using "equals()".(Ù£§b8íöÅ’ü1
+^
+java:S4973"<Strings and Boxed types should be compared using "equals()".(ÉìğÑúÿÿÿÿ8íöÅ’ü1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8íöÅ’ü1

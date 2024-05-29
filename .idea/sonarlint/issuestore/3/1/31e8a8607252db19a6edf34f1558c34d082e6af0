@@ -1,4 +1,10 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñ¶‘–8‡åæ‘ü1J$1dd01a58-1e64-4b9c-abe1-00670c4699a0
-t
-java:S1068",Remove this unused "userData" private field.(´ÓÑñøÿÿÿÿ8‘åæ‘ü1J$c2a20da7-ab42-4d82-929d-aac75a5b9b74
+„
+java:S4973"<Strings and Boxed types should be compared using "equals()".(Î´¦ÿÿÿÿÿ8ú¹»’ü1J$9657ac07-0c54-470f-90a4-dc222fab061e
+
+java:S4973""<Strings and Boxed types should be compared using "equals()".(ä—Àà8ú¹»’ü1J$0240e85e-b682-4f0a-9274-55bfbf06bbc8
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñ¶‘–8û¹»’ü1J$3d85533c-3a32-4d7e-a611-6e537343997e
+~
+java:S1128"6Remove this unused import 'Handlers.CreateGameRecord'.(šàéãþÿÿÿÿ8ÈåÀ’ü1J$fbd4a210-1df5-4f48-bb81-3b1ab4e5a72d
+o
+java:S1128",Remove this unused import 'chess.ChessGame'.(†¶ØŸ8ÈåÀ’ü1J$5b19ab37-8615-4426-bae8-0d5399961b7c

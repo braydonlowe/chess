@@ -77,3 +77,5 @@ Y
 ,src/main/java/Handlers/CreateGameRecord.java,c\3\c30b9aea5a6b18e32f1e36fb313c2a77cfef307b
 [
 +src/main/java/Services/JoinGameService.java,3\1\31e8a8607252db19a6edf34f1558c34d082e6af0
+Z
+*src/main/java/Handlers/JoinGameRecord.java,7\e\7ef0900395a5ee9a25eb99ad5f3682ac7711ffa7

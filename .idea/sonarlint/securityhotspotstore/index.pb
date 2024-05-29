@@ -67,3 +67,5 @@ _
 /src/main/java/Services/RegistrationService.java,2\9\29674df38560b175d64f60c2e60ca801c461c0d1
 X
 (src/main/java/Services/LoginService.java,6\b\6b454c2a40b3bf9da02d8e377b63fb142eb887ac
+X
+(src/main/java/Handlers/ErrorRespone.java,6\0\6005a0fb5c4edeb831e3380c5f681df5859950cd

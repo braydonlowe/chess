@@ -1,7 +1,3 @@
 
 c
-java:S1192("FDefine a constant instead of duplicating this literal "/game" 3 times.(×ä™¶8…·Ÿïû1
-W
-java:S2209&"5Change this instance-reference to a static reference.(œşÿÿÿÿ8Œ·Ÿïû1
-N
-java:S2440&",Remove this instantiation of "LoginHandler".(œşÿÿÿÿ8Œ·Ÿïû1
+java:S1192("FDefine a constant instead of duplicating this literal "/game" 3 times.(×ä™¶8ü1

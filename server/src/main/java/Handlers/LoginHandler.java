@@ -8,6 +8,7 @@ import spark.Request;
 import spark.Response;
 import Model.User;
 import Services.LoginService;
+import Handlers.ErrorRespone;
 
 public class LoginHandler {
     private final LoginService loginServ;
@@ -23,13 +24,13 @@ public class LoginHandler {
             res.status(200);
             return JsonUtil.toJson(auth);
         } catch (DataAccessException e) {
-            if (e.getMessage() == "User not found" || e.getMessage() == "Incorrect password") {
-                res.status(400);
+            if (e.getMessage() == "unauthorized") {
+                res.status(401);
             }
             else {
                 res.status(500);
             }
-            throw new RuntimeException(e);
+            return JsonUtil.toJson(new ErrorRespone("Error", e.getMessage()));
         }
 
     }

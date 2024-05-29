@@ -1,7 +1,6 @@
 
-	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¦¬ü1J$3921b34f-e97b-4586-8104-90da0cc3954e
 „
-java:S4973"<Strings and Boxed types should be compared using "equals()".(ÏàÒ”üÿÿÿÿ8§¬ü1J$d56c66b2-438f-419b-8888-528f4d5caee7
-„
-java:S4973"<Strings and Boxed types should be compared using "equals()".(ÏàÒ”üÿÿÿÿ8Ê«“ü1J$435e287b-c412-40cf-976b-b9588f591b5a
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8¨¬ü1J$0a59a6f5-38ec-4bf7-809e-d647b2653e79
+java:S4973"<Strings and Boxed types should be compared using "equals()".(À±ï‰ıÿÿÿÿ8³‰ãü1J$72b2965f-995f-4436-a677-172c07cfadc3
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( ç•Ñ8»‰ãü1J$b7f49d67-0b2b-4caf-ad69-d0dc31220f8a
+—
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(¢ïÄ8´«íü1J$49873f39-fd5c-4499-bf93-5ac3a8064bab

@@ -18,11 +18,11 @@ public class LoginService{
     public Auth loginUser(User oneUsersData) throws DataAccessException {
         User currentUser = userData.read(oneUsersData.username());
         if (currentUser == null) {
-            throw new DataAccessException("User not found");
+            throw new DataAccessException("unauthorized");
         }
         //Check to see if passwords match
         if (!currentUser.password().equals(oneUsersData.password())) {
-            throw new DataAccessException("Incorrect password");
+            throw new DataAccessException("unauthorized");
         }
         else {
             Auth newAuth = new Auth(authData.createAuth(), currentUser.username());

@@ -50,4 +50,10 @@ public class Server {
         Spark.stop();
         Spark.awaitStop();
     }
+
+
+    public static void main(String[] args) {
+        Server server = new Server();
+        server.run(8080);
+    }
 }

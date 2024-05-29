@@ -79,3 +79,7 @@ Y
 +src/main/java/Services/JoinGameService.java,3\1\31e8a8607252db19a6edf34f1558c34d082e6af0
 Z
 *src/main/java/Handlers/JoinGameRecord.java,7\e\7ef0900395a5ee9a25eb99ad5f3682ac7711ffa7
+[
++src/main/java/Services/ListGameService.java,6\1\6101f1e0529c806db9c0b4d4def647d73ef92de6
+]
+-src/main/java/Handlers/ListOfGamesRecord.java,6\8\68e62cd0f315a0ad7892273bd3c9921edb1d4d7d

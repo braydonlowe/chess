@@ -33,4 +33,14 @@ public class GameDataAccess implements DataAccessInterface<Game> {
         gameTable.remove(ID);
     }
 
+    public Game[] listGames() {
+        Game [] gameList = new Game[gameTable.size()];
+        int index = 0;
+        for(Map.Entry<String, Game> entry : gameTable.entrySet()) {
+            gameList[index] = entry.getValue();
+            index++;
+        }
+        return gameList;
+    }
+
 }

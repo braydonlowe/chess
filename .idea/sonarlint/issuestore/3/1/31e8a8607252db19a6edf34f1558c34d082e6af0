@@ -1,10 +1,10 @@
 
 „
-java:S4973"<Strings and Boxed types should be compared using "equals()".(Î´¦ÿÿÿÿÿ8ú¹»’ü1J$9657ac07-0c54-470f-90a4-dc222fab061e
+java:S4973"<Strings and Boxed types should be compared using "equals()".(Î´¦ÿÿÿÿÿ8ú¹»’ü1J$4f85e9c7-a0f2-4391-aeb3-ee2758979200
 
-java:S4973""<Strings and Boxed types should be compared using "equals()".(ä—Àà8ú¹»’ü1J$0240e85e-b682-4f0a-9274-55bfbf06bbc8
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñ¶‘–8û¹»’ü1J$3d85533c-3a32-4d7e-a611-6e537343997e
+java:S4973""<Strings and Boxed types should be compared using "equals()".(ä—Àà8ú¹»’ü1J$fdbfbb17-24f7-42f3-9203-ad7bc38862ea
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñ¶‘–8û¹»’ü1J$71457126-1be4-4b80-89c7-0ce1284345ba
 ~
-java:S1128"6Remove this unused import 'Handlers.CreateGameRecord'.(šàéãşÿÿÿÿ8ÈåÀ’ü1J$fbd4a210-1df5-4f48-bb81-3b1ab4e5a72d
+java:S1128"6Remove this unused import 'Handlers.CreateGameRecord'.(šàéãşÿÿÿÿ8ÈåÀ’ü1J$672e40fa-99c6-4f04-bbe4-e1c4d94c1b74
 o
-java:S1128",Remove this unused import 'chess.ChessGame'.(†¶ØŸ8ÈåÀ’ü1J$5b19ab37-8615-4426-bae8-0d5399961b7c
+java:S1128",Remove this unused import 'chess.ChessGame'.(†¶ØŸ8ÈåÀ’ü1J$00780fc7-8b66-4466-a577-5d98a05ec846

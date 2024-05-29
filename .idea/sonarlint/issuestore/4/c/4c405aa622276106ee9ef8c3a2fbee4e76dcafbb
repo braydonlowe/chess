@@ -1,7 +1,5 @@
 
 c
-java:S1192."FDefine a constant instead of duplicating this literal "/game" 3 times.(×ä™¶8„Šò‘ü1
-R
-java:S22090"5Change this instance-reference to a static reference.(­İ½8Šò‘ü1
+java:S11920"FDefine a constant instead of duplicating this literal "/game" 3 times.(ø¿ä8ÌÜì’ü1
 L
-java:S24400"/Remove this instantiation of "JoinGameHandler".(­İ½8‘Šò‘ü1
+java:S24400"/Remove this instantiation of "ListGameHandler".(ø¿ä8ÔÜì’ü1

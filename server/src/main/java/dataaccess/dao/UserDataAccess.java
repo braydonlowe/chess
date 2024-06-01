@@ -8,6 +8,18 @@ import model.User;
 
 public class UserDataAccess implements DataAccessInterface<User> {
     private static final Map<String, User> USERTABLE = new HashMap<>();
+    private final String createSQL = """
+            CREATE TABLE IF NOT EXISTS user (
+            'userID' int NOT NULL AUTO_INCREMENT,
+            'username' varchar(200) NOT NULL,
+            'password' varchar(200) NOT NULL,
+            'email" varChar(200) NOT Null
+            UNIQUE KEY 'username_UNIQUE' ('username')
+            )""";
+
+    public void createTable() {
+
+    }
 
     @Override
     public void clear() {

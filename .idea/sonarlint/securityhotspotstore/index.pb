@@ -21,3 +21,5 @@ P
  src/main/java/server/Server.java,4\c\4c405aa622276106ee9ef8c3a2fbee4e76dcafbb
 `
 0src/main/java/dataaccess/dao/UserDataAccess.java,3\d\3d629113599923a579bb388230bc06cb074986cf
+Z
+*src/main/java/dataaccess/dao/SQLUtils.java,c\e\ce42a3e6afbd762d123fe06bab352696b2051170

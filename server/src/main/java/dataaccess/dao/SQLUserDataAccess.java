@@ -8,6 +8,7 @@ import java.util.Map;
 import dataaccess.DatabaseManager;
 
 //SQLImports
+import dataaccess.dao.SQLUtils;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -26,15 +27,7 @@ public class SQLUserDataAccess implements DataAccessInterface<User> {
             )""";
 
     public void createTable() {
-        try (Connection connection = DatabaseManager.getConnection();
-            Statement statement = connection.createStatement()) {
-            statement.execute(createSQL);
-        } catch(DataAccessException e) {
-            e.printStackTrace();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-
-        }
+        SQLUtils.executeSQL(createSQL);
     }
 
     @Override

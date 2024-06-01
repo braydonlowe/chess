@@ -1,7 +1,7 @@
 
-[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(äª ø
-`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ëêßûÿÿÿÿ
-^
-java:S2095?"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÎÃç–
-U
-java:S1118":Add a private constructor to hide the implicit public one.( ùÓ‹ÿÿÿÿÿ
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(äª øJ$9aa65d52-8d62-424e-8ad3-a1ef69293404
+†	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ëêßûÿÿÿÿJ$71e28908-a989-4e3f-b36f-7f8a3bce8e55
+„
+java:S2095?"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÎÃç–J$05273270-afef-47c6-84f3-9456c5e7c64b
+{
+java:S1118":Add a private constructor to hide the implicit public one.( ùÓ‹ÿÿÿÿÿJ$79decc78-1f66-415b-8545-1347ea14547e

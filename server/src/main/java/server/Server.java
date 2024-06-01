@@ -2,14 +2,16 @@ package server;
 
 
 //Imports
+import dataaccess.DataAccessException;
 import spark.*;
 import handlers.*;
 import dataaccess.dao.*;
 import service.*;
+import dataaccess.DatabaseManager;
 
 public class Server {
     //Private variables
-
+    public final DatabaseManager dbManager;
     private final ClearService clearService;
     private final RegistrationService regService;
     private final LoginService loginService;
@@ -20,6 +22,10 @@ public class Server {
 
 
     public Server() {
+        //Database
+        dbManager = new DatabaseManager();
+
+        //DAO's
         UserDataAccess userData = new UserDataAccess();
         GameDataAccess gameData = new GameDataAccess();
         AuthDataAccess authData = new AuthDataAccess();
@@ -40,6 +46,12 @@ public class Server {
         Spark.port(desiredPort);
 
         Spark.staticFiles.location("web");
+
+        try {
+            dbManager.createDatabase();
+        } catch (DataAccessException e) {
+            return 1;
+        }
 
         // Register your endpoints and handle exceptions here.
         Spark.post("/user", (req, res) -> new RegistrationHandler(regService).registerUser(req, res));

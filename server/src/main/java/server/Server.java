@@ -9,9 +9,12 @@ import dataaccess.dao.*;
 import service.*;
 import dataaccess.DatabaseManager;
 
+import java.sql.SQLException;
+
 public class Server {
     //Private variables
     public final DatabaseManager dbManager;
+    public final SQLUserDataAccess userDataSQL;
     private final ClearService clearService;
     private final RegistrationService regService;
     private final LoginService loginService;
@@ -26,6 +29,7 @@ public class Server {
         dbManager = new DatabaseManager();
 
         //DAO's
+        userDataSQL = new SQLUserDataAccess();
         UserDataAccess userData = new UserDataAccess();
         GameDataAccess gameData = new GameDataAccess();
         AuthDataAccess authData = new AuthDataAccess();
@@ -49,7 +53,9 @@ public class Server {
 
         try {
             dbManager.createDatabase();
+            userDataSQL.createTable();
         } catch (DataAccessException e) {
+            e.printStackTrace();
             return 1;
         }
 

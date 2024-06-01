@@ -1,13 +1,41 @@
 package dataaccess.dao;
 
 //Imports
+import dataaccess.DataAccessException;
 import model.User;
-
 import java.util.HashMap;
 import java.util.Map;
+import dataaccess.DatabaseManager;
+
+//SQLImports
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class SQLUserDataAccess implements DataAccessInterface<User> {
     private static final Map<String, User> USERTABLE = new HashMap<>();
+
+    private final String createSQL = """
+            CREATE TABLE IF NOT EXISTS user (
+            `userID` int NOT NULL AUTO_INCREMENT,
+            `username` VARCHAR(200) NOT NULL,
+            `password` VARCHAR(200) NOT NULL,
+            `email` VARCHAR(200) NOT NULL,
+            PRIMARY KEY (`userID`),
+            UNIQUE KEY `username_UNIQUE` (`username`)
+            )""";
+
+    public void createTable() {
+        try (Connection connection = DatabaseManager.getConnection();
+            Statement statement = connection.createStatement()) {
+            statement.execute(createSQL);
+        } catch(DataAccessException e) {
+            e.printStackTrace();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+
+        }
+    }
 
     @Override
     public void clear() {

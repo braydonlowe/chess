@@ -11,3 +11,9 @@ S
 -src/main/java/dataaccess/DatabaseManager.java,0\4\040cd10c19adb6bd0678131c799d8d4ffb973f42
 _
 /src/test/java/passoff/server/DatabaseTests.java,4\6\46e183c64719ea440ac9788b949f42900e961b04
+c
+3src/main/java/dataaccess/dao/SQLAuthDataAccess.java,1\b\1ba37096ef58a7a4be957ffb7bbacca1adbee73d
+c
+3src/main/java/dataaccess/dao/SQLUserDataAccess.java,3\d\3d5df66421c880be7a4ec88d1284219178d88dc7
+c
+3src/main/java/dataaccess/dao/SQLGameDataAccess.java,5\c\5cfe060760831c1c662a8af63063ad1bc6a32846

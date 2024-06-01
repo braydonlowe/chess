@@ -1,8 +1,0 @@
-
-^
-java:S4973"<Strings and Boxed types should be compared using "equals()".(Î´¦ÿÿÿÿÿ8ÃÔ½“ü1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñ¶‘–8ÅÔ½“ü1
-X
-java:S1128"6Remove this unused import 'Handlers.CreateGameRecord'.(šàéãşÿÿÿÿ8ÍÔ½“ü1
-I
-java:S1128",Remove this unused import 'chess.ChessGame'.(†¶ØŸ8ÍÔ½“ü1

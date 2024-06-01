@@ -1,3 +1,0 @@
-
-“
-java:S1130"wRemove the declaration of thrown exception 'dataaccess.DataAccessException', as it cannot be thrown from method's body.(„í]8òÂÆ“ü1

@@ -37,12 +37,18 @@ public class SQLUserDataAccess implements DataAccessInterface<User> {
 
     @Override
     public void create(String id, User user) {
-        USERTABLE.put(id, user);
+        String createUser = "INSERT INTO user(username, password, email) VALUES(?, ?, ?)";
+        String[] params = {user.username(), user.password(), user.email()};
+        SQLUtils.executeParameterizedQuery(createUser, params);
     }
 
     @Override
     public User read(String id) {
-        return USERTABLE.get(id);
+        String query = "SELECT user FROM user WHERE `username` = ?";
+        String[] param = {id};
+        SQLUtils.executeParameterizedQuery(query, param);
+        //We need to edit our query to return something.
+        return null;
     }
 
 

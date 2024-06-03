@@ -32,5 +32,9 @@ public class SQLUtils {
         }
     }
 
+    public static Object executeParameterizedQueryWithReturn() {
+        return null;
+    }
+
 
     }

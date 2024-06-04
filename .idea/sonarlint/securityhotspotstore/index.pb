@@ -23,3 +23,5 @@ P
 0src/main/java/dataaccess/dao/UserDataAccess.java,3\d\3d629113599923a579bb388230bc06cb074986cf
 Z
 *src/main/java/dataaccess/dao/SQLUtils.java,c\e\ce42a3e6afbd762d123fe06bab352696b2051170
+`
+0src/main/java/dataaccess/dao/AuthDataAccess.java,f\a\fa55121bf94a52c1f4fa042e6bb1c0e95feead67

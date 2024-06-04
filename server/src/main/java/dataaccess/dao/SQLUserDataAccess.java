@@ -52,17 +52,17 @@ public class SQLUserDataAccess implements DataAccessInterface<User> {
     }
 
 
-    //@Override
-    //public void update(String id, User user) {
-        //I created this in two tables just in case we need to add some validatio here.
-    //    create(id, user);
-    //}
+    @Override
+    public void update(String id, User user) {
+    //I created this in two tables just in case we need to add some validatio here.
+        create(id, user);
+    }
 
 
-    //@Override
-    //public void delete(String id) {
-    //    USERTABLE.remove(id);
-    //}
+    @Override
+    public void delete(String id) {
+        USERTABLE.remove(id);
+    }
 
     //public int size() {
     //    return USERTABLE.size();

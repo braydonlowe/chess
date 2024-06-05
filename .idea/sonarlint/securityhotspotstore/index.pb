@@ -47,3 +47,7 @@ b
 -src/test/java/dataaccess/DataAccessTests.java,b\5\b5ed07d73fce1a266505a987108a44db128d2760
 M
 src/main/java/model/User.java,8\e\8e1ebf0166aec1f7f81589f5763cf23a86e9c01e
+Z
+*src/main/java/service/JoinGameService.java,4\7\471feb62ed0a86fa14c36e4a9d4ab92a15fecaf8
+Z
+*src/main/java/service/ListGameService.java,e\e\eeeaa81a06adb078db6dcbd73dd02dfc71b81b77

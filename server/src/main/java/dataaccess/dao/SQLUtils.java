@@ -3,6 +3,7 @@ package dataaccess.dao;
 import com.mysql.cj.x.protobuf.MysqlxPrepare;
 import dataaccess.DataAccessException;
 import dataaccess.DatabaseManager;
+import model.Auth;
 import model.User;
 import server.JsonUtil;
 
@@ -69,7 +70,13 @@ public class SQLUtils {
                     String password = resp.getString(name[1]);
                     String email = resp.getString(name[2]);
                     return returnClass.cast(new User(username, password, email));
-                } else {
+                }
+                if (returnClass == Auth.class) {
+                    String authToken = resp.getString(name[0]);
+                    String username = resp.getString(name[1]);
+                    return returnClass.cast(new Auth(authToken, username));
+                }
+                else {
                     throw new DataAccessException("StupidFace the great");
                 }
             }

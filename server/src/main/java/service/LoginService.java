@@ -7,11 +7,11 @@ import dataaccess.DataAccessException;
 import dataaccess.dao.*;
 
 public class LoginService{
-    private final AuthDataAccess authData;
+    private final SQLAuthDataAccess authData;
     private final SQLUserDataAccess userData;
 
 
-    public LoginService(AuthDataAccess authData, GameDataAccess gameData, SQLUserDataAccess userData) {
+    public LoginService(SQLAuthDataAccess authData, GameDataAccess gameData, SQLUserDataAccess userData) {
         this.authData = authData;
         this.userData = userData;
     }

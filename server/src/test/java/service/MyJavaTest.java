@@ -2,6 +2,7 @@ package service;
 
 
 //Import
+import dataaccess.dao.SQLAuthDataAccess;
 import handlers.CreateGameRecord;
 import handlers.ListOfGamesRecord;
 import model.Auth;
@@ -17,7 +18,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MyJavaTest {
-    private AuthDataAccess authData;
+    private SQLAuthDataAccess authData;
     private GameDataAccess gameData;
     private SQLUserDataAccess users;
 

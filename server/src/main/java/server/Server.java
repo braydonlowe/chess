@@ -15,6 +15,8 @@ public class Server {
     //Private variables
     public final DatabaseManager dbManager;
     public final SQLUserDataAccess userData;
+    public final SQLAuthDataAccess authData;
+
     private final ClearService clearService;
     private final RegistrationService regService;
     private final LoginService loginService;
@@ -30,9 +32,12 @@ public class Server {
 
         //DAO's
         userData = new SQLUserDataAccess();
+        authData = new SQLAuthDataAccess();
+
+        //Old DAO's
         //UserDataAccess userData = new UserDataAccess();
         GameDataAccess gameData = new GameDataAccess();
-        AuthDataAccess authData = new AuthDataAccess();
+        //AuthDataAccess authData = new AuthDataAccess();
 
         //Instantiate the services with the data.
         regService = new RegistrationService(authData, gameData, userData);
@@ -54,6 +59,7 @@ public class Server {
         try {
             dbManager.createDatabase();
             userData.createTable();
+            authData.createTable();
         } catch (DataAccessException e) {
             e.printStackTrace();
             return 1;

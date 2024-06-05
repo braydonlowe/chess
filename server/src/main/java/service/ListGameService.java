@@ -8,13 +8,13 @@ import dataaccess.DataAccessException;
 import dataaccess.dao.*;
 
 public class ListGameService {
-    private final AuthDataAccess authData;
+    private final SQLAuthDataAccess authData;
     //I don't think it needs game data
     private final GameDataAccess gameData;
     private final SQLUserDataAccess userData;
 
 
-    public ListGameService(AuthDataAccess authData, GameDataAccess gameData, SQLUserDataAccess userData) {
+    public ListGameService(SQLAuthDataAccess authData, GameDataAccess gameData, SQLUserDataAccess userData) {
         this.authData = authData;
         this.gameData = gameData;
         this.userData = userData;

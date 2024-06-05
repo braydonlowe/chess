@@ -34,8 +34,18 @@ public class SQLGameDataAccess {
         Connection connection = DatabaseManager.getConnection();
         String createUser = "INSERT INTO game(id, whiteUsername, blackUsername, gameName, chessGame) VALUES(?, ?, ?, ?, ?)";
         String serialKillerGame = JsonUtil.toJson(game);
-        GameName gameName = JsonUtil.fromJson(game.gameName(), GameName.class); //I have no idea why this is happening but here's the band-aid
-        String[] params = {game.gameID(), game.whiteUsername(), game.blackUsername(), gameName.gameName(), serialKillerGame};
+        String name = "";
+
+        //This is working for the other tests. However it's not working for a regular string.
+        boolean jsonRequest = JsonUtil.isValidJsonString(game.gameName());
+        if (jsonRequest) {
+            //I have no idea why this is happening but here's the band-aid
+            GameName gameName = JsonUtil.fromJson(game.gameName(), GameName.class);
+            name = gameName.gameName();
+        } else {
+            name = game.gameName();
+        }
+        String[] params = {game.gameID(), game.whiteUsername(), game.blackUsername(), name, serialKillerGame};
         PreparedStatement statement = SQLUtils.prepareParameterizedQuery(createUser, params, connection);
         SQLUtils.executeParameterizedQuery(statement);
         SQLUtils.closeQuietly(statement);

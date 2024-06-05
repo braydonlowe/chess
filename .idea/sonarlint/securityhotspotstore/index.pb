@@ -57,3 +57,9 @@ _
 /src/main/java/handlers/RegistrationHandler.java,6\3\633e15cf6c87b568883b006bfea281bcae78accf
 [
 +src/main/java/handlers/ListGameHandler.java,7\e\7e44a3c900fc7a74d6db2dbfab64fb0b6b5884cb
+]
+-src/main/java/handlers/ListOfGamesRecord.java,8\f\8f716db6e6b21273648b950d55ff19260ea883a6
+\
+,src/main/java/handlers/CreateGameRecord.java,c\b\cbcb9fdb6443d5a31a1d72a4920b4d8a2c3510b5
+T
+$src/main/java/handlers/GameName.java,3\e\3e7909b78104a2b058f950d359d2cff8ec84ef7c

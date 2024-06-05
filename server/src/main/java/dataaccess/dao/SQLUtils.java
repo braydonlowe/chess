@@ -89,13 +89,13 @@ public class SQLUtils {
                     return returnClass.cast(new Game(id,white,black,gameName,game));
                 }
                 else {
-                    throw new DataAccessException("StupidFace the great");
+                    throw new DataAccessException("input class not accepted");
                 }
             }
         } catch (SQLException e) {
-            throw new DataAccessException("Stupid face");
+            throw new DataAccessException("SQL statement error");
         }
-        return null;
+        throw new DataAccessException("Non persistance error");
     }
 
     public static void closeQuietly(AutoCloseable resource) {

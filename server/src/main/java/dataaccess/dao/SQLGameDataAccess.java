@@ -2,6 +2,8 @@ package dataaccess.dao;
 
 import dataaccess.DataAccessException;
 import dataaccess.DatabaseManager;
+import handlers.CreateGameRecord;
+import handlers.GameName;
 import model.Game;
 import server.JsonUtil;
 
@@ -9,7 +11,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class SQLGameDataAccess {
@@ -30,7 +34,8 @@ public class SQLGameDataAccess {
         Connection connection = DatabaseManager.getConnection();
         String createUser = "INSERT INTO game(id, whiteUsername, blackUsername, gameName, chessGame) VALUES(?, ?, ?, ?, ?)";
         String serialKillerGame = JsonUtil.toJson(game);
-        String[] params = {game.gameID(), game.whiteUsername(), game.blackUsername(), game.gameName(), serialKillerGame};
+        GameName gameName = JsonUtil.fromJson(game.gameName(), GameName.class); //I have no idea why this is happening but here's the band-aid
+        String[] params = {game.gameID(), game.whiteUsername(), game.blackUsername(), gameName.gameName(), serialKillerGame};
         PreparedStatement statement = SQLUtils.prepareParameterizedQuery(createUser, params, connection);
         SQLUtils.executeParameterizedQuery(statement);
         SQLUtils.closeQuietly(statement);
@@ -76,23 +81,21 @@ public class SQLGameDataAccess {
 
     public Game[] listGames() {
         String query = "SELECT * FROM game";
-        Game[] gameList = new Game[gameTableCount];
-        int curentIndex = 0;
+        List<Game> gameList = new ArrayList<>();
         try (Connection connection = DatabaseManager.getConnection();
              Statement statement = connection.prepareStatement(query)) {
             try (var nuggies = statement.executeQuery(query)) {
                 while (nuggies.next()) {
-                    String gameID = nuggies.getString(1);
+                    String gameID = nuggies.getString("id");
                     Game game = read(gameID);
-                    gameList[curentIndex] = game;
-                    curentIndex++;
+                    gameList.add(game);
                 }
-                return gameList;
+                return gameList.toArray(new Game[0]);
             }
 
         } catch (DataAccessException | SQLException e) {
             e.printStackTrace();
-            return null;
+            return new Game[0];
         }
     }
 

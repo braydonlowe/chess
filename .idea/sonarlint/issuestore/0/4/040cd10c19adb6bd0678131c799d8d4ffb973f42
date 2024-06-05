@@ -1,10 +1,10 @@
 
-	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(äª øJ$284bf4e6-3ff8-44dd-931d-026768065992
-†	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(ëêßûÿÿÿÿJ$2822512f-3d41-48dc-81e6-76227f2558d0
+	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(äª øJ$6307b598-8bd7-42d5-8606-afd4f4f5f07d
+†	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(ëêßûÿÿÿÿJ$ef0d4c7c-1deb-44bd-98cf-5cba5196ceef
 „
-java:S2095\"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÎÃç–J$12c4c724-2053-4ca2-a810-b1139bdc2ab5
-¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(µ³Éûÿÿÿÿ8…áÿ¸ş1J$b37a3398-eb4f-4bcc-8aac-062bbafde433
-œ	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‰˜‰Ó8ôóÿ¸ş1J$042fa83f-e278-4ac0-b7a9-c9fb4700c4ec
-¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(úÄ™ôÿÿÿÿÿ8…áÿ¸ş1J$40544219-9b57-4401-bfa4-b25caf6dddb1
+java:S2095\"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÎÃç–J$df45dafa-f054-4dca-aa90-01799af06266
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(µ³Éûÿÿÿÿ8…áÿ¸ş1J$5b275f5b-edaf-49b6-b3cf-c0470679e4e4
+œ	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‰˜‰Ó8ôóÿ¸ş1J$646523ec-191f-4841-b800-d9ca8f91e0ee
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(úÄ™ôÿÿÿÿÿ8…áÿ¸ş1J$c0c81d4a-85d1-4883-a6ec-2870afb201a3
 ‚
-java:S1118":Add a private constructor to hide the implicit public one.( ùÓ‹ÿÿÿÿÿ8õóÿ¸ş1J$a24dddc0-9e6f-42e4-8a97-341ad9ad5577
+java:S1118":Add a private constructor to hide the implicit public one.( ùÓ‹ÿÿÿÿÿ8õóÿ¸ş1J$cee64fb1-d28e-4b1b-be79-233cc71cc89b

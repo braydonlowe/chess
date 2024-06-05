@@ -15,21 +15,9 @@ import java.util.Map;
 public class SQLGameDataAccess {
     private static final Map<String, Game> GAMETABLE = new HashMap<>();
 
-    public final String createSQL = """
-            CREATE TABLE IF NOT EXISTS game (
-            `id` VARCHAR(200) NOT NULL UNIQUE PRIMARY KEY,
-            `whiteUsername` VARCHAR(200),
-            `blackUsername` VARCHAR(200),
-            `gameName` VARCHAR(200) NOT NULL,
-            `chessGame` TEXT NOT NULL
-            )""";
+
 
     private int gameTableCount = 0;
-
-    public void createTable() {
-        SQLUtils.executeSQL(createSQL);
-    }
-
 
     public void clear() {
         String clearSQL = "DELETE from game";
@@ -83,7 +71,7 @@ public class SQLGameDataAccess {
 
     //Delete
     public void delete(String id) {
-        gameTableCount--;
+        return;
     }
 
     public Game[] listGames() {

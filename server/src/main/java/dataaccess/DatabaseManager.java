@@ -1,5 +1,7 @@
 package dataaccess;
 
+import dataaccess.dao.SQLUtils;
+
 import java.sql.*;
 import java.util.Properties;
 
@@ -8,6 +10,31 @@ public class DatabaseManager {
     private static final String USER;
     private static final String PASSWORD;
     private static final String CONNECTION_URL;
+
+    private static final String createGameSQL = """
+            CREATE TABLE IF NOT EXISTS game (
+            `id` VARCHAR(200) NOT NULL UNIQUE PRIMARY KEY,
+            `whiteUsername` VARCHAR(200),
+            `blackUsername` VARCHAR(200),
+            `gameName` VARCHAR(200) NOT NULL,
+            `chessGame` TEXT NOT NULL
+            )""";
+
+    private static final String createUserSQL = """
+            CREATE TABLE IF NOT EXISTS user (
+            `username` VARCHAR(200) UNIQUE PRIMARY KEY,
+            `password` VARCHAR(200) NOT NULL,
+            `email` VARCHAR(200) NOT NULL
+            )""";
+
+    private static final String createAuthSQL = """
+            CREATE TABLE IF NOT EXISTS auth (
+            `authToken` VARCHAR(200) UNIQUE PRIMARY KEY,
+            `username` VARCHAR(200) NOT NULL
+            )""";
+
+
+
 
     /*
      * Load the database information for the db.properties file.
@@ -40,6 +67,8 @@ public class DatabaseManager {
             var conn = DriverManager.getConnection(CONNECTION_URL, USER, PASSWORD);
             try (var preparedStatement = conn.prepareStatement(statement)) {
                 preparedStatement.executeUpdate();
+                //Tables have to be created here not in the SQLDAO's
+                createTables();
             }
         } catch (SQLException e) {
             throw new DataAccessException(e.getMessage());
@@ -66,5 +95,18 @@ public class DatabaseManager {
         } catch (SQLException e) {
             throw new DataAccessException(e.getMessage());
         }
+    }
+
+
+    /**
+     * Create tables creates the tables for the DB.
+     * It has to be created here so that persistance can be achieved.
+     */
+
+    private static void createTables() {
+        SQLUtils.executeSQL(createGameSQL);
+        SQLUtils.executeSQL(createAuthSQL);
+        SQLUtils.executeSQL(createUserSQL);
+
     }
 }

@@ -24,10 +24,6 @@ public class SQLUserDataAccess implements DataAccessInterface<User> {
             `email` VARCHAR(200) NOT NULL
             )""";
 
-    public void createTable() {
-        SQLUtils.executeSQL(createSQL);
-    }
-
     @Override
     public void clear() {
         //Excecute a query that will end up getting this baby reset.

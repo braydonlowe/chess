@@ -16,6 +16,8 @@ import java.sql.ResultSet;
 
 
 public class SQLUtils {
+
+
     public static void executeSQL(String executionString) {
         try (Connection connection = DatabaseManager.getConnection();
              Statement statement = connection.createStatement()) {
@@ -93,7 +95,7 @@ public class SQLUtils {
         } catch (SQLException e) {
             throw new DataAccessException("Stupid face");
         }
-        throw new DataAccessException("Stupid face 2");
+        return null;
     }
 
     public static void closeQuietly(AutoCloseable resource) {

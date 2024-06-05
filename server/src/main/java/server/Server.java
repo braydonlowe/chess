@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 public class Server {
     //Private variables
-    public final DatabaseManager dbManager;
+    //public final DatabaseManager dbManager;
     public final SQLUserDataAccess userData;
     public final SQLAuthDataAccess authData;
     public final SQLGameDataAccess gameData;
@@ -28,7 +28,7 @@ public class Server {
 
     public Server() {
         //Database
-        dbManager = new DatabaseManager();
+        //dbManager = new DatabaseManager();
 
         //DAO's
         userData = new SQLUserDataAccess();
@@ -58,10 +58,7 @@ public class Server {
         Spark.staticFiles.location("web");
 
         try {
-            dbManager.createDatabase();
-            userData.createTable();
-            authData.createTable();
-            gameData.createTable();
+            DatabaseManager.createDatabase();
         } catch (DataAccessException e) {
             e.printStackTrace();
             return 1;

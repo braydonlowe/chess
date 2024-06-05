@@ -9,18 +9,11 @@ import java.sql.PreparedStatement;
 
 public class SQLAuthDataAccess {
 
-    private final String createSQL = """
-            CREATE TABLE IF NOT EXISTS auth (
-            `authToken` VARCHAR(200) UNIQUE PRIMARY KEY,
-            `username` VARCHAR(200) NOT NULL
-            )""";
-
     private int authNumber = 0;
     private int authCount = 0;
 
-    public void createTable() {
-        SQLUtils.executeSQL(createSQL);
-    }
+    boolean isCreated = false;
+
     public void clear() {
         String clearSQL = "DELETE from auth";
         SQLUtils.executeSQL(clearSQL);

@@ -1,10 +1,8 @@
 
 ‰
-java:S1192J"FDefine a constant instead of duplicating this literal "/game" 3 times.(ø¿ä8Ğ‘‡ı1J$1e9f9b31-3265-4bd5-b0ab-7668c2a096e4
-r
-java:S2440"/Remove this instantiation of "DatabaseManager".(õÕÿù8Ø‘‡ı1J$5a50a28c-2ce9-4775-ae5d-300ac9b9c806
-~	java:S125'"<This block of commented-out lines of code should be removed.(µ¨×Æ8¢ßÿ°ş1J$9ba3ea61-9d35-44cc-8685-3576bb22ee0b
-x
-java:S2209="5Change this instance-reference to a static reference.(ƒ°¹•8Û‘‡ı1J$3b6c9557-2b33-4431-9c87-9a0adf6a0333
-O
-java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8ï÷´¶ş1
+java:S1192G"FDefine a constant instead of duplicating this literal "/game" 3 times.(ø¿ä8§“¹¸ş1J$2ef8aee6-d0f2-4cd4-b1b4-c845bfd26ca7
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(ÉÎÀ·ıÿÿÿÿ8¬“¹¸ş1J$6a25b54e-e075-4da5-b647-53cb367c9663
+~	java:S125"<This block of commented-out lines of code should be removed.(ÄÑÌ¼8¬“¹¸ş1J$0e4f7c1d-5ebc-44f1-bcd7-a939bf5942ba
+~	java:S125'"<This block of commented-out lines of code should be removed.(µ¨×Æ8­“¹¸ş1J$86c707dc-7f2d-4552-9c47-1b1f6557467d
+u
+java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8±“¹¸ş1J$681f0350-ea74-4e7c-ac66-80c85d539aa2

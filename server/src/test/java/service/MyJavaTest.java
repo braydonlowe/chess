@@ -2,6 +2,7 @@ package service;
 
 
 //Import
+import dataaccess.DatabaseManager;
 import dataaccess.dao.*;
 import handlers.CreateGameRecord;
 import handlers.ListOfGamesRecord;
@@ -20,13 +21,11 @@ public class MyJavaTest {
     private SQLUserDataAccess users;
 
     @BeforeEach
-    void dataAccessReset() {
+    void dataAccessReset() throws DataAccessException {
         authData = new SQLAuthDataAccess();
         gameData = new SQLGameDataAccess();
         users = new SQLUserDataAccess();
-        authData.createTable();
-        users.createTable();
-        gameData.createTable();
+        DatabaseManager.createDatabase();
 
         authData.clear();
         gameData.clear();

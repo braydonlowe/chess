@@ -19,24 +19,27 @@ public class RegistrationHandler {
 
     public Object registerUser(Request req, Response res) {
         User user = JsonUtil.fromJson(req.body(), User.class);
-        String betterPassword = BCrypt.hashpw(user.password(), BCrypt.gensalt());
-        User hashedUser = new User(user.username(), betterPassword, user.email());
-        //We are returning a line from the auth table.
-        try {
-            Auth auth = regServ.createUser(hashedUser);
-            res.status(200);
-            return JsonUtil.toJson(auth);
-        } catch (DataAccessException e) {
-            if (e.getMessage() == "bad request") {
-                res.status(400);
+        if (user.password() == null) {
+            res.status(400);
+        } else {
+            String betterPassword = BCrypt.hashpw(user.password(), BCrypt.gensalt());
+            User hashedUser = new User(user.username(), betterPassword, user.email());
+            //We are returning a line from the auth table.
+            try {
+                Auth auth = regServ.createUser(hashedUser);
+                res.status(200);
+                return JsonUtil.toJson(auth);
+            } catch (DataAccessException e) {
+                if (e.getMessage() == "bad request") {
+                    res.status(400);
+                } else if (e.getMessage() == "already taken") {
+                    res.status(403);
+                } else {
+                    res.status(500);
+                }
+                return JsonUtil.toJson(new ErrorRespone("Error:" + e.getMessage()));
             }
-            else if (e.getMessage() == "already taken") {
-                res.status(403);
-            }
-            else {
-                res.status(500);
-            }
-            return JsonUtil.toJson(new ErrorRespone("Error:" + e.getMessage()));
         }
+        return JsonUtil.toJson(new ErrorRespone("Error: " + "bad request"));
     }
 }

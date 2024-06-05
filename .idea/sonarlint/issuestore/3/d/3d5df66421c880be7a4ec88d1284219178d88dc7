@@ -1,15 +1,15 @@
 
 Ю
-java:S14888"\Immediately return this expression instead of assigning it to the temporary variable "user".(“жєZ8мек≤ю1J$d38f26a1-b818-4360-9bd6-6eef39a2bb77
+java:S14888"\Immediately return this expression instead of assigning it to the temporary variable "user".(“жєZ8мек≤ю1J$a0c81d64-4eb8-4017-aabe-255ef554aec0
 d
-java:S1170"!Make this final field static too.(„иЎІ8ЃОЊ≤ю1J$3c7b3823-b707-4c70-a914-6e9d4a462ee5
+java:S1170"!Make this final field static too.(„иЎІ8ЃОЊ≤ю1J$e4ad6edf-d96b-4c29-b88d-63910f906a9a
 ~
-java:S1128";Remove this unused import 'dataaccess.DataAccessException'.(я™ђ…8щек≤ю1J$fd03958e-4a82-4aec-96a6-32da9929942e
+java:S1128";Remove this unused import 'dataaccess.DataAccessException'.(я™ђ…8щек≤ю1J$a8873bc2-85ed-4a0c-b150-511e409fa9de
 z
-java:S1128"7Remove this unused import 'dataaccess.DatabaseManager'.(Ї€цЇ8щек≤ю1J$fc96ec68-f17f-4d5a-a803-dd8057e4c4be
+java:S1128"7Remove this unused import 'dataaccess.DatabaseManager'.(Ї€цЇ8щек≤ю1J$d5dd1056-ca0c-4b51-9436-2611a526db50
 Ь
-java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(П÷ґґш€€€€8щек≤ю1J$85e95abf-0b17-4a84-8d86-a27aa836d679
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(П÷ґґш€€€€8щек≤ю1J$21ba18dd-29c3-4e1f-9471-e5807ff6722b
 s
-java:S1128"0Remove this unused import 'java.sql.Connection'.(•Ћф÷8щек≤ю1J$9a4fb990-e537-4c92-8681-4da8ea13957b
+java:S1128"0Remove this unused import 'java.sql.Connection'.(•Ћф÷8щек≤ю1J$97f6130e-324c-435f-8f8c-05d7a9017ce5
 u
-java:S1128"2Remove this unused import 'java.sql.SQLException'.(џп∆Я8щек≤ю1J$d21cd869-6d11-43a3-8f44-a6c90c5ed43b
+java:S1128"2Remove this unused import 'java.sql.SQLException'.(џп∆Я8щек≤ю1J$a62896c2-2f3c-4bab-ba12-c28b3c23b6ee

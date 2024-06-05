@@ -22,7 +22,9 @@ public class SQLAuthDataAccess {
         SQLUtils.executeSQL(createSQL);
     }
     public void clear() {
-
+        String clearSQL = "DELETE from auth";
+        SQLUtils.executeSQL(clearSQL);
+        authCount = 0;
     }
 
     //Create
@@ -55,7 +57,11 @@ public class SQLAuthDataAccess {
 
     //Delete
     public void delete(String id) {
-        AUTHTABLE.remove(id);
+        String query = "DELETE FROM auth WHERE `authToken` = ?";
+        String[] param = {id};
+        PreparedStatement statement = SQLUtils.prepareParameterizedQuery(query, param);
+        SQLUtils.executeParameterizedQuery(statement);
+        authCount--;
     }
 
 

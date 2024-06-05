@@ -24,12 +24,16 @@ public class MyJavaTest {
 
     @BeforeEach
     void dataAccessReset() {
-        authData = new AuthDataAccess();
+        authData = new SQLAuthDataAccess();
         gameData = new GameDataAccess();
         users = new SQLUserDataAccess();
+        authData.createTable();
+        users.createTable();
         authData.clear();
         gameData.clear();
         users.clear();
+
+        //gameData.createTable();
     }
 
 

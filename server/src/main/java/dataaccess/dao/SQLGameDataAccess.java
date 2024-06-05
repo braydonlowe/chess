@@ -17,9 +17,9 @@ import java.util.Map;
 public class SQLGameDataAccess {
     private static final Map<String, Game> GAMETABLE = new HashMap<>();
 
-    private final String createSQL = """
+    public final String createSQL = """
             CREATE TABLE IF NOT EXISTS game (
-            `id` NOT NULL UNIQUE PRIMARY KEY,
+            `id` VARCHAR(200) NOT NULL UNIQUE PRIMARY KEY,
             `whiteUsername` VARCHAR(200),
             `blackUsername` VARCHAR(200),
             `gameName` VARCHAR(200) NOT NULL,
@@ -50,7 +50,7 @@ public class SQLGameDataAccess {
     }
 
     //Read
-    public Game read(String id) {
+    public Game read(String id) throws DataAccessException {
         String query = "SELECT * FROM game WHERE `id` = ?";
         String[] param = {id};
         String[] columnID = {"id", "whiteUsername", "blackUsername", "gameName", "chessGame"};

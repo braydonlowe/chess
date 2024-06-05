@@ -47,7 +47,7 @@ public class SQLUserDataAccess implements DataAccessInterface<User> {
     }
 
     @Override
-    public User read(String id) {
+    public User read(String id) throws DataAccessException {
         String query = "SELECT * FROM user WHERE `username` = ?";
         String[] param = {id};
         String[] columnID = {"username","password","email"};

@@ -1,15 +1,5 @@
 
 
-java:S14888"\Immediately return this expression instead of assigning it to the temporary variable "user".(Òæ¹Z8ìåê²ş1J$a0c81d64-4eb8-4017-aabe-255ef554aec0
+java:S14888"\Immediately return this expression instead of assigning it to the temporary variable "user".(Òæ¹Z8ìåê²ş1J$a2007149-0057-43b8-ad49-bdcd24e5bf74
 d
-java:S1170"!Make this final field static too.(×èØ§8®¾²ş1J$e4ad6edf-d96b-4c29-b88d-63910f906a9a
-~
-java:S1128";Remove this unused import 'dataaccess.DataAccessException'.(ßª¬É8ùåê²ş1J$a8873bc2-85ed-4a0c-b150-511e409fa9de
-z
-java:S1128"7Remove this unused import 'dataaccess.DatabaseManager'.(ºÿöº8ùåê²ş1J$d5dd1056-ca0c-4b51-9436-2611a526db50
-œ
-java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(Ö¶¶øÿÿÿÿ8ùåê²ş1J$21ba18dd-29c3-4e1f-9471-e5807ff6722b
-s
-java:S1128"0Remove this unused import 'java.sql.Connection'.(¥ËôÖ8ùåê²ş1J$97f6130e-324c-435f-8f8c-05d7a9017ce5
-u
-java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8ùåê²ş1J$a62896c2-2f3c-4bab-ba12-c28b3c23b6ee
+java:S1170"!Make this final field static too.(×èØ§8®¾²ş1J$df2da289-7e83-499b-a804-7f343f0d0d30

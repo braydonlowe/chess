@@ -1,5 +1,6 @@
 package dataaccess.dao;
 
+import dataaccess.DataAccessException;
 import model.Auth;
 import model.User;
 
@@ -38,7 +39,7 @@ public class SQLAuthDataAccess {
 
 
     //Read
-    public Auth read(String id) {
+    public Auth read(String id) throws DataAccessException {
         String query = "SELECT * FROM auth WHERE `authToken` = ?";
         String[] param = {id};
         String[] columnID = {"authToken","username"};

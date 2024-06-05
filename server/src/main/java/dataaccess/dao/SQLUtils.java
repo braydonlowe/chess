@@ -51,7 +51,7 @@ public class SQLUtils {
         }
     }
 
-    public static <T> T getObject(Class<T> objToGet, PreparedStatement statement, String[] colName) {
+    public static <T> T getObject(Class<T> objToGet, PreparedStatement statement, String[] colName) throws DataAccessException {
         try (var response = statement.executeQuery()) {
             return resultHandler(response, objToGet, colName);
         } catch (SQLException | DataAccessException e) {

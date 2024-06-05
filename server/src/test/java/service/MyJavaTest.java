@@ -26,6 +26,8 @@ public class MyJavaTest {
         users = new SQLUserDataAccess();
         authData.createTable();
         users.createTable();
+        gameData.createTable();
+
         authData.clear();
         gameData.clear();
         users.clear();

@@ -1,13 +1,13 @@
 
 ¤
-java:S1488/"\Immediately return this expression instead of assigning it to the temporary variable "auth".(Šâ—úÿÿÿÿ8³Ğ•´ş1J$963ff116-9bb3-41e7-b975-0fced23eacda
+java:S14880"\Immediately return this expression instead of assigning it to the temporary variable "auth".(Šâ—úÿÿÿÿ8³Ğ•´ş1J$8eb71549-9a0a-4746-8bae-405fbc237d14
 d
-java:S1170"!Make this final field static too.(×èØ§8·Ğ•´ş1J$5f73acdd-3edc-4b74-ba68-c5c6c3ce599d
+java:S1170"!Make this final field static too.(×èØ§8·Ğ•´ş1J$89096aeb-0d11-4c0d-8925-6cd73b84f3fa
 q
-java:S1172")Remove this unused method parameter "id".(ú¯ÆÌùÿÿÿÿ8»Ğ•´ş1J$fb4b1085-d60f-4401-8446-db75060a51cc
+java:S1172 ")Remove this unused method parameter "id".(ú¯ÆÌùÿÿÿÿ8»Ğ•´ş1J$e249d968-7052-440d-aa86-e86cc2ee4699
 j
-java:S1128"'Remove this unused import 'model.User'.(˜Ğ ñ8¾Ğ•´ş1J$ebc1da09-8d5a-4cac-bd39-786f9d1d3c8a
+java:S1128"'Remove this unused import 'model.User'.(˜Ğ ñ8¾Ğ•´ş1J$c9c47de3-3bec-45aa-9c48-9f091f73a9da
 v
-java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8¾Ğ•´ş1J$3d3b50f5-093d-4047-b04f-23f8e3767691
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8¾Ğ•´ş1J$658ec8b8-134d-4fbb-92ad-287d1b11048d
 r
-java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8¾Ğ•´ş1J$ef967125-8d34-4b38-8ccf-8aaac98a4825
+java:S1128	"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8¾Ğ•´ş1J$5d8b53f4-0670-4855-96e9-c32911bb4ab9

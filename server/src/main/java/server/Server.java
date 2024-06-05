@@ -61,6 +61,7 @@ public class Server {
             dbManager.createDatabase();
             userData.createTable();
             authData.createTable();
+            gameData.createTable();
         } catch (DataAccessException e) {
             e.printStackTrace();
             return 1;

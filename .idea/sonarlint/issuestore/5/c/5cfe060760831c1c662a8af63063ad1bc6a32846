@@ -1,17 +1,11 @@
 
-Ÿ
-java:S1488;"\Immediately return this expression instead of assigning it to the temporary variable "game".(­ãö¿8ŠÎ¶µş1J$60524dfc-db55-4245-b7c7-3cb9fff43e1c
 d
-java:S1170"!Make this final field static too.(²±º…8Î¶µş1J$44d6a295-6166-4741-b3d4-892162ba586d
+java:S1170"!Make this final field static too.(²±º…8Î¶µş1J$3482d1af-3275-4941-9b92-79e27ebe1b14
+l
+java:S1172)")Remove this unused method parameter "id".(«ëÃ£8“Î¶µş1J$66de6ba3-273b-4eff-b8c2-77cae1c95148
 q
-java:S1172+")Remove this unused method parameter "id".(öŸ™éûÿÿÿÿ8“Î¶µş1J$70b45f2e-334f-4551-982a-5a392a94b14a
-q
-java:S1172L")Remove this unused method parameter "id".(…““óûÿÿÿÿ8”Î¶µş1J$da715021-a9a9-477c-b713-4fc6db744148
+java:S1172U")Remove this unused method parameter "id".(…““óûÿÿÿÿ8”Î¶µş1J$6b5aec52-8c14-49e7-b387-638df2209a33
 i
-java:S1168b"&Return an empty array instead of null.(¥¹ï8€Û¹µş1J$6e821424-1ae0-4625-8ab0-6f5d6336a52c
-j
-java:S1128"'Remove this unused import 'model.User'.(˜Ğ ñ8­‹·µş1J$0187f442-30b5-4ea8-bb8c-47f7e2255e39
+java:S1168k"&Return an empty array instead of null.(¥¹ï8€Û¹µş1J$fc726b14-ee1c-4e48-811a-68f448c2fdd2
 p
-java:S1128".Remove this unused import 'java.util.HashSet'.(Ê‚êX8­‹·µş1J$b8fe636c-3520-4477-9672-2b232f329c7b
-p
-java:S1068"-Remove this unused "GAMETABLE" private field.(áÒå¹8–Î¶µş1J$e5d2b8f3-3f94-4178-9740-544ad58d24b2
+java:S1068"-Remove this unused "GAMETABLE" private field.(áÒå¹8–Î¶µş1J$64455410-58ca-4219-8376-7a35e2037164

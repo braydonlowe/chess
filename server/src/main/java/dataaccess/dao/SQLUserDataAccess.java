@@ -2,15 +2,14 @@ package dataaccess.dao;
 
 //Imports
 import dataaccess.DataAccessException;
+import dataaccess.DatabaseManager;
 import model.User;
+
+import java.sql.Connection;
 import java.util.HashMap;
 import java.util.Map;
-import dataaccess.DatabaseManager;
 
 //SQLImports
-import dataaccess.dao.SQLUtils;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.sql.PreparedStatement;
 
 public class SQLUserDataAccess implements DataAccessInterface<User> {
@@ -38,28 +37,34 @@ public class SQLUserDataAccess implements DataAccessInterface<User> {
     }
 
     @Override
-    public void create(String id, User user) {
+    public void create(String id, User user) throws DataAccessException {
+        Connection connection = DatabaseManager.getConnection();
         String createUser = "INSERT INTO user(username, password, email) VALUES(?, ?, ?)";
         String[] params = {user.username(), user.password(), user.email()};
-        PreparedStatement statement = SQLUtils.prepareParameterizedQuery(createUser, params);
+        PreparedStatement statement = SQLUtils.prepareParameterizedQuery(createUser, params, connection);
         SQLUtils.executeParameterizedQuery(statement);
+        SQLUtils.closeQuietly(statement);
+        SQLUtils.closeQuietly(connection);
         userCount++;
     }
 
     @Override
     public User read(String id) throws DataAccessException {
+        Connection connection = DatabaseManager.getConnection();
         String query = "SELECT * FROM user WHERE `username` = ?";
         String[] param = {id};
         String[] columnID = {"username","password","email"};
-        PreparedStatement statement = SQLUtils.prepareParameterizedQuery(query, param);
+        PreparedStatement statement = SQLUtils.prepareParameterizedQuery(query, param, connection);
         //We need to edit our query to return something.
         User user = SQLUtils.getObject(User.class, statement, columnID);
+        SQLUtils.closeQuietly(statement);
+        SQLUtils.closeQuietly(connection);
         return user;
     }
 
 
     @Override
-    public void update(String id, User user) {
+    public void update(String id, User user) throws DataAccessException {
     //I created this in two tables just in case we need to add some validatio here.
         create(id, user);
     }

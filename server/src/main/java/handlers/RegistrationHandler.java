@@ -2,6 +2,7 @@ package handlers;
 
 //Imports
 import dataaccess.DataAccessException;
+import org.mindrot.jbcrypt.BCrypt;
 import spark.Request;
 import spark.Response;
 import model.User;
@@ -18,9 +19,11 @@ public class RegistrationHandler {
 
     public Object registerUser(Request req, Response res) {
         User user = JsonUtil.fromJson(req.body(), User.class);
+        String betterPassword = BCrypt.hashpw(user.password(), BCrypt.gensalt());
+        User hashedUser = new User(user.username(), betterPassword, user.email());
         //We are returning a line from the auth table.
         try {
-            Auth auth = regServ.createUser(user);
+            Auth auth = regServ.createUser(hashedUser);
             res.status(200);
             return JsonUtil.toJson(auth);
         } catch (DataAccessException e) {

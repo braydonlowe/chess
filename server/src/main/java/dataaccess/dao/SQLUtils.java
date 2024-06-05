@@ -1,7 +1,6 @@
 package dataaccess.dao;
 
 import chess.ChessGame;
-import com.mysql.cj.x.protobuf.MysqlxPrepare;
 import dataaccess.DataAccessException;
 import dataaccess.DatabaseManager;
 import model.Auth;
@@ -9,7 +8,6 @@ import model.Game;
 import model.User;
 import server.JsonUtil;
 
-import javax.xml.crypto.Data;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -27,9 +25,8 @@ public class SQLUtils {
         }
     }
 
-    public static PreparedStatement prepareParameterizedQuery(String query, String[] parameters) {
+    public static PreparedStatement prepareParameterizedQuery(String query, String[] parameters, Connection connection) {
         try {
-            Connection connection = DatabaseManager.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             int placement = 1;
             for (String param : parameters) {
@@ -37,7 +34,7 @@ public class SQLUtils {
                 placement++;
             }
             return preparedStatement; // returns .executeQuery();
-        } catch (DataAccessException | SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             return null;
         }
@@ -48,6 +45,9 @@ public class SQLUtils {
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            // Ensure resources are closed to prevent leaks
+            closeQuietly(statement);
         }
     }
 
@@ -94,5 +94,16 @@ public class SQLUtils {
             throw new DataAccessException("Stupid face");
         }
         throw new DataAccessException("Stupid face 2");
+    }
+
+    public static void closeQuietly(AutoCloseable resource) {
+        if (resource != null) {
+            try {
+                resource.close();
+            } catch (Exception e) {
+                // Log this if necessary
+                e.printStackTrace();
+            }
+        }
     }
     }

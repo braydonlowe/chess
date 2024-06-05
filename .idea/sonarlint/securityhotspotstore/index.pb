@@ -53,3 +53,7 @@ Z
 *src/main/java/service/ListGameService.java,e\e\eeeaa81a06adb078db6dcbd73dd02dfc71b81b77
 M
 src/main/java/model/Game.java,d\a\da333d770c23ebdaf029ed7a0be21b2b57a76583
+_
+/src/main/java/handlers/RegistrationHandler.java,6\3\633e15cf6c87b568883b006bfea281bcae78accf
+[
++src/main/java/handlers/ListGameHandler.java,7\e\7e44a3c900fc7a74d6db2dbfab64fb0b6b5884cb

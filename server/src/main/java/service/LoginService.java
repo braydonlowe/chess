@@ -5,6 +5,7 @@ import model.Auth;
 import model.User;
 import dataaccess.DataAccessException;
 import dataaccess.dao.*;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class LoginService{
     private final SQLAuthDataAccess authData;
@@ -21,7 +22,7 @@ public class LoginService{
             throw new DataAccessException("unauthorized");
         }
         //Check to see if passwords match
-        if (!currentUser.password().equals(oneUsersData.password())) {
+        if (!BCrypt.checkpw(oneUsersData.password(), currentUser.password())) {
             throw new DataAccessException("unauthorized");
         }
         else {

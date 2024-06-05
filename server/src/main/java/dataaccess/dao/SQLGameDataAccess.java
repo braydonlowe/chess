@@ -3,7 +3,6 @@ package dataaccess.dao;
 import dataaccess.DataAccessException;
 import dataaccess.DatabaseManager;
 import model.Game;
-import model.User;
 import server.JsonUtil;
 
 import java.sql.Connection;
@@ -11,7 +10,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
 public class SQLGameDataAccess {
@@ -40,36 +38,47 @@ public class SQLGameDataAccess {
     }
 
     //Create
-    public void create(String id, Game game) {
+    public void create(String id, Game game) throws DataAccessException {
+        Connection connection = DatabaseManager.getConnection();
         String createUser = "INSERT INTO game(id, whiteUsername, blackUsername, gameName, chessGame) VALUES(?, ?, ?, ?, ?)";
         String serialKillerGame = JsonUtil.toJson(game);
         String[] params = {game.gameID(), game.whiteUsername(), game.blackUsername(), game.gameName(), serialKillerGame};
-        PreparedStatement statement = SQLUtils.prepareParameterizedQuery(createUser, params);
+        PreparedStatement statement = SQLUtils.prepareParameterizedQuery(createUser, params, connection);
         SQLUtils.executeParameterizedQuery(statement);
+        SQLUtils.closeQuietly(statement);
+        SQLUtils.closeQuietly(connection);
         gameTableCount++;
     }
 
     //Read
     public Game read(String id) throws DataAccessException {
+        Connection connection = DatabaseManager.getConnection();
         String query = "SELECT * FROM game WHERE `id` = ?";
         String[] param = {id};
         String[] columnID = {"id", "whiteUsername", "blackUsername", "gameName", "chessGame"};
-        PreparedStatement statement = SQLUtils.prepareParameterizedQuery(query, param);
+
+
+        PreparedStatement statement = SQLUtils.prepareParameterizedQuery(query, param, connection);
         //We need to edit our query to return something.
         Game game = SQLUtils.getObject(Game.class, statement, columnID);
+        SQLUtils.closeQuietly(statement);
+        SQLUtils.closeQuietly(connection);
         return game;
     }
 
     //Update
-    public void update(String id, Game game) {
+    public void update(String id, Game game) throws DataAccessException {
+        Connection connection = DatabaseManager.getConnection();
         String query = """
         UPDATE game SET `whiteUsername` = ?, `blackUsername` = ?, `chessGame` = ?
         WHERE `id` = ?
         """;
         String gameData = JsonUtil.toJson(game);
         String[] params = {game.whiteUsername(), game.blackUsername(), gameData, id};
-        PreparedStatement statement = SQLUtils.prepareParameterizedQuery(query, params);
+        PreparedStatement statement = SQLUtils.prepareParameterizedQuery(query, params, connection);
         SQLUtils.executeParameterizedQuery(statement);
+        SQLUtils.closeQuietly(statement);
+        SQLUtils.closeQuietly(connection);
     }
 
     //Delete

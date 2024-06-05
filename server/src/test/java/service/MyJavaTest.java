@@ -2,16 +2,13 @@ package service;
 
 
 //Import
-import dataaccess.dao.SQLAuthDataAccess;
+import dataaccess.dao.*;
 import handlers.CreateGameRecord;
 import handlers.ListOfGamesRecord;
 import model.Auth;
 import model.Game;
 import model.User;
 import chess.ChessGame;
-import dataaccess.dao.AuthDataAccess;
-import dataaccess.dao.GameDataAccess;
-import dataaccess.dao.SQLUserDataAccess;
 import dataaccess.DataAccessException;
 import org.junit.jupiter.api.*;
 
@@ -19,13 +16,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MyJavaTest {
     private SQLAuthDataAccess authData;
-    private GameDataAccess gameData;
+    private SQLGameDataAccess gameData;
     private SQLUserDataAccess users;
 
     @BeforeEach
     void dataAccessReset() {
         authData = new SQLAuthDataAccess();
-        gameData = new GameDataAccess();
+        gameData = new SQLGameDataAccess();
         users = new SQLUserDataAccess();
         authData.createTable();
         users.createTable();

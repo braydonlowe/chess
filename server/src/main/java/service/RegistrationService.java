@@ -13,7 +13,7 @@ public class RegistrationService {
     private final SQLUserDataAccess userData;
 
 
-    public RegistrationService(SQLAuthDataAccess authData, GameDataAccess gameData, SQLUserDataAccess userData) {
+    public RegistrationService(SQLAuthDataAccess authData, SQLGameDataAccess gameData, SQLUserDataAccess userData) {
         this.authData = authData;
         //this.gameData = gameData;
         this.userData = userData;

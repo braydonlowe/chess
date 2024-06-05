@@ -51,3 +51,5 @@ Z
 *src/main/java/service/JoinGameService.java,4\7\471feb62ed0a86fa14c36e4a9d4ab92a15fecaf8
 Z
 *src/main/java/service/ListGameService.java,e\e\eeeaa81a06adb078db6dcbd73dd02dfc71b81b77
+M
+src/main/java/model/Game.java,d\a\da333d770c23ebdaf029ed7a0be21b2b57a76583

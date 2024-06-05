@@ -10,11 +10,11 @@ import dataaccess.dao.*;
 public class ListGameService {
     private final SQLAuthDataAccess authData;
     //I don't think it needs game data
-    private final GameDataAccess gameData;
+    private final SQLGameDataAccess gameData;
     private final SQLUserDataAccess userData;
 
 
-    public ListGameService(SQLAuthDataAccess authData, GameDataAccess gameData, SQLUserDataAccess userData) {
+    public ListGameService(SQLAuthDataAccess authData, SQLGameDataAccess gameData, SQLUserDataAccess userData) {
         this.authData = authData;
         this.gameData = gameData;
         this.userData = userData;

@@ -11,7 +11,7 @@ public class LoginService{
     private final SQLUserDataAccess userData;
 
 
-    public LoginService(SQLAuthDataAccess authData, GameDataAccess gameData, SQLUserDataAccess userData) {
+    public LoginService(SQLAuthDataAccess authData, SQLGameDataAccess gameData, SQLUserDataAccess userData) {
         this.authData = authData;
         this.userData = userData;
     }

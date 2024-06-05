@@ -1,9 +1,11 @@
 package dataaccess.dao;
 
+import chess.ChessGame;
 import com.mysql.cj.x.protobuf.MysqlxPrepare;
 import dataaccess.DataAccessException;
 import dataaccess.DatabaseManager;
 import model.Auth;
+import model.Game;
 import model.User;
 import server.JsonUtil;
 
@@ -75,6 +77,14 @@ public class SQLUtils {
                     String authToken = resp.getString(name[0]);
                     String username = resp.getString(name[1]);
                     return returnClass.cast(new Auth(authToken, username));
+                }
+                if (returnClass == Game.class) {
+                    String id = resp.getString(name[0]);
+                    String white = resp.getString(name[1]);
+                    String black = resp.getString(name[2]);
+                    String gameName = resp.getString(name[3]);
+                    ChessGame game = JsonUtil.fromJson(resp.getString(name[4]), ChessGame.class);
+                    return returnClass.cast(new Game(id,white,black,gameName,game));
                 }
                 else {
                     throw new DataAccessException("StupidFace the great");

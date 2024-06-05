@@ -1,0 +1,17 @@
+
+Ÿ
+java:S1488;"\Immediately return this expression instead of assigning it to the temporary variable "game".(­ãö¿8ŠÎ¶µş1J$61977587-6567-4e49-981e-eeb4ddc5c9f6
+d
+java:S1170"!Make this final field static too.(×èØ§8Î¶µş1J$89136648-123b-4b37-aaad-b3a35958b9f7
+q
+java:S1172+")Remove this unused method parameter "id".(öŸ™éûÿÿÿÿ8“Î¶µş1J$c94be146-71da-4625-b14f-affd7976269c
+q
+java:S1172L")Remove this unused method parameter "id".(…““óûÿÿÿÿ8”Î¶µş1J$456340dc-d083-4926-a4a4-893a92a99492
+C
+java:S1168b"&Return an empty array instead of null.(¥¹ï8€Û¹µş1
+j
+java:S1128"'Remove this unused import 'model.User'.(˜Ğ ñ8­‹·µş1J$05299dd5-2a2d-4e3a-97d9-e0b6fcdaf92e
+p
+java:S1128".Remove this unused import 'java.util.HashSet'.(Ê‚êX8­‹·µş1J$ecd692cf-74db-4490-87b4-c5f8950c5693
+p
+java:S1068"-Remove this unused "GAMETABLE" private field.(áÒå¹8–Î¶µş1J$e01a5193-16d9-4e30-89a2-0f07cd6b8034

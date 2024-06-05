@@ -17,11 +17,12 @@ public class SQLUserDataAccess implements DataAccessInterface<User> {
     private static final Map<String, User> USERTABLE = new HashMap<>();
     private int userCount = 0;
 
+
     private final String createSQL = """
             CREATE TABLE IF NOT EXISTS user (
-            `username` VARCHAR(200) NOT NULL UNIQUE PRIMARY KEY,
+            `username` VARCHAR(200) UNIQUE PRIMARY KEY,
             `password` VARCHAR(200) NOT NULL,
-            `email` VARCHAR(200) NOT NULL,
+            `email` VARCHAR(200) NOT NULL
             )""";
 
     public void createTable() {
@@ -32,6 +33,7 @@ public class SQLUserDataAccess implements DataAccessInterface<User> {
     public void clear() {
         //Excecute a query that will end up getting this baby reset.
         String clearSQL = "DELETE from user";
+        SQLUtils.executeSQL(clearSQL);
         userCount = 0;
     }
 
@@ -46,12 +48,13 @@ public class SQLUserDataAccess implements DataAccessInterface<User> {
 
     @Override
     public User read(String id) {
-        String query = "SELECT user FROM user WHERE `username` = ?";
+        String query = "SELECT * FROM user WHERE `username` = ?";
         String[] param = {id};
+        String[] columnID = {"username","password","email"};
         PreparedStatement statement = SQLUtils.prepareParameterizedQuery(query, param);
         //We need to edit our query to return something.
-        User user = SQLUtils.getObject(User.class, statement, "YourMom");
-        return null;
+        User user = SQLUtils.getObject(User.class, statement, columnID);
+        return user;
     }
 
 
@@ -68,7 +71,7 @@ public class SQLUserDataAccess implements DataAccessInterface<User> {
     }
 
     public int size() {
-        return USERTABLE.size();
+        return userCount;
     }
 
 }

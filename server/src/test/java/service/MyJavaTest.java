@@ -25,7 +25,7 @@ public class MyJavaTest {
     void dataAccessReset() {
         authData = new AuthDataAccess();
         gameData = new GameDataAccess();
-        users = new UserDataAccess();
+        users = new SQLUserDataAccess();
         authData.clear();
         gameData.clear();
         users.clear();

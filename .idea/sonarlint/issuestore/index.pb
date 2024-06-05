@@ -39,3 +39,11 @@ W
 'src/main/java/service/ClearService.java,b\0\b0e319af87b7e33e2bfd88f0d061d2b1deaeeee6
 W
 'src/main/java/service/LoginService.java,7\b\7b11053eb434333bf8717d76ee6f3b9769fbf853
+U
+%src/test/java/service/MyJavaTest.java,9\8\983819651a6ddec4241e053cdda4737e3eb5dd45
+b
+2src/test/java/passoff/server/StandardAPITests.java,4\4\44865688478e7de6876fba6fab89c554392767d8
+]
+-src/test/java/dataaccess/DataAccessTests.java,b\5\b5ed07d73fce1a266505a987108a44db128d2760
+M
+src/main/java/model/User.java,8\e\8e1ebf0166aec1f7f81589f5763cf23a86e9c01e

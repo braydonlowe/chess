@@ -7,10 +7,10 @@ import dataaccess.dao.*;
 public class ClearService {
     private final AuthDataAccess authData;
     private final GameDataAccess gameData;
-    private final UserDataAccess userData;
+    private final SQLUserDataAccess userData;
 
 
-    public ClearService(AuthDataAccess authData, GameDataAccess gameData, UserDataAccess userData) {
+    public ClearService(AuthDataAccess authData, GameDataAccess gameData, SQLUserDataAccess userData) {
         this.authData = authData;
         this.gameData = gameData;
         this.userData = userData;

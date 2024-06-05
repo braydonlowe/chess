@@ -10,7 +10,7 @@ import model.User;
 import chess.ChessGame;
 import dataaccess.dao.AuthDataAccess;
 import dataaccess.dao.GameDataAccess;
-import dataaccess.dao.UserDataAccess;
+import dataaccess.dao.SQLUserDataAccess;
 import dataaccess.DataAccessException;
 import org.junit.jupiter.api.*;
 
@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MyJavaTest {
     private AuthDataAccess authData;
     private GameDataAccess gameData;
-    private UserDataAccess users;
+    private SQLUserDataAccess users;
 
     @BeforeEach
     void dataAccessReset() {

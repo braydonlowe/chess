@@ -10,10 +10,10 @@ public class RegistrationService {
     private final AuthDataAccess authData;
     //I don't think it needs game data
     //private final GameDataAccess gameData;
-    private final UserDataAccess userData;
+    private final SQLUserDataAccess userData;
 
 
-    public RegistrationService(AuthDataAccess authData, GameDataAccess gameData, UserDataAccess userData) {
+    public RegistrationService(AuthDataAccess authData, GameDataAccess gameData, SQLUserDataAccess userData) {
         this.authData = authData;
         //this.gameData = gameData;
         this.userData = userData;

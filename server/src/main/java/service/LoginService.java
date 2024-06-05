@@ -8,10 +8,10 @@ import dataaccess.dao.*;
 
 public class LoginService{
     private final AuthDataAccess authData;
-    private final UserDataAccess userData;
+    private final SQLUserDataAccess userData;
 
 
-    public LoginService(AuthDataAccess authData, GameDataAccess gameData, UserDataAccess userData) {
+    public LoginService(AuthDataAccess authData, GameDataAccess gameData, SQLUserDataAccess userData) {
         this.authData = authData;
         this.userData = userData;
     }

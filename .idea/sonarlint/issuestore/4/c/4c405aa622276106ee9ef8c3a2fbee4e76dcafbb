@@ -1,7 +1,8 @@
 
-c
-java:S1192B"FDefine a constant instead of duplicating this literal "/game" 3 times.(ø¿ä8Ğ‘‡ı1
-L
-java:S2440"/Remove this instantiation of "DatabaseManager".(õÕÿù8Ø‘‡ı1
-R
-java:S22097"5Change this instance-reference to a static reference.(ƒ°¹•8Û‘‡ı1
+‰
+java:S1192B"FDefine a constant instead of duplicating this literal "/game" 3 times.(ø¿ä8Ğ‘‡ı1J$fcbf4d67-c0ae-41d8-bef2-6d834f0f3060
+r
+java:S2440"/Remove this instantiation of "DatabaseManager".(õÕÿù8Ø‘‡ı1J$64520759-2d74-4725-b789-dbfbbb75ffe7
+~	java:S125!"<This block of commented-out lines of code should be removed.(µ¨×Æ8¢ßÿ°ş1J$afe8e630-d2e3-4ea9-a5dd-d2f00f270c07
+x
+java:S22097"5Change this instance-reference to a static reference.(ƒ°¹•8Û‘‡ı1J$ac922a37-0469-4ebc-9fa3-c9029fa00705

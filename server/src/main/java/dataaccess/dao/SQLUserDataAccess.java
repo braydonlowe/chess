@@ -11,19 +11,17 @@ import dataaccess.DatabaseManager;
 import dataaccess.dao.SQLUtils;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.PreparedStatement;
 
 public class SQLUserDataAccess implements DataAccessInterface<User> {
     private static final Map<String, User> USERTABLE = new HashMap<>();
+    private int userCount = 0;
 
     private final String createSQL = """
             CREATE TABLE IF NOT EXISTS user (
-            `userID` int NOT NULL AUTO_INCREMENT,
-            `username` VARCHAR(200) NOT NULL,
+            `username` VARCHAR(200) NOT NULL UNIQUE PRIMARY KEY,
             `password` VARCHAR(200) NOT NULL,
             `email` VARCHAR(200) NOT NULL,
-            PRIMARY KEY (`userID`),
-            UNIQUE KEY `username_UNIQUE` (`username`)
             )""";
 
     public void createTable() {
@@ -32,22 +30,27 @@ public class SQLUserDataAccess implements DataAccessInterface<User> {
 
     @Override
     public void clear() {
-        USERTABLE.clear();
+        //Excecute a query that will end up getting this baby reset.
+        String clearSQL = "DELETE from user";
+        userCount = 0;
     }
 
     @Override
     public void create(String id, User user) {
         String createUser = "INSERT INTO user(username, password, email) VALUES(?, ?, ?)";
         String[] params = {user.username(), user.password(), user.email()};
-        SQLUtils.executeParameterizedQuery(createUser, params);
+        PreparedStatement statement = SQLUtils.prepareParameterizedQuery(createUser, params);
+        SQLUtils.executeParameterizedQuery(statement);
+        userCount++;
     }
 
     @Override
     public User read(String id) {
         String query = "SELECT user FROM user WHERE `username` = ?";
         String[] param = {id};
-        SQLUtils.executeParameterizedQuery(query, param);
+        PreparedStatement statement = SQLUtils.prepareParameterizedQuery(query, param);
         //We need to edit our query to return something.
+        User user = SQLUtils.getObject(User.class, statement, "YourMom");
         return null;
     }
 
@@ -64,8 +67,8 @@ public class SQLUserDataAccess implements DataAccessInterface<User> {
         USERTABLE.remove(id);
     }
 
-    //public int size() {
-    //    return USERTABLE.size();
-    //}
+    public int size() {
+        return USERTABLE.size();
+    }
 
 }

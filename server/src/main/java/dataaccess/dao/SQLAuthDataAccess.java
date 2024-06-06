@@ -29,7 +29,10 @@ public class SQLAuthDataAccess {
         SQLUtils.executeParameterizedQuery(statement);
         SQLUtils.closeQuietly(statement);
         SQLUtils.closeQuietly(connection);
-        authCount++;
+        if (id != null) {
+            authCount++;
+        }
+
     }
 
 
@@ -63,7 +66,9 @@ public class SQLAuthDataAccess {
         SQLUtils.executeParameterizedQuery(statement);
         SQLUtils.closeQuietly(statement);
         SQLUtils.closeQuietly(connection);
-        authCount--;
+        if (authCount > 0) {
+            authCount--;
+        }
     }
 
 

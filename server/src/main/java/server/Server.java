@@ -34,12 +34,11 @@ public class Server {
         userData = new SQLUserDataAccess();
         authData = new SQLAuthDataAccess();
         gameData = new SQLGameDataAccess();
-
-        //Old DAO's
+        //Old DAO's would follow this pattern.
         //UserDataAccess userData = new UserDataAccess();
-        //GameDataAccess gameData = new GameDataAccess();
-        //AuthDataAccess authData = new AuthDataAccess();
 
+
+        
         //Instantiate the services with the data.
         regService = new RegistrationService(authData, gameData, userData);
         clearService = new ClearService(authData, gameData, userData);

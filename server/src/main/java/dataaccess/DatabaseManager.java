@@ -11,7 +11,7 @@ public class DatabaseManager {
     private static final String PASSWORD;
     private static final String CONNECTION_URL;
 
-    private static final String createGameSQL = """
+    private static final String CREATE_GAME_SQL = """
             CREATE TABLE IF NOT EXISTS game (
             `id` VARCHAR(200) NOT NULL UNIQUE PRIMARY KEY,
             `whiteUsername` VARCHAR(200),
@@ -20,14 +20,14 @@ public class DatabaseManager {
             `chessGame` TEXT NOT NULL
             )""";
 
-    private static final String createUserSQL = """
+    private static final String CREATE_USER_SQL = """
             CREATE TABLE IF NOT EXISTS user (
             `username` VARCHAR(200) UNIQUE PRIMARY KEY,
             `password` VARCHAR(500) NOT NULL,
             `email` VARCHAR(200) NOT NULL
             )""";
 
-    private static final String createAuthSQL = """
+    private static final String CREATE_AUTH_SQL = """
             CREATE TABLE IF NOT EXISTS auth (
             `authToken` VARCHAR(200) UNIQUE PRIMARY KEY,
             `username` VARCHAR(200) NOT NULL
@@ -104,9 +104,9 @@ public class DatabaseManager {
      */
 
     private static void createTables() {
-        SQLUtils.executeSQL(createGameSQL);
-        SQLUtils.executeSQL(createAuthSQL);
-        SQLUtils.executeSQL(createUserSQL);
+        SQLUtils.executeSQL(CREATE_GAME_SQL);
+        SQLUtils.executeSQL(CREATE_AUTH_SQL);
+        SQLUtils.executeSQL(CREATE_USER_SQL);
 
     }
 }

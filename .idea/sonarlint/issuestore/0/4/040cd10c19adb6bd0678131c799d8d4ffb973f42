@@ -1,10 +1,7 @@
 
-	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(äª øJ$ed0e83f5-314d-4256-b52c-2efb2cb0a8bb
-†	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(ëêßûÿÿÿÿJ$0661f6a9-9ac9-468b-b857-b0ba4ed43dd3
+	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(äª øJ$2d89b313-ab15-4a69-a92a-0b4906bf9c96
+†	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(ëêßûÿÿÿÿJ$20304080-e9ba-4375-9b09-9dc6cb1fc77d
 „
-java:S2095\"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÎÃç–J$6cd1e402-24e6-45b9-98a6-6af3ab0fddbc
-¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(µ³Éûÿÿÿÿ8…áÿ¸ş1J$1e123367-2053-45d2-8f2e-ca72c00032e6
-œ	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‰˜‰Ó8ôóÿ¸ş1J$005a908c-9bf0-46af-a9d2-51fa35015f21
-¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(úÄ™ôÿÿÿÿÿ8…áÿ¸ş1J$db39919b-fbed-4b0a-bedc-d1d25171b3d0
+java:S2095\"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÎÃç–J$ec5d52ad-e556-4a22-a8cd-1e60bf0f99be
 ‚
-java:S1118":Add a private constructor to hide the implicit public one.( ùÓ‹ÿÿÿÿÿ8õóÿ¸ş1J$93a327d0-3ce9-4025-949f-c09f6552f403
+java:S1118":Add a private constructor to hide the implicit public one.( ùÓ‹ÿÿÿÿÿ8õóÿ¸ş1J$cddece10-65a9-4082-a8e0-523ef59c9c48

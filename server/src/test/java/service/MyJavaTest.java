@@ -154,8 +154,6 @@ public class MyJavaTest {
         authData.create(auth, new Auth(auth, "GoodUserName"));
 
         LoginService loginServ = new LoginService(authData, gameData, users);
-
-        Executable DataAccessException;
         assertThrows(IllegalArgumentException.class, () -> {
             loginServ.loginUser(theUser);
         });
@@ -167,7 +165,6 @@ public class MyJavaTest {
         String auth = authData.createAuth();
         authData.create(auth, new Auth(auth, "GoodUserName"));
         //Because of BCrypt this doesn't run the same. Which is understandable.
-
         LoginService loginServ = new LoginService(authData, gameData, users);
         assertThrows(NullPointerException.class, () -> {
             loginServ.loginUser(null);

@@ -1,13 +1,17 @@
 package dataaccess;
 
+import chess.ChessGame;
 import dataaccess.dao.SQLAuthDataAccess;
 import dataaccess.dao.SQLGameDataAccess;
 import dataaccess.dao.SQLUserDataAccess;
 import model.Auth;
+import model.Game;
+import model.User;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.xml.crypto.Data;
 import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 
@@ -30,6 +34,14 @@ public class DataAccessTests {
         authData.clear();
         gameData.clear();
         userData.clear();
+    }
+
+    //I wanted to make an overall test
+    @Test
+    void dataGood() {
+        assertNotNull(gameData);
+        assertNotNull(userData);
+        assertNotNull(authData);
     }
 
 
@@ -92,6 +104,125 @@ public class DataAccessTests {
     }
     //Users stuff
 
+    @Test
+    void userCreatePos() throws DataAccessException{
+        userData.create("coolUser", new User("coolUser", "coolPassword", "coolEmail"));
+        assertEquals(1, userData.size());
+    }
+
+    @Test
+    void userCreateNeg() throws DataAccessException {
+        assertThrows(NullPointerException.class, () -> {
+            userData.create(null, null);
+        });
+    }
+
+    @Test
+    void userClearData() throws DataAccessException {
+        userData.create("coolUser", new User("coolUser", "coolPassword", "coolEmail"));
+        assertEquals(1, userData.size());
+        userData.clear();
+        assertEquals(0, userData.size());
+    }
+
+    @Test
+    void userDataReadPos() throws DataAccessException {
+        userData.create("coolUser", new User("coolUser", "coolPassword", "coolEmail"));
+        assertEquals("coolEmail", userData.read("coolUser").email());
+    }
+
+    @Test
+    void userDataReadNeg() throws DataAccessException {
+        assertNull(userData.read(null));
+    }
+
     //Game stuff
+    @Test
+    void gameDataCreatePos() throws DataAccessException{
+        gameData.create("1234", new Game("1234", null, null, "NewGame", new ChessGame()));
+        assertEquals(1, gameData.size());
+    }
+
+    @Test
+    void gameDataCreateNeg() throws DataAccessException {
+        assertThrows(NullPointerException.class, () -> {
+            gameData.create(null, null);
+        });
+    }
+
+    @Test
+    void gameDataClear() throws DataAccessException {
+        gameData.create("1234", new Game("1234", null, null, "NewGame", new ChessGame()));
+        assertEquals(1, gameData.size());
+        gameData.clear();
+        assertEquals(0, gameData.size());
+    }
+
+    //We can definitly add more tests on the read part.
+    @Test
+    void readGamePos() throws DataAccessException {
+        gameData.create("1234", new Game("1234", null, null, "NewGame", new ChessGame()));
+        Game game = gameData.read("1234");
+        assertEquals("NewGame", game.gameName());
+
+    }
+
+    @Test
+    void readFullGame() throws DataAccessException {
+        gameData.create("1234", new Game("1234", "newUsername", "blackUsername", "NewGame", new ChessGame()));
+        Game game = gameData.read("1234");
+        assertEquals("newUsername", game.whiteUsername());
+        assertEquals("blackUsername", game.blackUsername());
+    }
+
+    @Test
+    void readGameID() throws DataAccessException {
+        gameData.create("1234", new Game("1234", "newUsername", "blackUsername", "NewGame", new ChessGame()));
+        Game game = gameData.read("1234");
+        assertEquals("1234", game.gameID());
+    }
+
+    @Test
+    void readGameNeg() throws DataAccessException {
+        assertThrows(NullPointerException.class, () -> {
+            gameData.create(null, null);
+        });
+    }
+
+    @Test
+    void updateGameWhiteJoin() throws DataAccessException {
+        gameData.create("1234", new Game("1234", null, null, "NewGame", new ChessGame()));
+        gameData.update("1234", new Game("1234", "newUsername", null, "NewGame", new ChessGame()));
+        assertEquals("newUsername", gameData.read("1234").whiteUsername());
+    }
+
+    @Test
+    void updateGameBlackJoin() throws DataAccessException {
+        gameData.create("1234", new Game("1234", null, null, "NewGame", new ChessGame()));
+        gameData.update("1234", new Game("1234", "newUsername", "blackUsername", "NewGame", new ChessGame()));
+        assertEquals("blackUsername", gameData.read("1234").blackUsername());
+    }
+
+    @Test
+    void updateGameNeg() throws DataAccessException {
+        assertThrows(NullPointerException.class, () -> {
+            gameData.update(null, null);
+        });
+
+    }
+
+    @Test
+    void listGamePos() throws DataAccessException {
+        gameData.create("1234", new Game("1234", null, null, "NewGame", new ChessGame()));
+        Game[] gameList = gameData.listGames();
+        assertEquals(1, gameList.length);
+    }
+
+    @Test
+    void listGameNeg() throws DataAccessException {
+        gameData.create(null , new Game("1234", null, null, "NewGame", new ChessGame()));
+        Game[] gameList = gameData.listGames();
+        assertEquals(0, gameData.size());
+    }
 
 }

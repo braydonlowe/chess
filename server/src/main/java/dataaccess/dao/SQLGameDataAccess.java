@@ -50,7 +50,9 @@ public class SQLGameDataAccess {
         SQLUtils.executeParameterizedQuery(statement);
         SQLUtils.closeQuietly(statement);
         SQLUtils.closeQuietly(connection);
-        gameTableCount++;
+        if (id != null) {
+            gameTableCount++;
+        }
     }
 
     //Read

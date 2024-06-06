@@ -1,10 +1,10 @@
 
-	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(äª øJ$0b7bf242-2cfe-4e8c-8b1b-c1fa96c56271
-†	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(ëêßûÿÿÿÿJ$9ba50f77-8092-4586-abae-e60f860f9d27
+	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(äª øJ$ed0e83f5-314d-4256-b52c-2efb2cb0a8bb
+†	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(ëêßûÿÿÿÿJ$0661f6a9-9ac9-468b-b857-b0ba4ed43dd3
 „
-java:S2095\"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÎÃç–J$e63398cc-3012-4527-bc21-4c90b28dd2cd
-¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(µ³Éûÿÿÿÿ8…áÿ¸ş1J$be56cc89-5bfc-4df4-895c-a8ddee6c898d
-œ	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‰˜‰Ó8ôóÿ¸ş1J$5dcd86dc-e54a-41df-b27f-91e964a9b184
-¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(úÄ™ôÿÿÿÿÿ8…áÿ¸ş1J$ee659278-b6d1-488e-9f45-7859e6291a50
+java:S2095\"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÎÃç–J$6cd1e402-24e6-45b9-98a6-6af3ab0fddbc
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(µ³Éûÿÿÿÿ8…áÿ¸ş1J$1e123367-2053-45d2-8f2e-ca72c00032e6
+œ	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‰˜‰Ó8ôóÿ¸ş1J$005a908c-9bf0-46af-a9d2-51fa35015f21
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(úÄ™ôÿÿÿÿÿ8…áÿ¸ş1J$db39919b-fbed-4b0a-bedc-d1d25171b3d0
 ‚
-java:S1118":Add a private constructor to hide the implicit public one.( ùÓ‹ÿÿÿÿÿ8õóÿ¸ş1J$ea3fac37-2f5a-4f3f-be73-120df536d30d
+java:S1118":Add a private constructor to hide the implicit public one.( ùÓ‹ÿÿÿÿÿ8õóÿ¸ş1J$93a327d0-3ce9-4025-949f-c09f6552f403

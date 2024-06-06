@@ -23,7 +23,7 @@ public class DatabaseManager {
     private static final String createUserSQL = """
             CREATE TABLE IF NOT EXISTS user (
             `username` VARCHAR(200) UNIQUE PRIMARY KEY,
-            `password` VARCHAR(200) NOT NULL,
+            `password` VARCHAR(500) NOT NULL,
             `email` VARCHAR(200) NOT NULL
             )""";
 

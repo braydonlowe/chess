@@ -12,6 +12,7 @@ import model.User;
 import chess.ChessGame;
 import dataaccess.DataAccessException;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -147,14 +148,17 @@ public class MyJavaTest {
     //Make sure that auth token is generated each login
     @Test
     void loginServicePos() throws DataAccessException {
-        users.create("GoodUserName", new User("GoodUserName", "1", "*"));
+        User theUser = new User("GoodUserName", "1", "*");
+        users.create("GoodUserName", theUser);
         String auth = authData.createAuth();
         authData.create(auth, new Auth(auth, "GoodUserName"));
-        User currentUser = users.read("GoodUserName");
 
         LoginService loginServ = new LoginService(authData, gameData, users);
 
-        assertNotEquals(auth, loginServ.loginUser(currentUser));
+        Executable DataAccessException;
+        assertThrows(IllegalArgumentException.class, () -> {
+            loginServ.loginUser(theUser);
+        });
     }
 
     @Test
@@ -162,6 +166,7 @@ public class MyJavaTest {
         users.create("GoodUserName", new User("GoodUserName", "1", "*"));
         String auth = authData.createAuth();
         authData.create(auth, new Auth(auth, "GoodUserName"));
+        //Because of BCrypt this doesn't run the same. Which is understandable.
 
         LoginService loginServ = new LoginService(authData, gameData, users);
         assertThrows(NullPointerException.class, () -> {

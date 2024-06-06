@@ -21,7 +21,6 @@ public class LoginService{
         if (currentUser == null) {
             throw new DataAccessException("unauthorized");
         }
-        //Check to see if passwords match
         if (!BCrypt.checkpw(oneUsersData.password(), currentUser.password())) {
             throw new DataAccessException("unauthorized");
         }

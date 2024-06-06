@@ -63,3 +63,7 @@ _
 ,src/main/java/handlers/CreateGameRecord.java,c\b\cbcb9fdb6443d5a31a1d72a4920b4d8a2c3510b5
 T
 $src/main/java/handlers/GameName.java,3\e\3e7909b78104a2b058f950d359d2cff8ec84ef7c
+]
+-src/main/java/handlers/CreateGameHandler.java,2\0\20c8d7d51eeacab7c180c643beae6da62614ed57
+[
++src/main/java/handlers/JoinGameHandler.java,a\2\a263bee3307060b08cb0d51a654ba004fa709ed9

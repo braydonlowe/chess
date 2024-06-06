@@ -8,9 +8,11 @@ import model.User;
 import java.sql.Connection;
 import java.util.HashMap;
 import java.util.Map;
+import org.mindrot.jbcrypt.BCrypt;
 
 //SQLImports
 import java.sql.PreparedStatement;
+
 
 public class SQLUserDataAccess implements DataAccessInterface<User> {
     private static final Map<String, User> USERTABLE = new HashMap<>();

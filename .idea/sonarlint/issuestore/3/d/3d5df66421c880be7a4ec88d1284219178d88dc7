@@ -1,5 +1,7 @@
 
 d
-java:S1170"!Make this final field static too.(×èØ§8ìö¦¸ş1J$39f45f92-cf40-4d97-99c0-f9a05c1b1182
-J
-java:S1068"-Remove this unused "createSQL" private field.(×èØ§8ã×õ¸ş1
+java:S1170"!Make this final field static too.(×èØ§8ÇÌİ×ş1J$3bed52b4-af61-461b-bf4f-c47fbcc44c39
+Y
+java:S1128"7Remove this unused import 'org.mindrot.jbcrypt.BCrypt'.(‡êÑ“ıÿÿÿÿ8å›ÖØş1
+p
+java:S1068"-Remove this unused "createSQL" private field.(×èØ§8ĞÌİ×ş1J$1bc83a92-1d35-4cfe-ae81-c14dc9ef2657

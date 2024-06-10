@@ -18,12 +18,21 @@ public class GameUITests {
     }
 
     @Test
-    void boarderPrintWhite() {
+    void printWhite() {
         ui.printBoardWhite(board);
     }
 
     @Test
-    void boarderPrintBlack() {
+    void printBlack() {
+        ui.printBoardBlack(board);
+    }
 
+
+    @Test
+    void printBoth() {
+        ui.printBoardBlack(board);
+        System.out.println();
+        System.out.println();
+        ui.printBoardWhite(board);
     }
 }

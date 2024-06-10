@@ -1,22 +1,12 @@
 
-¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ëìÍæıÿÿÿÿ8Éô…€2J$21f2c5bd-1772-440a-b800-9463f314bca0
-Ä
-java:S11868"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(³±Œ§8Êô…€2J$24160f10-a773-45ee-88d0-2faa1c5392c2
-m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8Íô…€2J$247f94a7-608e-4bd9-8550-ddc47c0260ee
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ëìÍæıÿÿÿÿ8ÏÈ®†€2J$b6f3f9e5-d047-4c20-9dd6-cbe03aa529cf
+m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8ÔÈ®†€2J$ff861c41-f4c6-41e9-b425-3a38d6c85ccc
 r
-java:S1197"*Move the array designators [] to the type.(¥‘Äéıÿÿÿÿ8Îô…€2J$b231c585-fa34-4436-9c3b-34d0a895c706
+java:S1197"*Move the array designators [] to the type.(¥‘Äéıÿÿÿÿ8ÕÈ®†€2J$e4b044d3-878e-499a-99b3-1600a8d4a58a
 r
-java:S1197"*Move the array designators [] to the type.(êÕí­ıÿÿÿÿ8Îô…€2J$a5da32cd-5824-4cd6-ae7d-4fecac653f3d
+java:S1197"*Move the array designators [] to the type.(êÕí­ıÿÿÿÿ8ÕÈ®†€2J$540e05f8-cbd1-4fc0-bea3-5f5611a1ab6b
 r
-java:S1197"*Move the array designators [] to the type.(·èº‘ùÿÿÿÿ8Îô…€2J$f32f7a47-48c4-42ea-a637-b439889a2871
+java:S1197"*Move the array designators [] to the type.(·èº‘ùÿÿÿÿ8ÕÈ®†€2J$c1ba8923-0f70-4376-b03a-b4e109e20dcd
 m
-java:S1197"*Move the array designators [] to the type.(şíÉï8Îô…€2J$ddae3b6c-05e5-44f5-ad14-2df97c2c9346
-£
-java:S3923."[Remove this conditional structure or edit its code blocks so that they're not all the same.(Ú ¼•üÿÿÿÿ8Ğô…€2J$476ec88c-1948-4ceb-a960-e4a52d036b5f
-Š
-java:S1126."BReplace this if-then-else statement by a single method invocation.(Ú ¼•üÿÿÿÿ8Ñô…€2J$fe6669cf-5bca-4a28-a8b6-7e35c2fdc77d
-X	java:S125K"<This block of commented-out lines of code should be removed.(œ¡Ş÷8Äîö…€2
-
-java:S1068"7Remove this unused "borderChessRowBlack" private field.(·èº‘ùÿÿÿÿ8Ôô…€2J$dd44cd14-ad05-428e-ab03-445c4fb19870
-z
-java:S1068"7Remove this unused "borderCharsColBlack" private field.(şíÉï8Ôô…€2J$67006430-4984-48e9-86b2-b33d27979671
+java:S1197"*Move the array designators [] to the type.(şíÉï8ÕÈ®†€2J$1a0ded85-5f45-4f0c-85f4-b868567fb0bb
+~	java:S125S"<This block of commented-out lines of code should be removed.(œ¡Ş÷8ÚÈ®†€2J$a9b8db78-2dba-4dc0-9c11-ddcbe9c26320

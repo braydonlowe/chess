@@ -34,7 +34,7 @@ public class GameplayUI {
         boolean endline = false;
         printBoarderRow(borderCharsRow);
         background = EscapeSequences.SET_BG_COLOR_LIGHT_GREY;
-        for (int row = 1; row <= 8; row++) {
+        for (int row = 8; row >= 1; row--) {
             background = switchColor(background);
             out.print(EscapeSequences.SET_TEXT_COLOR_WHITE);
             printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsCol[row-1] + " ", false);
@@ -43,19 +43,27 @@ public class GameplayUI {
                 printSpace(textColor, background, pieceCharacter , endline);
             }
             out.print(EscapeSequences.SET_TEXT_COLOR_WHITE);
-            if (row == 8) {
-                printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsCol[row-1] + " ", true);
-            }
-            else {
-                printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsCol[row-1] + " ", true);
-            }
+            printEndRow(row, 1);
         }
         printBoarderRow(borderCharsRow);
     }
 
     public void printBoardBlack(ChessBoard board) {
-
-
+        boolean endline = false;
+        printBoarderRow(borderChessRowBlack);
+        background = EscapeSequences.SET_BG_COLOR_LIGHT_GREY;
+        for (int row = 1; row <= 8; row++) {
+            background = switchColor(background);
+            out.print(EscapeSequences.SET_TEXT_COLOR_WHITE);
+            printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsColBlack[row-1] + " ", false);
+            for (int column = 8; column >= 1; column--) {
+                setColors(board, row, column);
+                printSpace(textColor, background, pieceCharacter , endline);
+            }
+            out.print(EscapeSequences.SET_TEXT_COLOR_WHITE);
+            printEndRow(row, 8);
+        }
+        printBoarderRow(borderCharsRow);
     }
 
     private void setColors(ChessBoard board, int row, int column) {
@@ -86,6 +94,16 @@ public class GameplayUI {
     private void resetColors() {
         out.print(EscapeSequences.RESET_BG_COLOR);
         out.print(EscapeSequences.RESET_TEXT_COLOR);
+    }
+
+    private void printEndRow(int row, int endVar) {
+        out.print(EscapeSequences.SET_TEXT_COLOR_WHITE);
+        if (row == endVar) {
+            printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsColBlack[row-1] + " ", true);
+        }
+        else {
+            printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsCol[row-1] + " ", true);
+        }
     }
 
     public void printBoarderRow(String[] border) { //Will be a good idea to move this to private

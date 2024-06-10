@@ -1,6 +1,6 @@
 package ui;
 
-import model.ListOfGamesRecord;
+import model.*;
 
 public class ServerFacade {
 
@@ -11,15 +11,33 @@ public class ServerFacade {
     }
 
     //register
+    public Auth register(User request) throws Exception {
+        return ServerFacadeUtils.makeRequest("POST", "/user", request, Auth.class, url, null);
+    }
+
     //login
+    public Auth login(String auth, User request) throws Exception {
+        return ServerFacadeUtils.makeRequest("POST", "/session", request, Auth.class, url, auth);
+    }
+
     //logout
+    public void logout(String auth) throws Exception{
+        ServerFacadeUtils.makeRequest("DELETE", "/session", null, null, url, auth);
+    }
+
     //listgames
     public ListOfGamesRecord listGames() throws Exception {
-        ServerFacadeUtils.makeRequest("GET","/game", null, ListOfGamesRecord.class , url, null);
+        return ServerFacadeUtils.makeRequest("GET","/game", null, ListOfGamesRecord.class , url, null);
     }
 
     //create game
+    public CreateGameRecord createGame(String auth, CreateGameRecord request) throws Exception {
+        return ServerFacadeUtils.makeRequest("POST", "/game", request, CreateGameRecord.class, url, auth);
+    }
     //join game
+    public void joinGame(String auth, JoinGameRecord request) throws Exception {
+        ServerFacadeUtils.makeRequest("PUT", "/game", request, null, url, auth);
+    }
 
     //clear data
     public void clearData() throws Exception {

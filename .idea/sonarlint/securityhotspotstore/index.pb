@@ -71,3 +71,9 @@ U
 %src/main/java/ui/EscapeSequences.java,f\5\f5164a7694d7bc0ec5a278873d5b206d75837ac4
 [
 +src/test/java/client/ServerFacadeTests.java,1\5\15ed76843373412ef09df4eda6fd4f94cd64533b
+P
+ src/main/java/ui/PreLoginUI.java,d\b\dba4c4113de62d6ea2a55b6411f6bd23917d2eb0
+Q
+!src/main/java/ui/PostLoginUI.java,d\e\de853cc8eb9769c9c13a0935749d81410ffb9e94
+P
+ src/main/java/ui/GameplayUI.java,b\7\b7db377a65bbcaa1a54112ea934b4aa06bcdfad8

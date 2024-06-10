@@ -91,3 +91,5 @@ M
 ,src/test/java/client2/ServerFacadeTests.java,9\0\904ef39cf5d3dcd6921380cf2584f3692902d018
 V
 &src/test/java/client2/GameUITests.java,0\0\00e6a9b81f3df7b4a2882cdb02bcefd19b77f59c
+W
+'src/main/java/ui/ServerFacadeUtils.java,0\8\086ffe3ce20438379fc6042e72dd08160478e6b1

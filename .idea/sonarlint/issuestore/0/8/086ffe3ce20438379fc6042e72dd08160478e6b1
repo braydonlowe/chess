@@ -1,0 +1,12 @@
+
+ˆ	java:S112#"FDefine and throw a dedicated exception instead of using a generic one.(ÓÃ£ú8š¸¹ €2J$1e051fbb-15d6-42f1-956e-37fb0a75fd25
+	java:S1125"FDefine and throw a dedicated exception instead of using a generic one.(™‹ˆãùÿÿÿÿ8ø²º €2J$d906fa28-b54c-4b13-b645-a9babbfab43d
+ˆ	java:S1122"FDefine and throw a dedicated exception instead of using a generic one.(úœõÊ8·¾ €2J$7d0a8c2e-77ed-4151-ade5-b78539a25a36
+Ä
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ŒÃ—Ë8ñÛ´ €2J$3711fefa-2388-49a7-a3f4-3fcbb150ea19
+‰
+java:S1126G"AReplace this if-then-else statement by a single return statement.(”ğÿ‘ıÿÿÿÿ8ƒÜ´ €2J$4a1be50d-4c13-4212-a285-76c7fd533d89
+Z
+java:S1128"8Remove this unused import 'java.net.URISyntaxException'.(Ä®íÿÿÿÿÿ8˜ŒÃ €2
+x
+java:S1144"0Remove this unused private "makeRequest" method.(öÃ‡Ÿşÿÿÿÿ8„Ü´ €2J$a47995a0-557f-4e76-9492-2e4ec84b16a2

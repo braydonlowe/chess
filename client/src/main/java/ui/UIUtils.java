@@ -3,6 +3,7 @@ package ui;
 import chess.ChessGame;
 import chess.ChessPiece;
 
+import java.io.PrintStream;
 import java.util.HashMap;
 
 public class UIUtils {
@@ -32,5 +33,10 @@ public class UIUtils {
         else {
             return BLACK_PIECES.get(type);
         }
+    }
+
+    public static void resetColors(PrintStream out) {
+        out.print(EscapeSequences.RESET_BG_COLOR);
+        out.print(EscapeSequences.RESET_TEXT_COLOR);
     }
 }

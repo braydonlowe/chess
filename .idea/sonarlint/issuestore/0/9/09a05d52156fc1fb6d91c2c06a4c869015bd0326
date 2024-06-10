@@ -1,4 +1,8 @@
 
-i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·š†‡8—Âï¡€2
-_
-java:S2094"BRemove this empty class, write its code or make it an "interface".(·š†‡8šÂï¡€2
+	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·š†‡8ÆĞ€¢€2J$7bccf026-0d50-4f27-bc51-0587ca697f77
+
+java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(Çµí‘8ÈĞ€¢€2J$de5df265-9374-4de0-8535-60d35d7ac156
+‚
+java:S1854":Remove this useless assignment to local variable "facade".(ø©¢§üÿÿÿÿ8ËĞ€¢€2J$7e0f97ce-2ac1-46a9-ae65-c43ad6ad8af3
+s
+java:S1481"+Remove this unused "facade" local variable.(ø©¢§üÿÿÿÿ8ÍĞ€¢€2J$cbcab5aa-fdd7-420f-86df-71e0bb0f358f

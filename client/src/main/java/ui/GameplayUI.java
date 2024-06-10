@@ -90,12 +90,6 @@ public class GameplayUI {
         }
     }
 
-
-    private void resetColors() {
-        out.print(EscapeSequences.RESET_BG_COLOR);
-        out.print(EscapeSequences.RESET_TEXT_COLOR);
-    }
-
     private void printEndRow(int row, int endVar) {
         out.print(EscapeSequences.SET_TEXT_COLOR_WHITE);
         if (row == endVar) {
@@ -125,7 +119,7 @@ public class GameplayUI {
         out.print(text);
         out.print(contents);
         if (isEnd) {
-            resetColors();
+            UIUtils.resetColors(out);
             out.println();
         }
     }

@@ -47,7 +47,6 @@ public class GameplayUI {
             }
             else {
                 printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsCol[row-1] + " ", true);
-
             }
         }
         printBoarderRow(borderCharsRow);
@@ -69,12 +68,11 @@ public class GameplayUI {
             else {
                 textColor = EscapeSequences.SET_TEXT_COLOR_BLUE;
                 pieceCharacter = UIUtils.getSymbol(ChessGame.TeamColor.BLACK, piece.getPieceType());
-
             }
         }
         else {
             pieceCharacter = EscapeSequences.WHITE_PAWN;
-            if (background == EscapeSequences.SET_BG_COLOR_LIGHT_GREY) {
+            if (background.equals(EscapeSequences.SET_BG_COLOR_LIGHT_GREY)) {
                 textColor = EscapeSequences.SET_TEXT_COLOR_LIGHT_GREY;
             }
             else {
@@ -97,7 +95,7 @@ public class GameplayUI {
             if (i == border.length-1) {
                 isEnd = true;
             }
-            printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " +border[i] + " ", false);
+            printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + "\u200A" +border[i] + " " + "\u2009" , false);
         }
         printSpace(EscapeSequences.SET_TEXT_BOLD , EscapeSequences.SET_BG_COLOR_DARK_GREY, "   ", isEnd); // Setting the empty space at the beginning
 
@@ -114,7 +112,7 @@ public class GameplayUI {
     }
 
     public String switchColor(String color) {
-        if (color == EscapeSequences.SET_BG_COLOR_BLACK) {
+        if (color.equals(EscapeSequences.SET_BG_COLOR_BLACK)) {
             return EscapeSequences.SET_BG_COLOR_LIGHT_GREY;
         }
         return EscapeSequences.SET_BG_COLOR_BLACK;

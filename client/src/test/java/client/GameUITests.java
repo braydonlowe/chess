@@ -21,4 +21,9 @@ public class GameUITests {
     void boarderPrintWhite() {
         ui.printBoardWhite(board);
     }
+
+    @Test
+    void boarderPrintBlack() {
+
+    }
 }

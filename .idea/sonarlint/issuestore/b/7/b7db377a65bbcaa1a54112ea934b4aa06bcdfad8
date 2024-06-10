@@ -1,24 +1,20 @@
 
-
-java:S4973M"<Strings and Boxed types should be compared using "equals()".(œØô8àÕ„€2J$5dd415b5-fefe-426b-aa6b-5edb42b0aec0
-
-java:S4973u"<Strings and Boxed types should be compared using "equals()".(ìˆ‘8ØòØ„€2J$4f0f527c-3364-4e98-806e-2be0fa5c8665
 Ä
-java:S11868"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(³±Œ§8Õ„€2J$5e707098-2891-42b8-a491-7bda55bf2836
-m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8‘Õ„€2J$1b387607-b1bb-4117-b4d9-6fd6acd36163
+java:S11867"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(³±Œ§8ó¬Û…€2J$ec8f3250-8617-4faf-b070-21ca1cf5fe0f
+m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8÷¬Û…€2J$4309a3f7-dba1-44d9-8b74-743ed4e7780c
 r
-java:S1197"*Move the array designators [] to the type.(¥‘Äéıÿÿÿÿ8’Õ„€2J$a4488ae1-a523-42b2-8930-3c865c71fcbb
+java:S1197"*Move the array designators [] to the type.(¥‘Äéıÿÿÿÿ8ø¬Û…€2J$d28173a2-24a8-416f-9548-511ab50dfaaa
 r
-java:S1197"*Move the array designators [] to the type.(êÕí­ıÿÿÿÿ8“Õ„€2J$c79b08b0-2a82-4a53-97fa-c438a1c1d1a6
+java:S1197"*Move the array designators [] to the type.(êÕí­ıÿÿÿÿ8ø¬Û…€2J$a9c42bae-6c76-4902-a78d-9bfbf2f92c86
 r
-java:S1197"*Move the array designators [] to the type.(·èº‘ùÿÿÿÿ8“Õ„€2J$b26ccd1a-ff47-4b30-8a80-c24f449638c8
+java:S1197"*Move the array designators [] to the type.(·èº‘ùÿÿÿÿ8ø¬Û…€2J$c3a92eed-2d0d-489e-a7cb-da0d9be1a21c
 m
-java:S1197"*Move the array designators [] to the type.(şíÉï8“Õ„€2J$b94126ff-a1b9-4ae6-9c42-8b44d005a0d5
+java:S1197"*Move the array designators [] to the type.(şíÉï8ø¬Û…€2J$eeab51b5-9f77-4f6e-abee-87ea3789e0c9
 £
-java:S3923-"[Remove this conditional structure or edit its code blocks so that they're not all the same.(Ú ¼•üÿÿÿÿ8•Õ„€2J$09bd38be-a2b1-410b-a9c8-395ed5d6df3b
+java:S3923-"[Remove this conditional structure or edit its code blocks so that they're not all the same.(Ú ¼•üÿÿÿÿ8ú¬Û…€2J$3f4915c3-04bd-44eb-b687-93b696468915
 Š
-java:S1126-"BReplace this if-then-else statement by a single method invocation.(Ú ¼•üÿÿÿÿ8–Õ„€2J$050117d9-2ff7-46bd-ae8d-b313f6525436
+java:S1126-"BReplace this if-then-else statement by a single method invocation.(Ú ¼•üÿÿÿÿ8û¬Û…€2J$8c40916e-07ee-4476-8e3d-9396c1722640
 
-java:S1068"7Remove this unused "borderChessRowBlack" private field.(·èº‘ùÿÿÿÿ8˜Õ„€2J$7b87ed27-8334-49b8-9274-f21c041dfb6e
+java:S1068"7Remove this unused "borderChessRowBlack" private field.(·èº‘ùÿÿÿÿ8ÿ¬Û…€2J$b210f5e3-7a73-40ad-b739-1301fbc40fab
 z
-java:S1068"7Remove this unused "borderCharsColBlack" private field.(şíÉï8˜Õ„€2J$84e2cd3c-7700-4695-a800-78fa838a564b
+java:S1068"7Remove this unused "borderCharsColBlack" private field.(şíÉï8ÿ¬Û…€2J$94698666-eec1-4a83-98b8-f5297a440c99

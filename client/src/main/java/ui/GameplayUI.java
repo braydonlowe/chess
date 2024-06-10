@@ -37,7 +37,7 @@ public class GameplayUI {
             printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsCol[row-1] + " ", false);
             for (int column = 1; column <= 8; column++) {
                 background = switchColor(background);
-                String pieceCharacter = "    ";
+                String pieceCharacter = "";
                 String textColor = EscapeSequences.SET_TEXT_COLOR_BLACK;
                 ChessPiece piece = board.getPiece(new ChessPosition(row, column));
                 if (piece != null) {
@@ -49,6 +49,15 @@ public class GameplayUI {
                         textColor = EscapeSequences.SET_TEXT_COLOR_BLUE;
                         pieceCharacter = UIUtils.getSymbol(ChessGame.TeamColor.BLACK, piece.getPieceType());
 
+                    }
+                }
+                else {
+                    pieceCharacter = EscapeSequences.WHITE_PAWN;
+                    if (background == EscapeSequences.SET_BG_COLOR_LIGHT_GREY) {
+                        textColor = EscapeSequences.SET_TEXT_COLOR_LIGHT_GREY;
+                    }
+                    else {
+                        textColor = EscapeSequences.SET_TEXT_COLOR_BLACK;
                     }
                 }
                 printSpace(textColor, background, pieceCharacter , endline);

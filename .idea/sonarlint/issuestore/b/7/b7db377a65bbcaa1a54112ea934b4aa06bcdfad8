@@ -1,24 +1,30 @@
 
 
-java:S4973h"<Strings and Boxed types should be compared using "equals()".(ìˆ‘8ö†€„€2J$0e34d0b8-3bd0-4fab-bd94-95afd9583d62
-Ä
-java:S1186D"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(³±Œ§8š‡€„€2J$7497f06d-3a9b-4732-b781-844894668f68
-¡
-java:S1450"YRemove the "background" field and declare it as a local variable in the relevant methods.(¾‹¬şıÿÿÿÿ8®Ú‹„€2J$c286afeb-df38-48e2-9640-f4f61089525e
-m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8‡€„€2J$864d5475-0145-401c-87bb-f49879357227
-r
-java:S1197"*Move the array designators [] to the type.(¥‘Äéıÿÿÿÿ8Ÿ‡€„€2J$0157dd85-57c4-46f1-9d8b-82110853efcc
-r
-java:S1197"*Move the array designators [] to the type.(êÕí­ıÿÿÿÿ8 ‡€„€2J$5a57b79f-a6c9-424c-b7d5-afe38938c459
-r
-java:S1197"*Move the array designators [] to the type.(·èº‘ùÿÿÿÿ8 ‡€„€2J$9f9268b8-b214-44a1-ab9b-40dc7bce820f
-m
-java:S1197"*Move the array designators [] to the type.(şíÉï8 ‡€„€2J$7b8961cf-e79f-4593-80f6-a148fe1eeb9b
-£
-java:S39239"[Remove this conditional structure or edit its code blocks so that they're not all the same.(Ú ¼•üÿÿÿÿ8£‡€„€2J$091d182e-2a45-4f64-b8c9-b5680ff8d605
-Š
-java:S11269"BReplace this if-then-else statement by a single method invocation.(Ú ¼•üÿÿÿÿ8£‡€„€2J$a1fd5b02-98ab-4c2e-b0dc-71d7ac25eabe
+java:S49738"<Strings and Boxed types should be compared using "equals()".(œØô8ÚÓÀ„€2J$e766668e-91a2-4cae-8edc-24593dddd15d
 
-java:S1068"7Remove this unused "borderChessRowBlack" private field.(·èº‘ùÿÿÿÿ8¦‡€„€2J$fd982a84-b868-4620-85e7-df56a017dc86
+java:S4973q"<Strings and Boxed types should be compared using "equals()".(ìˆ‘8ÚÓÀ„€2J$fcc78b32-7027-4108-955f-19a1ff792667
+Ä
+java:S1186M"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(³±Œ§8ŒÔÀ„€2J$6d2ab5dd-6d85-4787-871f-4e6079f3c115
+¡
+java:S1450"YRemove the "background" field and declare it as a local variable in the relevant methods.(¾‹¬şıÿÿÿÿ8ÔÀ„€2J$8a4a469a-299e-43c7-b4e2-4bbdcf71fa6a
+m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8ÔÀ„€2J$30c1fed8-0bbc-4a27-a8f2-19fabe7af7da
+r
+java:S1197"*Move the array designators [] to the type.(¥‘Äéıÿÿÿÿ8ÔÀ„€2J$482a01ea-eb7c-4e23-b957-daef7f1bbda5
+r
+java:S1197"*Move the array designators [] to the type.(êÕí­ıÿÿÿÿ8‘ÔÀ„€2J$06841d28-f633-4c00-8fcf-3cc598a1570b
+r
+java:S1197"*Move the array designators [] to the type.(·èº‘ùÿÿÿÿ8‘ÔÀ„€2J$819732cc-f8ac-4efc-a329-c42979b3e6a3
+m
+java:S1197"*Move the array designators [] to the type.(şíÉï8‘ÔÀ„€2J$a7a48019-40fe-486e-9565-f370a7acbc93
+•
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(ı•ÙÒ8‘ÔÀ„€2J$5a332b00-c92e-4389-8ba2-67da97e8ee5a
+€
+java:S1854)"=Remove this useless assignment to local variable "textColor".(ÌØÜÜ8’ÔÀ„€2J$fe256919-ab4f-4879-a31d-304c9ea5b953
+£
+java:S3923B"[Remove this conditional structure or edit its code blocks so that they're not all the same.(Ú ¼•üÿÿÿÿ8•ÔÀ„€2J$63c05873-c30a-46c9-a90f-04c9ae845541
+Š
+java:S1126B"BReplace this if-then-else statement by a single method invocation.(Ú ¼•üÿÿÿÿ8•ÔÀ„€2J$76d00dc6-0bda-41d2-bd80-c0fd9b089386
+
+java:S1068"7Remove this unused "borderChessRowBlack" private field.(·èº‘ùÿÿÿÿ8˜ÔÀ„€2J$2f74846e-e2b9-4827-b4c7-1483c1a912f3
 z
-java:S1068"7Remove this unused "borderCharsColBlack" private field.(şíÉï8¦‡€„€2J$07dc3ec1-22ce-4516-bfaf-105b511a0e8a
+java:S1068"7Remove this unused "borderCharsColBlack" private field.(şíÉï8˜ÔÀ„€2J$b12e10bd-db6b-4632-9c75-cab23ed3d320

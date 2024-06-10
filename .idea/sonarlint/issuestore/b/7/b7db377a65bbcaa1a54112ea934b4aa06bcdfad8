@@ -1,20 +1,22 @@
 
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ëìÍæıÿÿÿÿ8Éô…€2J$21f2c5bd-1772-440a-b800-9463f314bca0
 Ä
-java:S11867"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(³±Œ§8ó¬Û…€2J$ec8f3250-8617-4faf-b070-21ca1cf5fe0f
-m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8÷¬Û…€2J$4309a3f7-dba1-44d9-8b74-743ed4e7780c
+java:S11868"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(³±Œ§8Êô…€2J$24160f10-a773-45ee-88d0-2faa1c5392c2
+m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8Íô…€2J$247f94a7-608e-4bd9-8550-ddc47c0260ee
 r
-java:S1197"*Move the array designators [] to the type.(¥‘Äéıÿÿÿÿ8ø¬Û…€2J$d28173a2-24a8-416f-9548-511ab50dfaaa
+java:S1197"*Move the array designators [] to the type.(¥‘Äéıÿÿÿÿ8Îô…€2J$b231c585-fa34-4436-9c3b-34d0a895c706
 r
-java:S1197"*Move the array designators [] to the type.(êÕí­ıÿÿÿÿ8ø¬Û…€2J$a9c42bae-6c76-4902-a78d-9bfbf2f92c86
+java:S1197"*Move the array designators [] to the type.(êÕí­ıÿÿÿÿ8Îô…€2J$a5da32cd-5824-4cd6-ae7d-4fecac653f3d
 r
-java:S1197"*Move the array designators [] to the type.(·èº‘ùÿÿÿÿ8ø¬Û…€2J$c3a92eed-2d0d-489e-a7cb-da0d9be1a21c
+java:S1197"*Move the array designators [] to the type.(·èº‘ùÿÿÿÿ8Îô…€2J$f32f7a47-48c4-42ea-a637-b439889a2871
 m
-java:S1197"*Move the array designators [] to the type.(şíÉï8ø¬Û…€2J$eeab51b5-9f77-4f6e-abee-87ea3789e0c9
+java:S1197"*Move the array designators [] to the type.(şíÉï8Îô…€2J$ddae3b6c-05e5-44f5-ad14-2df97c2c9346
 £
-java:S3923-"[Remove this conditional structure or edit its code blocks so that they're not all the same.(Ú ¼•üÿÿÿÿ8ú¬Û…€2J$3f4915c3-04bd-44eb-b687-93b696468915
+java:S3923."[Remove this conditional structure or edit its code blocks so that they're not all the same.(Ú ¼•üÿÿÿÿ8Ğô…€2J$476ec88c-1948-4ceb-a960-e4a52d036b5f
 Š
-java:S1126-"BReplace this if-then-else statement by a single method invocation.(Ú ¼•üÿÿÿÿ8û¬Û…€2J$8c40916e-07ee-4476-8e3d-9396c1722640
+java:S1126."BReplace this if-then-else statement by a single method invocation.(Ú ¼•üÿÿÿÿ8Ñô…€2J$fe6669cf-5bca-4a28-a8b6-7e35c2fdc77d
+X	java:S125K"<This block of commented-out lines of code should be removed.(œ¡Ş÷8Äîö…€2
 
-java:S1068"7Remove this unused "borderChessRowBlack" private field.(·èº‘ùÿÿÿÿ8ÿ¬Û…€2J$b210f5e3-7a73-40ad-b739-1301fbc40fab
+java:S1068"7Remove this unused "borderChessRowBlack" private field.(·èº‘ùÿÿÿÿ8Ôô…€2J$dd44cd14-ad05-428e-ab03-445c4fb19870
 z
-java:S1068"7Remove this unused "borderCharsColBlack" private field.(şíÉï8ÿ¬Û…€2J$94698666-eec1-4a83-98b8-f5297a440c99
+java:S1068"7Remove this unused "borderCharsColBlack" private field.(şíÉï8Ôô…€2J$67006430-4984-48e9-86b2-b33d27979671

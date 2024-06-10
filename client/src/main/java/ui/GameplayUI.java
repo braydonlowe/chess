@@ -14,6 +14,7 @@ public class GameplayUI {
     private String background = EscapeSequences.SET_BG_COLOR_BLACK;
     private String textColor = EscapeSequences.SET_TEXT_COLOR_BLACK;
     private String pieceCharacter = "";
+    private static final String emptySpace = " " + "\u200A" + "  " + "\u2009";
     /*
      * I think what I want to do is pass in a gameboard, and have this print it out.
      */
@@ -71,7 +72,7 @@ public class GameplayUI {
             }
         }
         else {
-            pieceCharacter = EscapeSequences.WHITE_PAWN;
+            pieceCharacter = emptySpace;//EscapeSequences.WHITE_PAWN;
             if (background.equals(EscapeSequences.SET_BG_COLOR_LIGHT_GREY)) {
                 textColor = EscapeSequences.SET_TEXT_COLOR_LIGHT_GREY;
             }

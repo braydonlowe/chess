@@ -67,3 +67,7 @@ $src/main/java/handlers/GameName.java,3\e\3e7909b78104a2b058f950d359d2cff8ec84e
 -src/main/java/handlers/CreateGameHandler.java,2\0\20c8d7d51eeacab7c180c643beae6da62614ed57
 [
 +src/main/java/handlers/JoinGameHandler.java,a\2\a263bee3307060b08cb0d51a654ba004fa709ed9
+U
+%src/main/java/ui/EscapeSequences.java,f\5\f5164a7694d7bc0ec5a278873d5b206d75837ac4
+[
++src/test/java/client/ServerFacadeTests.java,1\5\15ed76843373412ef09df4eda6fd4f94cd64533b

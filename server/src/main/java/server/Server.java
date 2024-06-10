@@ -38,7 +38,7 @@ public class Server {
         //UserDataAccess userData = new UserDataAccess();
 
 
-        
+
         //Instantiate the services with the data.
         regService = new RegistrationService(authData, gameData, userData);
         clearService = new ClearService(authData, gameData, userData);

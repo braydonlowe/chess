@@ -77,3 +77,13 @@ Q
 !src/main/java/ui/PostLoginUI.java,d\e\de853cc8eb9769c9c13a0935749d81410ffb9e94
 P
  src/main/java/ui/GameplayUI.java,b\7\b7db377a65bbcaa1a54112ea934b4aa06bcdfad8
+G
+src/main/java/Main.java,e\4\e44a8606ce010ad9b89aafdfcee2ab49afbf6d10
+R
+"src/main/java/ui/ServerFacade.java,4\c\4cbb54bad5ecf934f35ad6a5c112c802bed0f07c
+U
+%src/test/java/client/GameUITests.java,7\c\7ce35fab990572b35312489031eccee7feb67aaf
+S
+#src/main/java/chess/ChessBoard.java,1\3\139d0d4bb2b8e11a4e03dbed5b694452387fb52a
+M
+src/main/java/ui/UIUtils.java,0\4\04cc08dc2450b56cc5090885a70a55b7b943c27e

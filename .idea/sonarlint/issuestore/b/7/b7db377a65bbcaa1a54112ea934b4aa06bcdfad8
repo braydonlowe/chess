@@ -1,3 +1,26 @@
 
-_
-java:S2094"BRemove this empty class, write its code or make it an "interface".(ª¶èŒ8 Ú÷þÿ1
+
+java:S4973["<Strings and Boxed types should be compared using "equals()".(ìˆ‘8ñ±…ƒ€2J$21f5569b-d80e-4ff3-913e-cc8acd5244b8
+Ä
+java:S1186@"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(³±Œ§8æ²…ƒ€2J$dfbef76a-cf11-4df6-ab5b-2a281542533a
+m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8é²…ƒ€2J$11fb6118-6fd5-4019-a30a-40e678ca0ee4
+r
+java:S1197"*Move the array designators [] to the type.(¥‘Äéýÿÿÿÿ8ê²…ƒ€2J$167b0b7a-a911-4ff6-ae78-2b2a454669d3
+r
+java:S1197"*Move the array designators [] to the type.(êÕí­ýÿÿÿÿ8ë²…ƒ€2J$8a5c8cb3-27c0-4f8a-9bbf-27e384295b53
+r
+java:S1197"*Move the array designators [] to the type.(·èº‘ùÿÿÿÿ8ë²…ƒ€2J$79b06f3f-b987-43a8-bece-84fe1220cb4f
+m
+java:S1197"*Move the array designators [] to the type.(þíÉï8ë²…ƒ€2J$4a9ed23f-d161-4285-ad9a-64ea61a098fa
+
+java:S1117;"7Rename "out" which hides the field declared at line 12.(ÌñÒÜÿÿÿÿÿ8î²…ƒ€2J$9c6e1582-7cc8-4af8-af1e-f8f8f44816dd
+r	java:S106;"+Replace this use of System.out by a logger.(ÌñÒÜÿÿÿÿÿ8î²…ƒ€2J$c3727e38-3d8d-4682-8384-006a70fe8780
+z
+java:S1117Q"7Rename "out" which hides the field declared at line 12.(Ùèßª8ð²…ƒ€2J$ad9dd5d6-5f81-4d62-8fa4-96d0f57d2528
+m	java:S106Q"+Replace this use of System.out by a logger.(Ùèßª8ð²…ƒ€2J$5f0516ad-43a8-441d-ac91-115835a5d1cf
+o
+java:S1068"'Remove this unused "out" private field.(Ñ…ˆ”þÿÿÿÿ8ñ²…ƒ€2J$0b9a5fa9-21f9-472e-8d7b-e1b728fd7657
+
+java:S1068"7Remove this unused "borderChessRowBlack" private field.(·èº‘ùÿÿÿÿ8ñ²…ƒ€2J$ec24c3f3-055a-42d2-91ca-38e5cc930922
+z
+java:S1068"7Remove this unused "borderCharsColBlack" private field.(þíÉï8ñ²…ƒ€2J$c33bd8e8-d18f-4192-93e1-777c3dcb64c6

@@ -3,7 +3,7 @@ package service;
 //Imports
 import model.Game;
 import model.Auth;
-import handlers.ListOfGamesRecord;
+import model.ListOfGamesRecord;
 import dataaccess.DataAccessException;
 import dataaccess.dao.*;
 

@@ -1,7 +1,7 @@
 package service;
 
 //Imports
-import handlers.CreateGameRecord;
+import model.CreateGameRecord;
 import model.Auth;
 import model.Game;
 import chess.ChessGame;

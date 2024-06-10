@@ -2,8 +2,7 @@ package dataaccess.dao;
 
 import dataaccess.DataAccessException;
 import dataaccess.DatabaseManager;
-import handlers.CreateGameRecord;
-import handlers.GameName;
+import model.GameName;
 import model.Game;
 import server.JsonUtil;
 

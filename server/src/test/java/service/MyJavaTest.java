@@ -4,15 +4,14 @@ package service;
 //Import
 import dataaccess.DatabaseManager;
 import dataaccess.dao.*;
-import handlers.CreateGameRecord;
-import handlers.ListOfGamesRecord;
+import model.CreateGameRecord;
+import model.ListOfGamesRecord;
 import model.Auth;
 import model.Game;
 import model.User;
 import chess.ChessGame;
 import dataaccess.DataAccessException;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.*;
 

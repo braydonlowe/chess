@@ -2,6 +2,8 @@ package handlers;
 
 //Imports
 import dataaccess.DataAccessException;
+import model.ErrorRespone;
+import model.JoinGameRecord;
 import spark.Request;
 import spark.Response;
 import service.JoinGameService;

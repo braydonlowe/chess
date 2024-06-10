@@ -3,6 +3,7 @@ package handlers;
 //Imports
 import model.Auth;
 import dataaccess.DataAccessException;
+import model.ErrorRespone;
 import server.JsonUtil;
 import spark.Request;
 import spark.Response;

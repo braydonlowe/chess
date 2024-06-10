@@ -14,11 +14,12 @@ import java.net.URL;
 public class ServerFacadeUtils {
 
     //Copied and modified from petshop
-    public static <T> T makeRequest(String method, String path, Object request, Class<T> responseClass, String serverUrl) throws Exception {
+    public static <T> T makeRequest(String method, String path, Object request, Class<T> responseClass, String serverUrl, String auth) throws Exception {
         try {
             URL url = (new URI(serverUrl + path)).toURL();
             HttpURLConnection http = (HttpURLConnection) url.openConnection();
             http.setRequestMethod(method);
+            http.addRequestProperty("authorization", auth);
             http.setDoOutput(true);
 
             writeBody(request, http);

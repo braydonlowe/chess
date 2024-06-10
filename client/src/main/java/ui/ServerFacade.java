@@ -1,12 +1,6 @@
 package ui;
 
-import ui.ServerFacadeUtils;
-
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
+import model.ListOfGamesRecord;
 
 public class ServerFacade {
 
@@ -16,5 +10,19 @@ public class ServerFacade {
         this.url = url;
     }
 
+    //register
+    //login
+    //logout
+    //listgames
+    public ListOfGamesRecord listGames() throws Exception {
+        ServerFacadeUtils.makeRequest("GET","/game", null, ListOfGamesRecord.class , url, null);
+    }
 
+    //create game
+    //join game
+
+    //clear data
+    public void clearData() throws Exception {
+        ServerFacadeUtils.makeRequest("DELETE", "/db", null, null,url,null);
+    }
 }

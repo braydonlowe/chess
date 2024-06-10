@@ -2,6 +2,7 @@ package handlers;
 
 //Imports
 import dataaccess.DataAccessException;
+import model.ErrorRespone;
 import spark.Request;
 import spark.Response;
 import service.ListGameService;

@@ -12,6 +12,8 @@ public class GameplayUI {
     private PrintStream out;
 
     private String background = EscapeSequences.SET_BG_COLOR_BLACK;
+    private String textColor = EscapeSequences.SET_TEXT_COLOR_BLACK;
+    private String pieceCharacter = "";
     /*
      * I think what I want to do is pass in a gameboard, and have this print it out.
      */
@@ -36,30 +38,7 @@ public class GameplayUI {
             out.print(EscapeSequences.SET_TEXT_COLOR_WHITE);
             printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsCol[row-1] + " ", false);
             for (int column = 1; column <= 8; column++) {
-                background = switchColor(background);
-                String pieceCharacter = "";
-                String textColor = EscapeSequences.SET_TEXT_COLOR_BLACK;
-                ChessPiece piece = board.getPiece(new ChessPosition(row, column));
-                if (piece != null) {
-                    if (piece.getTeamColor() == ChessGame.TeamColor.WHITE) {
-                        textColor = EscapeSequences.SET_TEXT_COLOR_WHITE;
-                        pieceCharacter = UIUtils.getSymbol(ChessGame.TeamColor.WHITE, piece.getPieceType());
-                    }
-                    else {
-                        textColor = EscapeSequences.SET_TEXT_COLOR_BLUE;
-                        pieceCharacter = UIUtils.getSymbol(ChessGame.TeamColor.BLACK, piece.getPieceType());
-
-                    }
-                }
-                else {
-                    pieceCharacter = EscapeSequences.WHITE_PAWN;
-                    if (background == EscapeSequences.SET_BG_COLOR_LIGHT_GREY) {
-                        textColor = EscapeSequences.SET_TEXT_COLOR_LIGHT_GREY;
-                    }
-                    else {
-                        textColor = EscapeSequences.SET_TEXT_COLOR_BLACK;
-                    }
-                }
+                setColors(board, row, column);
                 printSpace(textColor, background, pieceCharacter , endline);
             }
             out.print(EscapeSequences.SET_TEXT_COLOR_WHITE);
@@ -77,6 +56,31 @@ public class GameplayUI {
     public void printBoardBlack(ChessBoard board) {
 
 
+    }
+
+    private void setColors(ChessBoard board, int row, int column) {
+        background = switchColor(background);
+        ChessPiece piece = board.getPiece(new ChessPosition(row, column));
+        if (piece != null) {
+            if (piece.getTeamColor() == ChessGame.TeamColor.WHITE) {
+                textColor = EscapeSequences.SET_TEXT_COLOR_WHITE;
+                pieceCharacter = UIUtils.getSymbol(ChessGame.TeamColor.WHITE, piece.getPieceType());
+            }
+            else {
+                textColor = EscapeSequences.SET_TEXT_COLOR_BLUE;
+                pieceCharacter = UIUtils.getSymbol(ChessGame.TeamColor.BLACK, piece.getPieceType());
+
+            }
+        }
+        else {
+            pieceCharacter = EscapeSequences.WHITE_PAWN;
+            if (background == EscapeSequences.SET_BG_COLOR_LIGHT_GREY) {
+                textColor = EscapeSequences.SET_TEXT_COLOR_LIGHT_GREY;
+            }
+            else {
+                textColor = EscapeSequences.SET_TEXT_COLOR_BLACK;
+            }
+        }
     }
 
 

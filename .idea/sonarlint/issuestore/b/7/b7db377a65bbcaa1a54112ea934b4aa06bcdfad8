@@ -1,30 +1,24 @@
 
 
-java:S49738"<Strings and Boxed types should be compared using "equals()".(œØô8ÚÓÀ„€2J$e766668e-91a2-4cae-8edc-24593dddd15d
+java:S4973M"<Strings and Boxed types should be compared using "equals()".(œØô8àÕ„€2J$5dd415b5-fefe-426b-aa6b-5edb42b0aec0
 
-java:S4973q"<Strings and Boxed types should be compared using "equals()".(ìˆ‘8ÚÓÀ„€2J$fcc78b32-7027-4108-955f-19a1ff792667
+java:S4973u"<Strings and Boxed types should be compared using "equals()".(ìˆ‘8ØòØ„€2J$4f0f527c-3364-4e98-806e-2be0fa5c8665
 Ä
-java:S1186M"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(³±Œ§8ŒÔÀ„€2J$6d2ab5dd-6d85-4787-871f-4e6079f3c115
-¡
-java:S1450"YRemove the "background" field and declare it as a local variable in the relevant methods.(¾‹¬şıÿÿÿÿ8ÔÀ„€2J$8a4a469a-299e-43c7-b4e2-4bbdcf71fa6a
-m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8ÔÀ„€2J$30c1fed8-0bbc-4a27-a8f2-19fabe7af7da
+java:S11868"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(³±Œ§8Õ„€2J$5e707098-2891-42b8-a491-7bda55bf2836
+m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8‘Õ„€2J$1b387607-b1bb-4117-b4d9-6fd6acd36163
 r
-java:S1197"*Move the array designators [] to the type.(¥‘Äéıÿÿÿÿ8ÔÀ„€2J$482a01ea-eb7c-4e23-b957-daef7f1bbda5
+java:S1197"*Move the array designators [] to the type.(¥‘Äéıÿÿÿÿ8’Õ„€2J$a4488ae1-a523-42b2-8930-3c865c71fcbb
 r
-java:S1197"*Move the array designators [] to the type.(êÕí­ıÿÿÿÿ8‘ÔÀ„€2J$06841d28-f633-4c00-8fcf-3cc598a1570b
+java:S1197"*Move the array designators [] to the type.(êÕí­ıÿÿÿÿ8“Õ„€2J$c79b08b0-2a82-4a53-97fa-c438a1c1d1a6
 r
-java:S1197"*Move the array designators [] to the type.(·èº‘ùÿÿÿÿ8‘ÔÀ„€2J$819732cc-f8ac-4efc-a329-c42979b3e6a3
+java:S1197"*Move the array designators [] to the type.(·èº‘ùÿÿÿÿ8“Õ„€2J$b26ccd1a-ff47-4b30-8a80-c24f449638c8
 m
-java:S1197"*Move the array designators [] to the type.(şíÉï8‘ÔÀ„€2J$a7a48019-40fe-486e-9565-f370a7acbc93
-•
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(ı•ÙÒ8‘ÔÀ„€2J$5a332b00-c92e-4389-8ba2-67da97e8ee5a
-€
-java:S1854)"=Remove this useless assignment to local variable "textColor".(ÌØÜÜ8’ÔÀ„€2J$fe256919-ab4f-4879-a31d-304c9ea5b953
+java:S1197"*Move the array designators [] to the type.(şíÉï8“Õ„€2J$b94126ff-a1b9-4ae6-9c42-8b44d005a0d5
 £
-java:S3923B"[Remove this conditional structure or edit its code blocks so that they're not all the same.(Ú ¼•üÿÿÿÿ8•ÔÀ„€2J$63c05873-c30a-46c9-a90f-04c9ae845541
+java:S3923-"[Remove this conditional structure or edit its code blocks so that they're not all the same.(Ú ¼•üÿÿÿÿ8•Õ„€2J$09bd38be-a2b1-410b-a9c8-395ed5d6df3b
 Š
-java:S1126B"BReplace this if-then-else statement by a single method invocation.(Ú ¼•üÿÿÿÿ8•ÔÀ„€2J$76d00dc6-0bda-41d2-bd80-c0fd9b089386
+java:S1126-"BReplace this if-then-else statement by a single method invocation.(Ú ¼•üÿÿÿÿ8–Õ„€2J$050117d9-2ff7-46bd-ae8d-b313f6525436
 
-java:S1068"7Remove this unused "borderChessRowBlack" private field.(·èº‘ùÿÿÿÿ8˜ÔÀ„€2J$2f74846e-e2b9-4827-b4c7-1483c1a912f3
+java:S1068"7Remove this unused "borderChessRowBlack" private field.(·èº‘ùÿÿÿÿ8˜Õ„€2J$7b87ed27-8334-49b8-9274-f21c041dfb6e
 z
-java:S1068"7Remove this unused "borderCharsColBlack" private field.(şíÉï8˜ÔÀ„€2J$b12e10bd-db6b-4632-9c75-cab23ed3d320
+java:S1068"7Remove this unused "borderCharsColBlack" private field.(şíÉï8˜Õ„€2J$84e2cd3c-7700-4695-a800-78fa838a564b

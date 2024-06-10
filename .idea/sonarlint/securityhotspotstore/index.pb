@@ -87,3 +87,7 @@ S
 #src/main/java/chess/ChessBoard.java,1\3\139d0d4bb2b8e11a4e03dbed5b694452387fb52a
 M
 src/main/java/ui/UIUtils.java,0\4\04cc08dc2450b56cc5090885a70a55b7b943c27e
+\
+,src/test/java/client2/ServerFacadeTests.java,9\0\904ef39cf5d3dcd6921380cf2584f3692902d018
+V
+&src/test/java/client2/GameUITests.java,0\0\00e6a9b81f3df7b4a2882cdb02bcefd19b77f59c

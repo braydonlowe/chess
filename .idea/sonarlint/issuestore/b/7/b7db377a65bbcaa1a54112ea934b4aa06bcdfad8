@@ -1,12 +1,11 @@
 
-¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ëìÍæıÿÿÿÿ8ÏÈ®†€2J$b6f3f9e5-d047-4c20-9dd6-cbe03aa529cf
-m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8ÔÈ®†€2J$ff861c41-f4c6-41e9-b425-3a38d6c85ccc
+m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8Úç­‡€2J$3fc05f3c-9cb5-44d2-bbd4-8c5f1533425c
 r
-java:S1197"*Move the array designators [] to the type.(¥‘Äéıÿÿÿÿ8ÕÈ®†€2J$e4b044d3-878e-499a-99b3-1600a8d4a58a
+java:S1197"*Move the array designators [] to the type.(™Éú•ùÿÿÿÿ8Úç­‡€2J$b8111e95-f633-450d-b9ce-3ec93ebadd5c
 r
-java:S1197"*Move the array designators [] to the type.(êÕí­ıÿÿÿÿ8ÕÈ®†€2J$540e05f8-cbd1-4fc0-bea3-5f5611a1ab6b
+java:S1197"*Move the array designators [] to the type.(‹Šë©ùÿÿÿÿ8Úç­‡€2J$a928efed-5dca-4924-8ee3-987e29715c75
+l
+java:S1197"*Move the array designators [] to the type.(é¾Ä8Ûç­‡€2J$8bb59b2d-9c00-43ea-8f60-c86589927244
 r
-java:S1197"*Move the array designators [] to the type.(·èº‘ùÿÿÿÿ8ÕÈ®†€2J$c1ba8923-0f70-4376-b03a-b4e109e20dcd
-m
-java:S1197"*Move the array designators [] to the type.(şíÉï8ÕÈ®†€2J$1a0ded85-5f45-4f0c-85f4-b868567fb0bb
-~	java:S125S"<This block of commented-out lines of code should be removed.(œ¡Ş÷8ÚÈ®†€2J$a9b8db78-2dba-4dc0-9c11-ddcbe9c26320
+java:S1197"*Move the array designators [] to the type.(•Âôÿÿÿÿÿ8Ûç­‡€2J$48f776a8-6f53-4461-9588-4670d0b32da9
+~	java:S125S"<This block of commented-out lines of code should be removed.(••ç¥8àç­‡€2J$e2cea307-2441-4a51-a777-76cc1daf915a

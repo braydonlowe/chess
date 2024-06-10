@@ -23,6 +23,9 @@ public class ServerFacadeTests {
     @AfterAll
     static void stopServer() {
         server.stop();
+        server.userData.clear();
+        server.authData.clear();
+        server.gameData.clear();
     }
 
 
@@ -30,6 +33,10 @@ public class ServerFacadeTests {
     public void clearDatabase() throws Exception {
         facade.clearData();
         assertEquals(0, server.userData.size());
+    }
+
+    @Test void registerPos() throws Exception {
+
     }
 
 }

@@ -95,3 +95,5 @@ W
 'src/main/java/ui/ServerFacadeUtils.java,0\8\086ffe3ce20438379fc6042e72dd08160478e6b1
 Y
 )src/main/java/model/CreateGameRecord.java,c\5\c517e2158fbc19f8d91c82545acd8a58f4b38d7a
+J
+src/main/java/ui/main.java,0\9\09a05d52156fc1fb6d91c2c06a4c869015bd0326

@@ -10,6 +10,8 @@ import java.nio.charset.StandardCharsets;
 
 public class GameplayUI {
     private PrintStream out;
+
+    private String background = EscapeSequences.SET_BG_COLOR_BLACK;
     /*
      * I think what I want to do is pass in a gameboard, and have this print it out.
      */
@@ -26,15 +28,12 @@ public class GameplayUI {
     private static final String borderCharsColBlack[] = {"1","2","3","4","5","6","7","8"};
 
     public void printBoardWhite(ChessBoard board) {
-        boolean endboard = false;
         boolean endline = false;
         printBoarderRow(borderCharsRow);
-        String background = EscapeSequences.SET_BG_COLOR_LIGHT_GREY;
+        background = EscapeSequences.SET_BG_COLOR_LIGHT_GREY;
         for (int row = 1; row <= 8; row++) {
-            if (row == 8) {
-                endboard = true;
-            }
-            printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, borderCharsCol[row-1], endboard);
+            background = switchColor(background);
+            printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsCol[row-1] + " ", false);
             for (int column = 1; column <= 8; column++) {
                 background = switchColor(background);
                 String pieceCharacter = "    ";
@@ -46,24 +45,32 @@ public class GameplayUI {
                         pieceCharacter = UIUtils.getSymbol(ChessGame.TeamColor.WHITE, piece.getPieceType());
                     }
                     else {
-                        textColor = EscapeSequences.SET_TEXT_COLOR_GREEN;
+                        textColor = EscapeSequences.SET_TEXT_COLOR_BLUE;
                         pieceCharacter = UIUtils.getSymbol(ChessGame.TeamColor.BLACK, piece.getPieceType());
 
                     }
                 }
                 printSpace(textColor, background, pieceCharacter , endline);
             }
-            printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, borderCharsCol[row-1], true);
+            printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsCol[row-1] + " ", true);
 
+            if (row == 8) {
+                printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsCol[row-1] + " ", true);
+            }
+            resetColors();
         }
-        var out = new PrintStream(System.out, true, StandardCharsets.UTF_8);
-        out.print(EscapeSequences.RESET_BG_COLOR);
-        out.print(EscapeSequences.RESET_TEXT_COLOR);
+        resetColors();
     }
 
     public void printBoardBlack(ChessBoard board) {
 
 
+    }
+
+
+    private void resetColors() {
+        out.print(EscapeSequences.RESET_BG_COLOR);
+        out.print(EscapeSequences.RESET_TEXT_COLOR);
     }
 
     public void printBoarderRow(String[] border) { //Will be a good idea to move this to private
@@ -78,11 +85,11 @@ public class GameplayUI {
     }
 
     public void printSpace(String text, String background,String contents, boolean isEnd) {
-        var out = new PrintStream(System.out, true, StandardCharsets.UTF_8); // Stolen from tic tac toe
         out.print(background);
         out.print(text);
         out.print(contents);
         if (isEnd) {
+            resetColors();
             out.println();
         }
     }

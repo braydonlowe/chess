@@ -33,6 +33,7 @@ public class GameplayUI {
         background = EscapeSequences.SET_BG_COLOR_LIGHT_GREY;
         for (int row = 1; row <= 8; row++) {
             background = switchColor(background);
+            out.print(EscapeSequences.SET_TEXT_COLOR_WHITE);
             printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsCol[row-1] + " ", false);
             for (int column = 1; column <= 8; column++) {
                 background = switchColor(background);
@@ -52,14 +53,16 @@ public class GameplayUI {
                 }
                 printSpace(textColor, background, pieceCharacter , endline);
             }
-            printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsCol[row-1] + " ", true);
-
+            out.print(EscapeSequences.SET_TEXT_COLOR_WHITE);
             if (row == 8) {
                 printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsCol[row-1] + " ", true);
             }
-            resetColors();
+            else {
+                printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " + borderCharsCol[row-1] + " ", true);
+
+            }
         }
-        resetColors();
+        printBoarderRow(borderCharsRow);
     }
 
     public void printBoardBlack(ChessBoard board) {
@@ -75,13 +78,16 @@ public class GameplayUI {
 
     public void printBoarderRow(String[] border) { //Will be a good idea to move this to private
         boolean isEnd = false;
-        printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " ", isEnd);
+        out.print(EscapeSequences.SET_TEXT_COLOR_WHITE); //We have to make sure the board stays uniform
+        printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, "   ", isEnd);
         for (int i = 0; i < border.length; i++) {
             if (i == border.length-1) {
                 isEnd = true;
             }
-            printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " +border[i] + " ", isEnd);
+            printSpace(EscapeSequences.SET_TEXT_BOLD, EscapeSequences.SET_BG_COLOR_DARK_GREY, " " +border[i] + " ", false);
         }
+        printSpace(EscapeSequences.SET_TEXT_BOLD , EscapeSequences.SET_BG_COLOR_DARK_GREY, "   ", isEnd); // Setting the empty space at the beginning
+
     }
 
     public void printSpace(String text, String background,String contents, boolean isEnd) {

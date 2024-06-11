@@ -36,12 +36,12 @@ public class PreLoginUI {
 
 
 
-    public void menuLoop(ServerFacade facade) {
+    public boolean menuLoop(ServerFacade facade) {
         this.facade = facade;
-        boolean toggle = false;
+        boolean stopLoop = false;
         Scanner scan = UIUtils.getInput();
         menuToInput();
-        while (!toggle) {
+        while (!stopLoop) {
             String line = scan.nextLine();
             String scannerInput = line.toUpperCase();
             switch (scannerInput) {
@@ -49,25 +49,27 @@ public class PreLoginUI {
                     help();
                     continue;
                 case "QUIT":
-                    toggle = true;
-                    continue;
+                    return true;
                 case "LOGIN":
-                    toggle = login(scan);
-                    if (!toggle) {
-                        menuToInput();
-                    }
+                    stopLoop = login(scan);
+                    UIUtils.clearTerminal(out);
                     continue;
                 case "REGISTER":
-                    toggle = register(scan);
-                    if (!toggle) {
-                        menuToInput();
-                    }
+                    stopLoop = register(scan);
+                    UIUtils.clearTerminal(out);
                     continue;
                 default:
-                    UIUtils.printOneLiners(out,"Please type an appropriate command.");
-                }
+                    UIUtils.printOneLiners(out, "Please type an appropriate command.");
             }
+            if (!stopLoop) {
+                menuToInput();
+            } else {
+                return false;
+            }
+            return false;
         }
+        return false;
+    }
 
     public void help() {
         String[] title = {"Available options:"};
@@ -127,6 +129,10 @@ public class PreLoginUI {
 
     public Auth getAuth() {
         return auth;
+    }
+
+    public void setAuthNull() {
+        auth = null;
     }
 
 }

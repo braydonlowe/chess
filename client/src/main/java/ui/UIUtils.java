@@ -48,7 +48,8 @@ public class UIUtils {
     }
 
     public static void clearTerminal(PrintStream out) {
-        out.print(EscapeSequences.ERASE_SCREEN);
+        out.print("\033[H\033[2J"); //Still isn't working as I would like. I'll come back.
+        out.flush();
     }
 
 

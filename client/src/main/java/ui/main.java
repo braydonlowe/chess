@@ -8,13 +8,16 @@ public class main {
         String localhost = "http://localhost:8080";
         ServerFacade facade = new ServerFacade(localhost);
         PreLoginUI login = new PreLoginUI();
-        login.menuLoop(facade);
-        Auth auth = login.getAuth();
-        if (auth == null) {
-            return;
+        boolean mainToggleLoop = false;
+        while (!mainToggleLoop) {
+            mainToggleLoop = login.menuLoop(facade);
+            Auth auth = login.getAuth();
+            if (auth == null) {
+                return;
+            }
+            PostLoginUI post = new PostLoginUI(auth);
+            post.menuLoop(facade, auth);
+            login.setAuthNull();
         }
-        PostLoginUI post = new PostLoginUI(auth);
-
-        post.menuLoop(facade,auth);
     }
 }

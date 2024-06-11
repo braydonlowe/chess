@@ -97,3 +97,7 @@ Y
 )src/main/java/model/CreateGameRecord.java,c\5\c517e2158fbc19f8d91c82545acd8a58f4b38d7a
 J
 src/main/java/ui/main.java,0\9\09a05d52156fc1fb6d91c2c06a4c869015bd0326
+Q
+!src/test/java/client/UITests.java,7\1\71374378c7a54ada71c45df52fcfcbf7f046af96
+L
+src/main/java/ui/Status.java,9\e\9e27960b7040fbb07e7f54df389d46b7b7316f1b

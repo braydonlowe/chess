@@ -5,6 +5,7 @@ public class main {
         //Later I'll add something to this function to not run on local.
         String localhost = "http://localhost:8081";
         ServerFacade facade = new ServerFacade(localhost);
-
+        PreLoginUI login = new PreLoginUI();
+        login.menuLoop(facade);
     }
 }

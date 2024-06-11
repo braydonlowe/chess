@@ -16,8 +16,8 @@ public class ServerFacade {
     }
 
     //login
-    public Auth login(String auth, User request) throws Exception {
-        return ServerFacadeUtils.makeRequest("POST", "/session", request, Auth.class, url, auth);
+    public Auth login(User request) throws Exception {
+        return ServerFacadeUtils.makeRequest("POST", "/session", request, Auth.class, url, null);
     }
 
     //logout

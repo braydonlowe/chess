@@ -39,4 +39,30 @@ public class UIUtils {
         out.print(EscapeSequences.RESET_BG_COLOR);
         out.print(EscapeSequences.RESET_TEXT_COLOR);
     }
+
+    public static void setColors(PrintStream out) {
+        out.print(EscapeSequences.SET_TEXT_COLOR_WHITE);
+        out.print(EscapeSequences.SET_TEXT_BOLD);
+        out.print(EscapeSequences.SET_BG_COLOR_LIGHT_GREY);
+    }
+
+
+    public static void setMenu(PrintStream out, String[] options, boolean listOption) {
+        for (String op : options) {
+            int length = op.length();
+            if (listOption) {
+                out.print(" - " + op);
+            }
+            else {
+                out.print(op);
+                length-=3;
+            }
+            for (int i = length; i <= 33; i++) {
+                out.print(" ");
+            }
+            resetColors(out);
+            out.println();
+            setColors(out);
+        }
+    }
 }

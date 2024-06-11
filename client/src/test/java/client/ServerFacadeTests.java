@@ -2,6 +2,7 @@
 
 import org.junit.jupiter.api.*;
 import server.Server;
+import ui.PreLoginUI;
 import ui.ServerFacade;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,12 +12,14 @@ public class ServerFacadeTests {
 
     private static Server server;
     private static ServerFacade facade;
+    private static PreLoginUI login;
 
     @BeforeAll
     public static void init() {
         server = new Server();
         var port = server.run(0);
         facade = new ServerFacade("HTTP://localhost:" + port);
+        login = new PreLoginUI();
         System.out.println("Started test HTTP server on " + port);
     }
 
@@ -33,6 +36,11 @@ public class ServerFacadeTests {
     public void clearDatabase() throws Exception {
         facade.clearData();
         assertEquals(0, server.userData.size());
+    }
+
+    @Test
+    void menuInteractionPreLogin() {
+        login.menuLoop(facade);
     }
 
     @Test void registerPos() throws Exception {

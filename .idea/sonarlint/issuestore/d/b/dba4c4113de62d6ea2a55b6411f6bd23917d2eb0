@@ -1,3 +1,6 @@
 
-Š
-java:S2094"BRemove this empty class, write its code or make it an "interface".(–îåóøÿÿÿÿ8ôÑõþÿ1J$7b64fe13-c137-4742-8582-ef653db9b64f
+Ž	java:S112‚"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ñ­ÿ¤€2J$27f1d1a6-84df-422d-bd79-ad63d2b814c9
+›	java:S1353"YReduce the total number of break and continue statements in this loop to use at most one.(ø˜ÃÓ8Ò­ÿ¤€2J$360b0e7d-0403-4d08-9ea7-9fcc6bcc2d1e
+m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8ï­ÿ¤€2J$25db4582-4f90-41d6-a3d9-6e561546949b
+i
+java:S1128"'Remove this unused import 'model.Auth'.(è¼¡58ü­ÿ¤€2J$a5cf3510-e8c6-45df-8997-458635af49d6

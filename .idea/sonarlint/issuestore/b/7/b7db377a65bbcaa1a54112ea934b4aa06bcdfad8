@@ -1,11 +1,11 @@
 
-m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8Úç­‡€2J$7505c80e-52d1-4460-95fa-ed2043bad0c7
+m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8Úç­‡€2J$895dd7c1-72e9-46f2-b6a2-2b53fa5bd744
 r
-java:S1197"*Move the array designators [] to the type.(™Éú•ùÿÿÿÿ8Úç­‡€2J$17faadaf-6cda-4c4e-b9c6-cd4fa34c6d02
+java:S1197"*Move the array designators [] to the type.(™Éú•ùÿÿÿÿ8Úç­‡€2J$890a19a8-a0b0-4894-abfe-9548dad70933
 r
-java:S1197"*Move the array designators [] to the type.(‹Šë©ùÿÿÿÿ8Úç­‡€2J$549edf17-9357-4775-9c0f-8c58e0d7b843
+java:S1197"*Move the array designators [] to the type.(‹Šë©ùÿÿÿÿ8Úç­‡€2J$1f9a2b22-b3a3-4adb-9583-02c4037756a1
 l
-java:S1197"*Move the array designators [] to the type.(é¾Ä8Ûç­‡€2J$4d8f22e1-bb73-4b1b-a8ca-42e9aa691ac1
+java:S1197"*Move the array designators [] to the type.(é¾Ä8Ûç­‡€2J$2ce44769-ba67-490a-b97e-f3171da61d8b
 r
-java:S1197"*Move the array designators [] to the type.(•Âôÿÿÿÿÿ8Ûç­‡€2J$1a536f6c-52df-402c-8b45-58d0efeb8765
-~	java:S125S"<This block of commented-out lines of code should be removed.(••ç¥8àç­‡€2J$41004e45-7b2b-4587-85db-9a3b53458f9b
+java:S1197"*Move the array designators [] to the type.(•Âôÿÿÿÿÿ8Ûç­‡€2J$2707dbbc-0fdd-491e-86eb-d3d049ebe16e
+~	java:S125S"<This block of commented-out lines of code should be removed.(••ç¥8àç­‡€2J$235a04df-0b1f-4727-a4ea-97e033bcf101

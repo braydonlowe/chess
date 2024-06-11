@@ -5,17 +5,20 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ui.GameplayUI;
 import chess.ChessGame;
+import ui.PreLoginUI;
 
-public class GameUITests {
+public class UITests {
     private ChessGame game;
     private ChessBoard board;
     private GameplayUI ui;
+    private PreLoginUI login;
 
     @BeforeEach
     void getChessBoard() {
         game = new ChessGame();
         board = game.getBoard();
         ui = new GameplayUI();
+        login = new PreLoginUI();
 
     }
 
@@ -36,5 +39,10 @@ public class GameUITests {
         System.out.println();
         System.out.println();
         ui.printBoardWhite(board);
+    }
+
+    @Test
+    void showMenuPreLogin() {
+        login.printMenu();
     }
 }

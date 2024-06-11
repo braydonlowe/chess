@@ -1,10 +1,10 @@
 
-b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ÓÃ£ú8šÇÚ €2
-g	java:S1121"FDefine and throw a dedicated exception instead of using a generic one.(™‹ˆãùÿÿÿÿ8›ÇÚ €2
-b	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(íëö8›ÇÚ €2
-\
-java:S1118":Add a private constructor to hide the implicit public one.(¡½ÍÑùÿÿÿÿ8¬ÇÚ €2
-c
-java:S1126C"AReplace this if-then-else statement by a single return statement.(”ğÿ‘ıÿÿÿÿ8¼ÇÚ €2
-Z
-java:S1128"8Remove this unused import 'java.net.URISyntaxException'.(Ä®íÿÿÿÿÿ8¼ÇÚ €2
+ˆ	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ÓÃ£ú8šÇÚ €2J$7fd228f8-f1f9-4abe-9140-abccfc4dcb82
+	java:S1121"FDefine and throw a dedicated exception instead of using a generic one.(™‹ˆãùÿÿÿÿ8›ÇÚ €2J$c2b491fe-b20b-4660-bb6a-e5619df63c91
+ˆ	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(íëö8›ÇÚ €2J$8437da18-1355-47ed-b9e1-a2bcffa51ccb
+‚
+java:S1118":Add a private constructor to hide the implicit public one.(¡½ÍÑùÿÿÿÿ8¬ÇÚ €2J$ce1ee239-e9e8-4b78-8ac7-5c120ae6859d
+‰
+java:S1126C"AReplace this if-then-else statement by a single return statement.(”ğÿ‘ıÿÿÿÿ8¼ÇÚ €2J$73a32517-2a94-44e1-98df-a19c52b246b9
+€
+java:S1128"8Remove this unused import 'java.net.URISyntaxException'.(Ä®íÿÿÿÿÿ8¼ÇÚ €2J$4446bd8a-6a29-4248-ba8b-0934dc5fdf2e

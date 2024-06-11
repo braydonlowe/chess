@@ -26,8 +26,8 @@ public class ServerFacade {
     }
 
     //listgames
-    public ListOfGamesRecord listGames() throws Exception {
-        return ServerFacadeUtils.makeRequest("GET","/game", null, ListOfGamesRecord.class , url, null);
+    public ListOfGamesRecord listGames(String auth) throws Exception {
+        return ServerFacadeUtils.makeRequest("GET","/game", null, ListOfGamesRecord.class , url, auth);
     }
 
     //create game

@@ -5,6 +5,7 @@ import chess.ChessPiece;
 
 import java.io.PrintStream;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class UIUtils {
     private static final HashMap<ChessPiece.PieceType, String> WHITE_PIECES = new HashMap<>();
@@ -64,5 +65,16 @@ public class UIUtils {
             out.println();
             setColors(out);
         }
+    }
+
+    public static void printOneLiners(PrintStream out, String line) {
+        String[] input1 = {line};
+        out.print(EscapeSequences.SET_BG_COLOR_DARK_GREY);
+        UIUtils.setMenu(out, input1, false);
+        UIUtils.resetColors(out);
+    }
+
+    public static Scanner getInput() {
+        return new Scanner(System.in);
     }
 }

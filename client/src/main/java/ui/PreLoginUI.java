@@ -12,6 +12,8 @@ public class PreLoginUI {
     private PrintStream out;
     private static final String[] options = {"HELP", "QUIT", "LOGIN", "REGISTER"};
 
+    private Auth auth;
+
     private ServerFacade facade;
     public PreLoginUI() {
         this.out = new PrintStream(System.out, true, StandardCharsets.UTF_8);
@@ -32,21 +34,12 @@ public class PreLoginUI {
         UIUtils.resetColors(out);
     }
 
-    public Scanner getInput() {
-        return new Scanner(System.in);
-    }
 
-    public void printOneLiners(String line) {
-        String[] input1 = {line};
-        out.print(EscapeSequences.SET_BG_COLOR_DARK_GREY);
-        UIUtils.setMenu(out, input1, false);
-        UIUtils.resetColors(out);
-    }
 
     public void menuLoop(ServerFacade facade) {
         this.facade = facade;
         boolean toggle = false;
-        Scanner scan = getInput();
+        Scanner scan = UIUtils.getInput();
         menuToInput();
         while (!toggle) {
             String line = scan.nextLine();
@@ -71,7 +64,7 @@ public class PreLoginUI {
                     }
                     continue;
                 default:
-                    printOneLiners("Please type an appropriate command.");
+                    UIUtils.printOneLiners(out,"Please type an appropriate command.");
                 }
             }
         }
@@ -85,38 +78,38 @@ public class PreLoginUI {
 
 
     public boolean login(Scanner scan) {
-        printOneLiners("Username");
+        UIUtils.printOneLiners(out,"Username");
         String username = scan.nextLine();
         if (Objects.equals(username, "")) {
             return false;
         }
-        printOneLiners("Password");
+        UIUtils.printOneLiners(out,"Password");
         String password = scan.nextLine();
         if (Objects.equals(password, "")) {
             return false;
         }
         try {
             User user = new User(username, password, null);
-            facade.login(user);
+            auth = facade.login(user);
             return true;
         } catch (Exception e) {
-            printOneLiners("Invalid login. Please try again.");
+            UIUtils.printOneLiners(out, "Invalid login. Please try again.");
             return false;
         }
     }
 
     public boolean register(Scanner scan) {
-        printOneLiners("Please type your username");
+        UIUtils.printOneLiners(out,"Please type your username");
         String valid1 = scan.nextLine();
         if (Objects.equals(valid1, "")) {
             return false;
         }
-        printOneLiners("Please type your password");
+        UIUtils.printOneLiners(out,"Please type your password");
         String valid2 = scan.nextLine();
         if (Objects.equals(valid2, "")) {
             return false;
         }
-        printOneLiners("Please type your email");
+        UIUtils.printOneLiners(out,"Please type your email");
         String valid3 = scan.nextLine();
         if (Objects.equals(valid3, "")) {
             return false;
@@ -124,11 +117,16 @@ public class PreLoginUI {
         try {
             User user = new User(valid1, valid2, valid3);
             facade.register(user);
-            facade.login(user);
+            auth = facade.login(user);
             return true;
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            UIUtils.printOneLiners(out,"Username already taken");
+            return false;
         }
+    }
+
+    public Auth getAuth() {
+        return auth;
     }
 
 }

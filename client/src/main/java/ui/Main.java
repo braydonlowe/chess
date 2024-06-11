@@ -5,7 +5,7 @@ import model.Auth;
 public class Main {
     public static void main(String[] args) throws Exception {
         //Later I'll add something to this function to not run on local.
-        Status.USER_STATUS status = Status.USER_STATUS.LOGGEDOUT;
+        Status.USERSTATUS status = Status.USERSTATUS.LOGGEDOUT;
         String localhost = "http://localhost:8080";
         ServerFacade facade = new ServerFacade(localhost);
         PreLoginUI login = new PreLoginUI();
@@ -16,7 +16,7 @@ public class Main {
             if (auth == null) {
                 return;
             }
-            status = Status.USER_STATUS.LOGGEDIN;
+            status = Status.USERSTATUS.LOGGEDIN;
             PostLoginUI post = new PostLoginUI(auth);
             post.menuLoop(facade, auth);
             login.setAuthNull();

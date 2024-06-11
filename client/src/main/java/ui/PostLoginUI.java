@@ -1,5 +1,6 @@
 package ui;
 
+import chess.ChessBoard;
 import model.*;
 
 import java.io.PrintStream;
@@ -21,6 +22,7 @@ public class PostLoginUI {
     public PostLoginUI(Auth auth) {
         this.outThing = new PrintStream(System.out, true, StandardCharsets.UTF_8);
         listOfgames = new HashMap<>();
+        ui = new GameplayUI();
         try {
             ListOfGamesRecord gameList = facade.listGames(auth.authToken());
             Game[] games = gameList.games();
@@ -30,7 +32,7 @@ public class PostLoginUI {
                 counter++;
             }
         } catch (Exception exe) {
-            UIUtils.printOneLiners(outThing,"Unable to list games.");
+            UIUtils.printOneLiners(outThing,"Welcome to the jungle!");
         }
     }
     public void printMenu() {
@@ -67,7 +69,7 @@ public class PostLoginUI {
                     createGame(scan, auth);
                     break;
                 case "PLAY GAME":
-                    toggle = playGame(scan, auth);
+                    playGame(scan, auth);
                     break;
                 case "LIST GAMES":
                     listGames(auth);
@@ -77,9 +79,6 @@ public class PostLoginUI {
                     break;
                 default:
                     UIUtils.printOneLiners(outThing, "Please type an appropriate command.");
-            }
-            if (!toggle) {
-                menuToInput();
             }
         }
     }
@@ -119,7 +118,7 @@ public class PostLoginUI {
     }
 
     public boolean playGame(Scanner scan, Auth auth) {
-        UIUtils.printOneLiners(outThing,"Game name");
+        UIUtils.printOneLiners(outThing,"Enter game number:");
         String gameID = scan.nextLine();
         if (Objects.equals(gameID, "")) {
             return false;
@@ -127,7 +126,7 @@ public class PostLoginUI {
         UIUtils.printOneLiners(outThing,"Color of choice");
         String playerColor = scan.nextLine();
         playerColor = playerColor.toUpperCase();
-        if (Objects.equals(playerColor, "WHITE") || Objects.equals(playerColor, "BLACK")) {
+        if ((playerColor == "WHITE") || (playerColor == "BLACK")) {
             return false;
         }
 
@@ -136,6 +135,7 @@ public class PostLoginUI {
             gameID = theGame.gameID();
             JoinGameRecord record = new JoinGameRecord(gameID, playerColor);
             facade.joinGame(auth.authToken(), record);
+            UIUtils.printOneLiners(outThing,"Game successfully joined");
             return true;
         } catch (Exception e) {
             UIUtils.printOneLiners(outThing,"Invalid game. Please try again.");
@@ -151,23 +151,27 @@ public class PostLoginUI {
             int counter = 1;
             for (Game game : games) {
                 listOfgames.put(String.valueOf(counter), game);
-                UIUtils.printOneLiners(outThing,String.valueOf(counter) + ": " + game.gameName());
+                UIUtils.printOneLiners(outThing,String.valueOf(counter) + ": " + game.gameName() + " Player 1: " + game.whiteUsername() + " Player 2: " + game.blackUsername());
                 counter++;
             }
         } catch (Exception exe) {
-            UIUtils.printOneLiners(outThing,"Welcome to the Jungle!");
+            UIUtils.printOneLiners(outThing,"Unable to list games.");
         }
     }
 
     public void observeGame(Scanner scan) {
-        UIUtils.printOneLiners(outThing,"GameID");
+        UIUtils.printOneLiners(outThing,"Enter game number:");
         String gameID = scan.nextLine();
         if (Objects.equals(gameID, "")) {
             return;
         }
         try {
             Game game = listOfgames.get(gameID);
+            ChessBoard board = game.game().getBoard();
+            UIUtils.printOneLiners(outThing,"Now observing...");
+            UIUtils.printOneLiners(outThing,"From White's Perspective");
             ui.printBoardWhite(game.game().getBoard());
+            UIUtils.printOneLiners(outThing,"From Black's Perspective");
             ui.printBoardBlack(game.game().getBoard());
         } catch (Exception exe) {
         }

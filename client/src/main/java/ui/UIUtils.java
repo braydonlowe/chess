@@ -63,7 +63,7 @@ public class UIUtils {
                 out.print(op);
                 length-=3;
             }
-            for (int i = length; i <= 33; i++) {
+            for (int i = length; i <= 50; i++) {
                 out.print(" ");
             }
             resetColors(out);

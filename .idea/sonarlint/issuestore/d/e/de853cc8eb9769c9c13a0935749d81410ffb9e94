@@ -1,21 +1,21 @@
 
-	java:S112s"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¥¬œ§€2J$30260525-9482-47d0-a2c4-fc74092e4482
-›	java:S1359"YReduce the total number of break and continue statements in this loop to use at most one.(ø˜ÃÓ8§¬œ§€2J$70d3b9ac-22b6-4ca3-b1f1-f4ab231bdf26
+	java:S112t"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¥¬œ§€2J$c06007a7-1783-47c3-b9d3-d34918a46d85
+›	java:S1359"YReduce the total number of break and continue statements in this loop to use at most one.(ø˜ÃÓ8§¬œ§€2J$6a2679ce-efd6-42a4-be82-f06f096d214c
 °
-java:S1319"hThe type of "listOfgames" should be an interface such as "Map" rather than the implementation "HashMap".(ôÍúúıÿÿÿÿ8¨¬œ§€2J$a1038814-959b-469e-bc1f-16a06f62437f
+java:S1319"hThe type of "listOfgames" should be an interface such as "Map" rather than the implementation "HashMap".(ôÍúúıÿÿÿÿ8¨¬œ§€2J$a863f4ab-2c07-4a5c-a13e-9cf9aa867d21
 Ÿ
-java:S1104"WMake listOfgames a static final constant or non-public and provide accessors if needed.(ôÍúúıÿÿÿÿ8©¬œ§€2J$6c032b71-8d91-4ecd-b262-96556eb3086b
-m	java:S106"+Replace this use of System.out by a logger.(Ôæ´Ñ8ì¬œ§€2J$8b4cb70e-9617-4b5e-8416-4bc0552196e0
-	java:S128N"LEnd this switch case with an unconditional break, return or throw statement.(µ¿ÍG8ğ¬œ§€2J$0210a236-5d09-40c4-aeed-39a65484e8d9
-	java:S128F"LEnd this switch case with an unconditional break, return or throw statement.(•Š¿‹8ğ¬œ§€2J$8f89050d-b66a-4680-bdd5-af06e36049df
+java:S1104"WMake listOfgames a static final constant or non-public and provide accessors if needed.(ôÍúúıÿÿÿÿ8©¬œ§€2J$49ce90f7-252a-4b23-a4f4-9a84a16a1729
+m	java:S106"+Replace this use of System.out by a logger.(Ôæ´Ñ8ì¬œ§€2J$9fda65aa-98e5-4084-a686-11160ad49784
+	java:S128N"LEnd this switch case with an unconditional break, return or throw statement.(µ¿ÍG8ğ¬œ§€2J$a0b75077-8d93-4c86-9886-fabe9dbb0b23
+	java:S128F"LEnd this switch case with an unconditional break, return or throw statement.(•Š¿‹8ğ¬œ§€2J$a7237d29-a378-4898-89f0-c848386727cb
 ‚
-java:S1854f"?Remove this useless assignment to local variable "otherRecord".(Â‘Õ»8ò¬œ§€2J$413507b0-3593-4538-9ccb-3132b42b8ced
+java:S1854f"?Remove this useless assignment to local variable "otherRecord".(Â‘Õ»8ò¬œ§€2J$60802501-edf4-443b-ab4d-247f00ed8479
 ‚
-java:S6213e":Rename this variable to not match a restricted identifier.(á¥‚•ıÿÿÿÿ8ô¬œ§€2J$b02582f7-f895-4fe2-874a-da5e2be8e16b
+java:S6213e":Rename this variable to not match a restricted identifier.(á¥‚•ıÿÿÿÿ8ô¬œ§€2J$1dffa24d-8cff-4411-9556-22cbe61267bf
 s
-java:S1481f"0Remove this unused "otherRecord" local variable.(Â‘Õ»8õ¬œ§€2J$59cbc943-f133-4e4f-a32a-eb3b113b24ee
+java:S1481f"0Remove this unused "otherRecord" local variable.(Â‘Õ»8õ¬œ§€2J$412a7b35-69be-4de4-a75a-793ffabb81cb
 ƒ
-java:S6213‡":Rename this variable to not match a restricted identifier.(¾óÄşÿÿÿÿ8÷¬œ§€2J$3354a5f6-87e5-43c8-b0a4-eb38915c6115
-q
+java:S6213ˆ":Rename this variable to not match a restricted identifier.(¾óÄşÿÿÿÿ8÷¬œ§€2J$760cc7dc-0c26-44af-8b59-a6b1f3a78a0e
+—
 java:S1128
-"TRemove this unnecessary import: same package classes are always implicitly imported.(âÀ‹¿8ÌØš¨€2
+"TRemove this unnecessary import: same package classes are always implicitly imported.(âÀ‹¿8ÌØš¨€2J$39b2c146-3097-4234-8079-29d44708e677

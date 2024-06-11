@@ -100,6 +100,7 @@ public class PostLoginUI {
         try {
             CreateGameRecord record = new CreateGameRecord(gameName);
             CreateGameRecord otherRecord = facade.createGame(auth.authToken(), record);
+
             return true;
         } catch (Exception e) {
             UIUtils.printOneLiners(outThing,"Invalid login. Please try again.");
@@ -153,7 +154,7 @@ public class PostLoginUI {
                 counter++;
             }
         } catch (Exception exe) {
-            UIUtils.printOneLiners(outThing,"Unable to list games.");
+            UIUtils.printOneLiners(outThing,"Welcome to the Jungle!");
         }
     }
 

@@ -10,6 +10,9 @@ public class main {
         PreLoginUI login = new PreLoginUI();
         login.menuLoop(facade);
         Auth auth = login.getAuth();
+        if (auth == null) {
+            return;
+        }
         PostLoginUI post = new PostLoginUI(auth);
 
         post.menuLoop(facade,auth);

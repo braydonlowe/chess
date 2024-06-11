@@ -47,6 +47,10 @@ public class UIUtils {
         out.print(EscapeSequences.SET_BG_COLOR_LIGHT_GREY);
     }
 
+    public static void clearTerminal(PrintStream out) {
+        out.print(EscapeSequences.ERASE_SCREEN);
+    }
+
 
     public static void setMenu(PrintStream out, String[] options, boolean listOption) {
         for (String op : options) {

@@ -39,8 +39,13 @@ public class SQLGameDataAccess {
         boolean jsonRequest = JsonUtil.isValidJsonString(game.gameName());
         if (jsonRequest) {
             //I have no idea why this is happening but here's the band-aid
-            GameName gameName = JsonUtil.fromJson(game.gameName(), GameName.class);
-            name = gameName.gameName();
+            String gameNameJson = game.gameName();
+            GameName gameWithName = JsonUtil.fromJson(gameNameJson, GameName.class);
+            //Naming has gotten in the way. We have two different requests gameID and gameName
+            name = gameWithName.gameName();
+            if (gameWithName.gameName() == null) {
+                name = gameWithName.gameID();
+            }
         } else {
             name = game.gameName();
         }

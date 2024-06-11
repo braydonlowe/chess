@@ -1,0 +1,6 @@
+
+—
+java:S2095 "OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(â…ÍÆÿÿÿÿÿ8—§û¹ş1J$84a6cb6e-b4db-4f95-a2dd-fa6673e578d1
+}
+java:S1118":Add a private constructor to hide the implicit public one.(„°ì8™§û¹ş1J$20ec76ea-6a8d-4473-82d5-d22849fd760e
+ƒ	java:S125&"<This block of commented-out lines of code should be removed.(÷øû‡üÿÿÿÿ8›§û¹ş1J$39d30617-4820-4053-b5e2-e1eb9f53abef

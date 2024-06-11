@@ -1,5 +1,9 @@
 //package client; //This is needed for the tests to pass. I'm not sure what I did wrong here.
 
+import model.Auth;
+import model.CreateGameRecord;
+import model.ListOfGamesRecord;
+import model.User;
 import org.junit.jupiter.api.*;
 import server.Server;
 import ui.PreLoginUI;
@@ -26,6 +30,10 @@ public class ServerFacadeTests {
     @AfterAll
     static void stopServer() {
         server.stop();
+    }
+
+    @AfterEach
+    void clearDB() {
         server.userData.clear();
         server.authData.clear();
         server.gameData.clear();
@@ -43,8 +51,23 @@ public class ServerFacadeTests {
         login.menuLoop(facade);
     }
 
-    @Test void registerPos() throws Exception {
+    @Test
+    void createGamePos() throws Exception {
+        User user = new User("asdf","jkl;","1234");
+        Auth auth = facade.register(user);
+        CreateGameRecord record = new CreateGameRecord("CoolGame");
+        facade.createGame(auth.authToken(), record);
+        assertEquals(1, server.gameData.size());
+    }
 
+    @Test
+    void listGames() throws Exception {
+        User user = new User("asdf","jkl;","1234");
+        Auth auth = facade.register(user);
+        CreateGameRecord record = new CreateGameRecord("CoolGame");
+        facade.createGame(auth.authToken(), record);
+        ListOfGamesRecord list = facade.listGames(auth.authToken());
+        assertEquals(1, list.games().length);
     }
 
 }

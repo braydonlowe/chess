@@ -1,19 +1,13 @@
 
-	java:S112v"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ö”´®€2J$e77d38c1-8cbf-4c28-9756-b374929f1635
-›	java:S1359"YReduce the total number of break and continue statements in this loop to use at most one.(ø˜ÃÓ8÷”´®€2J$6612dad6-3ced-4d68-90fb-6b7861ad8797
+	java:S112u"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8úÓé¯€2J$a8e89976-3563-47f9-8274-f6fe9613ba2c
+›	java:S1358"YReduce the total number of break and continue statements in this loop to use at most one.(ø˜ÃÓ8üÓé¯€2J$d853b021-b471-4ee3-8423-2ec8a38707b9
 °
-java:S1319"hThe type of "listOfgames" should be an interface such as "Map" rather than the implementation "HashMap".(ôÍúúıÿÿÿÿ8÷”´®€2J$0fc9a0c0-f243-43e6-b561-d676433bd951
+java:S1319"hThe type of "listOfgames" should be an interface such as "Map" rather than the implementation "HashMap".(ôÍúúıÿÿÿÿ8üÓé¯€2J$cdf3d680-f846-49d5-a280-b0e4704093a6
 Ÿ
-java:S1104"WMake listOfgames a static final constant or non-public and provide accessors if needed.(ôÍúúıÿÿÿÿ8÷”´®€2J$9748576c-0ff3-4538-bbc3-691e14980bb1
-m	java:S106"+Replace this use of System.out by a logger.(Ôæ´Ñ8š•´®€2J$e1fff28d-9038-4667-8d8e-96c2e605175d
+java:S1104"WMake listOfgames a static final constant or non-public and provide accessors if needed.(ôÍúúıÿÿÿÿ8ıÓé¯€2J$e801d2f1-d802-4c08-b6c8-122e76675937
+m	java:S106"+Replace this use of System.out by a logger.(Ôæ´Ñ8¾Ôé¯€2J$1e39e57b-3e91-4113-8a2f-0a2c67339bd5
 ‚
-java:S1854h"?Remove this useless assignment to local variable "otherRecord".(Â‘Õ»8•´®€2J$f080c93f-2101-43f6-810a-55a437ada862
-‚
-java:S6213g":Rename this variable to not match a restricted identifier.(á¥‚•ıÿÿÿÿ8•´®€2J$015a62bc-5d49-4b90-b8c6-dbe164d73638
-s
-java:S1481h"0Remove this unused "otherRecord" local variable.(Â‘Õ»8•´®€2J$22367fbe-80e9-44bc-be7b-7db17a5fdde7
+java:S6213f":Rename this variable to not match a restricted identifier.(á¥‚•ıÿÿÿÿ8ÅÔé¯€2J$4636fe30-d6aa-4a32-95b5-1d8be23a2e73
 ƒ
-java:S6213Š":Rename this variable to not match a restricted identifier.(¾óÄşÿÿÿÿ8 •´®€2J$e9e3b890-3ab2-41f9-bbaf-bd7275e12473
-—
-java:S1128
-"TRemove this unnecessary import: same package classes are always implicitly imported.(âÀ‹¿8¡•´®€2J$e3d04564-9ceb-4d41-bae2-c8c98844951b
+java:S6213‰":Rename this variable to not match a restricted identifier.(¾óÄşÿÿÿÿ8ÈÔé¯€2J$3e1a0bdd-e416-4427-828c-32eed2601a10
+l	java:S108¬")Either remove or fill this block of code.(¬ªÀˆ8ËÔé¯€2J$97ec3354-910a-4f60-9c2c-849b96843063

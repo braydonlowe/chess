@@ -105,3 +105,11 @@ Z
 *src/main/java/model/ListOfGamesRecord.java,a\f\af931ec3459c3b5dadf7b9ae9be10d63df2f17f3
 c
 3src/main/java/dataaccess/sql/SQLGameDataAccess.java,a\6\a66e5a564fe3d44fd7a4c1c254b73ec1ad928413
+Z
+*src/main/java/dataaccess/sql/SQLUtils.java,8\e\8e2f5b5a52d85463c931214fdc362b3d34234646
+c
+3src/main/java/dataaccess/sql/SQLUserDataAccess.java,f\c\fc44442e196c20a52789cf096a84428901151dd0
+c
+3src/main/java/dataaccess/sql/SQLAuthDataAccess.java,5\e\5ec2a0293a8c65e903015123f2a61474bfb163ea
+Q
+!src/main/java/model/GameName.java,d\e\decd88ef5fd5711e626e401df54f73286c3a6b3e

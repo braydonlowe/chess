@@ -7,7 +7,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Objects;
 import java.util.Scanner;
-import ui.*;
 
 public class PostLoginUI {
 
@@ -101,7 +100,7 @@ public class PostLoginUI {
         }
         try {
             CreateGameRecord record = new CreateGameRecord(gameName);
-            CreateGameRecord otherRecord = facade.createGame(auth.authToken(), record);
+            facade.createGame(auth.authToken(), record);
             UIUtils.printOneLiners(outThing,"Game created");
             return true;
         } catch (Exception e) {
@@ -160,19 +159,17 @@ public class PostLoginUI {
         }
     }
 
-    public boolean observeGame(Scanner scan) {
+    public void observeGame(Scanner scan) {
         UIUtils.printOneLiners(outThing,"GameID");
         String gameID = scan.nextLine();
         if (Objects.equals(gameID, "")) {
-            return false;
+            return;
         }
         try {
             Game game = listOfgames.get(gameID);
             ui.printBoardWhite(game.game().getBoard());
             ui.printBoardBlack(game.game().getBoard());
-            return true;
         } catch (Exception exe) {
-            return false;
         }
     }
 }

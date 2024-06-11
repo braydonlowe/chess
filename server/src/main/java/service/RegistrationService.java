@@ -22,7 +22,12 @@ public class RegistrationService {
     }
     public Auth createUser(User oneUsersData) throws DataAccessException {
         //Check to see if the user is in the database if not throw a 403 error
-        User currentUser = userData.read(oneUsersData.username());
+        User currentUser;
+        try {
+            currentUser = userData.read(oneUsersData.username());
+        } catch (DataAccessException ex) {
+            currentUser = null;
+        }
 
         //If an input field is missing throw a 400 error.
         if (currentUser == null) {

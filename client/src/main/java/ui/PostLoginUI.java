@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class PostLoginUI {
 
     private PrintStream outThing;
-    private static final String[] options = {"HELP", "LOGOUT", "CREATE GAME", "PLAY GAME", "LIST GAMES", "OBSERVE GAME"};
+    private static final String[] OPTIONS = {"HELP", "LOGOUT", "CREATE GAME", "PLAY GAME", "LIST GAMES", "OBSERVE GAME"};
 
     private ServerFacade facade;
 
@@ -39,7 +39,7 @@ public class PostLoginUI {
         UIUtils.setColors(outThing);
         String[] menuTitle = {"Menu"};
         UIUtils.setMenu(outThing,menuTitle, false);
-        UIUtils.setMenu(outThing, options, true);
+        UIUtils.setMenu(outThing, OPTIONS, true);
     }
 
     public void menuToInput() {

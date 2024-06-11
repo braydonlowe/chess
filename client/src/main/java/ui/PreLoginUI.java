@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class PreLoginUI {
     private PrintStream out;
-    private static final String[] options = {"HELP", "QUIT", "LOGIN", "REGISTER"};
+    private static final String[] OPTIONS = {"HELP", "QUIT", "LOGIN", "REGISTER"};
 
     private Auth auth;
 
@@ -23,7 +23,7 @@ public class PreLoginUI {
         UIUtils.setColors(out);
         String[] menuTitle = {"Menu"};
         UIUtils.setMenu(out,menuTitle, false);
-        UIUtils.setMenu(out, options, true);
+        UIUtils.setMenu(out, OPTIONS, true);
     }
 
     public void menuToInput() {

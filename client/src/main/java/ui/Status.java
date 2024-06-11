@@ -1,7 +1,7 @@
 package ui;
 
 public class Status {
-    public enum userStatus{
+    public enum USER_STATUS {
         LOGGEDIN,
         LOGGEDOUT
     }

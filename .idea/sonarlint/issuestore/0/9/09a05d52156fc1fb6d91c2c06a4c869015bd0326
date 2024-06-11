@@ -1,4 +1,10 @@
 
-	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·š†‡8¬‘¹®€2J$4f2e4805-a227-4c7b-a9f1-83388bc0f981
-”
-java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(ÙØ¤Şıÿÿÿÿ8­‘¹®€2J$53d90d5d-151b-476a-b789-cb3a139b9e1c
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(·š†‡8ğµƒÁ€2
+n
+java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(ÙØ¤Şıÿÿÿÿ8òµƒÁ€2
+‚
+java:S1854":Remove this useless assignment to local variable "status".(”í“ıùÿÿÿÿ8œÇ´€2J$16f61079-5936-46e1-8689-54299e7d77a2
+‚
+java:S1854":Remove this useless assignment to local variable "status".(îç¡¬úÿÿÿÿ8ğÈ´€2J$b1484e81-42ed-4ae0-bb6b-6b6b92df96b7
+s
+java:S1481"+Remove this unused "status" local variable.(”í“ıùÿÿÿÿ8’œÇ´€2J$b8f4cd28-a6c2-4ca2-92f9-e6a9d22d86f2

@@ -1,14 +1,14 @@
-package dataaccess.dao;
+package dataaccess.sql;
 
 //Imports
 import dataaccess.DataAccessException;
 import dataaccess.DatabaseManager;
+import dataaccess.dao.DataAccessInterface;
 import model.User;
 
 import java.sql.Connection;
 import java.util.HashMap;
 import java.util.Map;
-import org.mindrot.jbcrypt.BCrypt;
 
 //SQLImports
 import java.sql.PreparedStatement;

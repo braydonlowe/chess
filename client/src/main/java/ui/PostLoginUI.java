@@ -66,19 +66,21 @@ public class PostLoginUI {
                     continue;
                 case "CREATE GAME":
                     createGame(scan, auth);
-                    continue;
+                    break;
                 case "PLAY GAME":
                     toggle = playGame(scan, auth);
+                    break;
                 case "LIST GAMES":
                     listGames(auth);
-                    if (!toggle) {
-                        menuToInput();
-                    }
-                    continue;
+                    break;
                 case "OBSERVE GAME":
                     observeGame(scan);
+                    break;
                 default:
                     UIUtils.printOneLiners(outThing, "Please type an appropriate command.");
+            }
+            if (!toggle) {
+                menuToInput();
             }
         }
     }
@@ -100,7 +102,7 @@ public class PostLoginUI {
         try {
             CreateGameRecord record = new CreateGameRecord(gameName);
             CreateGameRecord otherRecord = facade.createGame(auth.authToken(), record);
-
+            UIUtils.printOneLiners(outThing,"Game created");
             return true;
         } catch (Exception e) {
             UIUtils.printOneLiners(outThing,"Invalid login. Please try again.");

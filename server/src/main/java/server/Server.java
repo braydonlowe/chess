@@ -3,13 +3,13 @@ package server;
 
 //Imports
 import dataaccess.DataAccessException;
+import dataaccess.sql.SQLAuthDataAccess;
+import dataaccess.sql.SQLGameDataAccess;
+import dataaccess.sql.SQLUserDataAccess;
 import spark.*;
 import handlers.*;
-import dataaccess.dao.*;
 import service.*;
 import dataaccess.DatabaseManager;
-
-import java.sql.SQLException;
 
 public class Server {
     //Private variables

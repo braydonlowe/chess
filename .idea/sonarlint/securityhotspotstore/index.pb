@@ -103,3 +103,5 @@ L
 src/main/java/ui/Status.java,9\e\9e27960b7040fbb07e7f54df389d46b7b7316f1b
 Z
 *src/main/java/model/ListOfGamesRecord.java,a\f\af931ec3459c3b5dadf7b9ae9be10d63df2f17f3
+c
+3src/main/java/dataaccess/sql/SQLGameDataAccess.java,a\6\a66e5a564fe3d44fd7a4c1c254b73ec1ad928413

@@ -3,7 +3,9 @@ package service;
 
 //Import
 import dataaccess.DatabaseManager;
-import dataaccess.dao.*;
+import dataaccess.sql.SQLAuthDataAccess;
+import dataaccess.sql.SQLGameDataAccess;
+import dataaccess.sql.SQLUserDataAccess;
 import model.CreateGameRecord;
 import model.ListOfGamesRecord;
 import model.Auth;

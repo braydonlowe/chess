@@ -1,12 +1,14 @@
 package service;
 
 //Imports
+import dataaccess.sql.SQLAuthDataAccess;
+import dataaccess.sql.SQLGameDataAccess;
+import dataaccess.sql.SQLUserDataAccess;
 import model.CreateGameRecord;
 import model.Auth;
 import model.Game;
 import chess.ChessGame;
 import dataaccess.DataAccessException;
-import dataaccess.dao.*;
 
 public class CreateGameService {
     private final SQLAuthDataAccess authData;

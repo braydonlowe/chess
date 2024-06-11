@@ -1,10 +1,12 @@
 package service;
 
 //Imports
+import dataaccess.sql.SQLAuthDataAccess;
+import dataaccess.sql.SQLGameDataAccess;
+import dataaccess.sql.SQLUserDataAccess;
 import model.Auth;
 import model.User;
 import dataaccess.DataAccessException;
-import dataaccess.dao.*;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class LoginService{

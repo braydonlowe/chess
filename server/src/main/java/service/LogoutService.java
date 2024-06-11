@@ -2,7 +2,9 @@ package service;
 
 //Imports
 import dataaccess.DataAccessException;
-import dataaccess.dao.*;
+import dataaccess.sql.SQLAuthDataAccess;
+import dataaccess.sql.SQLGameDataAccess;
+import dataaccess.sql.SQLUserDataAccess;
 
 public class LogoutService {
     private final SQLAuthDataAccess authData;

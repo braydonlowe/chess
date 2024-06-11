@@ -1,11 +1,13 @@
 package service;
 
 //Imports
+import dataaccess.sql.SQLAuthDataAccess;
+import dataaccess.sql.SQLGameDataAccess;
+import dataaccess.sql.SQLUserDataAccess;
 import model.Auth;
 import model.Game;
 import model.User;
 import dataaccess.DataAccessException;
-import dataaccess.dao.*;
 
 public class JoinGameService {
     private final SQLAuthDataAccess authData;

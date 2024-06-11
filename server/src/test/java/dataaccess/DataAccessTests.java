@@ -1,19 +1,15 @@
 package dataaccess;
 
 import chess.ChessGame;
-import dataaccess.dao.SQLAuthDataAccess;
-import dataaccess.dao.SQLGameDataAccess;
-import dataaccess.dao.SQLUserDataAccess;
+import dataaccess.sql.SQLAuthDataAccess;
+import dataaccess.sql.SQLGameDataAccess;
+import dataaccess.sql.SQLUserDataAccess;
 import model.Auth;
 import model.Game;
 import model.User;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import javax.xml.crypto.Data;
-import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -1,6 +1,6 @@
 package dataaccess;
 
-import dataaccess.dao.SQLUtils;
+import dataaccess.sql.SQLUtils;
 
 import java.sql.*;
 import java.util.Properties;

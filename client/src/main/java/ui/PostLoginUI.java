@@ -136,6 +136,12 @@ public class PostLoginUI {
             JoinGameRecord record = new JoinGameRecord(gameID, playerColor);
             facade.joinGame(auth.authToken(), record);
             UIUtils.printOneLiners(outThing,"Game successfully joined");
+            if ((playerColor == "WHITE")) {
+                ui.printBoardWhite(theGame.game().getBoard());
+            }
+            else {
+                ui.printBoardBlack(theGame.game().getBoard());
+            }
             return true;
         } catch (Exception e) {
             UIUtils.printOneLiners(outThing,"Invalid game. Please try again.");

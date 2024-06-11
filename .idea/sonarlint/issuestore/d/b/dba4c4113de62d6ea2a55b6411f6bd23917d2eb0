@@ -1,5 +1,5 @@
 
-›	java:S135,"YReduce the total number of break and continue statements in this loop to use at most one.(İ¸¢8â®€2J$de8f389d-6d86-4696-8153-ede0155d7ad8
+›	java:S135,"YReduce the total number of break and continue statements in this loop to use at most one.(İ¸¢8â®€2J$88026371-0168-4e6e-bb8f-06a94a22caa7
 ‹
-java:S2583@"CChange this condition so that it does not always evaluate to "true"(Ù¥¶áüÿÿÿÿ8Î¢Á®€2J$c3b46fd8-952e-4810-9b8a-c8b34b5294cd
-m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8¥â®€2J$067be14a-9979-4290-86b2-2628d6c94a59
+java:S2583@"CChange this condition so that it does not always evaluate to "true"(Ù¥¶áüÿÿÿÿ8Î¢Á®€2J$60ac80d4-93f1-4f8c-9d42-dd502394df0a
+m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8¥â®€2J$35d7ce91-bf31-4948-9fe0-40ca65341265

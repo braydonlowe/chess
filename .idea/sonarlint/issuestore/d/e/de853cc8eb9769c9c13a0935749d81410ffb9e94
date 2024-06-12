@@ -1,23 +1,23 @@
 
-g	java:S112t"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ì˜Â€2
-u	java:S135:"YReduce the total number of break and continue statements in this loop to use at most one.(ø˜ÃÓ8î˜Â€2
-Š
-java:S1319"hThe type of "listOfgames" should be an interface such as "Map" rather than the implementation "HashMap".(ôÍúúıÿÿÿÿ8î˜Â€2
-y
-java:S1104"WMake listOfgames a static final constant or non-public and provide accessors if needed.(ôÍúúıÿÿÿÿ8ï˜Â€2
-Z
-java:S4973"<Strings and Boxed types should be compared using "equals()".(‡ıï¡8ğ˜Â€2
-Z
-java:S4973"<Strings and Boxed types should be compared using "equals()".(‡ıï¡8ğ˜Â€2
-_
-java:S4973‹"<Strings and Boxed types should be compared using "equals()".(Û«Ş½ùÿÿÿÿ8ğ˜Â€2
-G	java:S106"+Replace this use of System.out by a logger.(Ôæ´Ñ8¤Ÿ˜Â€2
-\
-java:S6213e":Rename this variable to not match a restricted identifier.(á¥‚•ıÿÿÿÿ8ªŸ˜Â€2
-]
-java:S6213ˆ":Rename this variable to not match a restricted identifier.(¾óÄşÿÿÿÿ8¬Ÿ˜Â€2
-\
-java:S1854°"9Remove this useless assignment to local variable "board".(÷×ç¨ùÿÿÿÿ8¯Ÿ˜Â€2
-M
-java:S1481°"*Remove this unused "board" local variable.(÷×ç¨ùÿÿÿÿ8°Ÿ˜Â€2
-F	java:S108¶")Either remove or fill this block of code.(¬ªÀˆ8°Ÿ˜Â€2
+	java:S112t"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8á¤õ€2J$30adf802-389d-4326-a5b7-3d64cd4bfd8a
+›	java:S135:"YReduce the total number of break and continue statements in this loop to use at most one.(ø˜ÃÓ8ä¤õ€2J$4e22ded4-56b7-443b-bc83-9bd11326aa11
+°
+java:S1319"hThe type of "listOfgames" should be an interface such as "Map" rather than the implementation "HashMap".(ôÍúúıÿÿÿÿ8ä¤õ€2J$1349695d-b842-4e2c-ab62-cbfb92b2778a
+Ÿ
+java:S1104"WMake listOfgames a static final constant or non-public and provide accessors if needed.(ôÍúúıÿÿÿÿ8å¤õ€2J$78388130-28f0-4aa3-b1f1-3731797a50b4
+€
+java:S4973"<Strings and Boxed types should be compared using "equals()".(‡ıï¡8ç¤õ€2J$c772f2d2-29eb-48d3-bb3c-67d440531600
+€
+java:S4973"<Strings and Boxed types should be compared using "equals()".(‡ıï¡8ç¤õ€2J$37da855a-dc32-46a1-a9a2-a87f0b4fd8a8
+…
+java:S4973‹"<Strings and Boxed types should be compared using "equals()".(Û«Ş½ùÿÿÿÿ8ç¤õ€2J$5de7d0b7-42f9-4f07-876d-776c5f5ccb9e
+m	java:S106"+Replace this use of System.out by a logger.(Ôæ´Ñ8‚¤õ€2J$4855fde2-c76a-4c1a-a4b5-f4016c5f5fb9
+‚
+java:S6213e":Rename this variable to not match a restricted identifier.(á¥‚•ıÿÿÿÿ8¤‚¤õ€2J$9633e73d-a39e-429f-9e79-7cdecbc38e5b
+ƒ
+java:S6213ˆ":Rename this variable to not match a restricted identifier.(¾óÄşÿÿÿÿ8«‚¤õ€2J$721fd89f-2305-41bc-83f5-03c86598e15f
+‚
+java:S1854°"9Remove this useless assignment to local variable "board".(÷×ç¨ùÿÿÿÿ8®‚¤õ€2J$218a2137-9d03-4983-a8fb-9253da968c53
+s
+java:S1481°"*Remove this unused "board" local variable.(÷×ç¨ùÿÿÿÿ8¯‚¤õ€2J$e7b8228b-ec38-4974-809e-016a5761943f
+l	java:S108¶")Either remove or fill this block of code.(¬ªÀˆ8°‚¤õ€2J$6709c9be-9a47-4d2a-aa94-b09192591614

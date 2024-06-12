@@ -2,6 +2,7 @@ package ui;
 
 import chess.ChessBoard;
 import model.*;
+import websocket.GamePlay;
 
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
@@ -18,6 +19,7 @@ public class PostLoginUI {
 
     public HashMap<String, Game> listOfgames;
     private GameplayUI ui;
+    private GamePlay gamePlay;
 
     public PostLoginUI(Auth auth) {
         this.outThing = new PrintStream(System.out, true, StandardCharsets.UTF_8);

@@ -133,6 +133,7 @@ public class PostLoginUI {
         }
 
         try {
+            //Instead here I think we call the gameplay class....
             Game theGame = listOfgames.get(gameID);
             gameID = theGame.gameID();
             JoinGameRecord record = new JoinGameRecord(gameID, playerColor);
@@ -146,7 +147,7 @@ public class PostLoginUI {
             }
             return true;
         } catch (Exception e) {
-            UIUtils.printOneLiners(outThing,"Invalid game. Please try again.");
+            UIUtils.printOneLiners(outThing,"Invalid input. Please try again.");
             return false;
         }
     }

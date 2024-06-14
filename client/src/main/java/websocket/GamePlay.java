@@ -30,17 +30,20 @@ public class GamePlay {
         String rowColumn = scan.nextLine();
         String[] rowColumns = rowColumn.split(" ");
         //find it in the map
-        int letterValid = lettersToInt.get(rowColumns[0]);
-        //if not in map
-        return null;
-        //Else
-        //Create & return a chess position.
+        if (rowColumns.length != 2) {
+            return null;
+        }
+        String rowCap = rowColumns[0].toUpperCase();
+        int rowNumber = lettersToInt.get(rowCap);
+        //if it's not in the map it'll throw an exception
+
+        return new ChessPosition(rowNumber, Integer.valueOf(rowColumns[1]));
     }
 
     public static boolean gamePlayLoop(Scanner scan, PrintStream out) {
         boolean inGameLoop = true;
         UIUtils.printOneLiners(out, "Game Options:");
-        UIUtils.setMenu(out, menuOptions, true);
+        UIUtils.printMenu(out, menuOptions, "Game Options");
         while(inGameLoop) {
             String input = scan.nextLine();
             String inputSwitch = input.toUpperCase();
@@ -75,12 +78,13 @@ public class GamePlay {
 
     private static void makeMove(PrintStream out, Scanner scan) {
         //Found in ChessGame
-        makeChessPositionFromInput(out, scan);
-        //try {
-
-        //} catch (InvalidMoveException e) {
-
-        //}
+        //Choose a piece to move;
+        try {
+            makeChessPositionFromInput(out, scan);
+        } catch (Exception e) {
+            UIUtils.printOneLiners(out, "Input position invalid.");
+        }
+        //Choose a place to put it.
     }
     private static void resign() {
         //I wonder if the game is deleted?

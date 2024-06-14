@@ -82,4 +82,10 @@ public class UIUtils {
     public static Scanner getInput() {
         return new Scanner(System.in);
     }
+
+    public static void printMenu(PrintStream outThing, String[] options, String menuLine) {
+        UIUtils.setColors(outThing);
+        UIUtils.printOneLiners(outThing, menuLine);
+        UIUtils.setMenu(outThing, options, true);
+    }
 }

@@ -36,15 +36,9 @@ public class PostLoginUI {
             UIUtils.printOneLiners(outThing,"Welcome to the jungle!");
         }
     }
-    public void printMenu() {
-        UIUtils.setColors(outThing);
-        String[] menuTitle = {"Menu"};
-        UIUtils.setMenu(outThing,menuTitle, false);
-        UIUtils.setMenu(outThing, OPTIONS, true);
-    }
 
     public void menuToInput() {
-        printMenu();
+        UIUtils.printMenu(outThing, OPTIONS, "Menu");
         String[] input = {"Please type selection"};
         outThing.print(EscapeSequences.SET_BG_COLOR_DARK_GREY);
         UIUtils.setMenu(outThing, input, false);

@@ -19,7 +19,6 @@ public class PostLoginUI {
 
     public HashMap<String, Game> listOfgames;
     private GameplayUI ui;
-    private GamePlay gamePlay;
 
     public PostLoginUI(Auth auth) {
         this.outThing = new PrintStream(System.out, true, StandardCharsets.UTF_8);
@@ -139,12 +138,15 @@ public class PostLoginUI {
             JoinGameRecord record = new JoinGameRecord(gameID, playerColor);
             facade.joinGame(auth.authToken(), record);
             UIUtils.printOneLiners(outThing,"Game successfully joined");
-            if ((playerColor == "WHITE")) {
+            if ((playerColor.equals("WHITE"))) {
                 ui.printBoardWhite(theGame.game().getBoard());
             }
             else {
                 ui.printBoardBlack(theGame.game().getBoard());
             }
+            //This is where we go into gameplay.
+            GamePlay.gamePlayLoop(scan, outThing);
+            menuToInput();
             return true;
         } catch (Exception e) {
             UIUtils.printOneLiners(outThing,"Invalid input. Please try again.");

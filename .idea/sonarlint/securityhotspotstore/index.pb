@@ -123,3 +123,9 @@ e
 5src/main/java/websocket/commands/UserGameCommand.java,c\1\c16e750703ed4f45be1d38427deab84e079f2fb8
 U
 %src/main/java/websocket/GamePlay.java,8\f\8f894bc891dc344e3bf7390ca5479106bda808af
+R
+"src/main/java/chess/ChessGame.java,7\3\73bf4fdc57c71c6f70f600b9fea515a646b27eef
+V
+&src/main/java/chess/ChessPosition.java,1\2\12180158e3ed9f2b7cf9588a38f33fca071ee26a
+R
+"src/main/java/chess/ChessMove.java,4\2\429c55da8253d8ee02138d80d1951c5e7d4a468c

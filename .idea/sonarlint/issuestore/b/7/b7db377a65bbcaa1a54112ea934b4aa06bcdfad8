@@ -1,11 +1,15 @@
 
-m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8Úç­‡€2J$1971aaa6-bb41-4043-ae7d-4d373745aec0
+m	java:S106"+Replace this use of System.out by a logger.(®úÓõ8Úç­‡€2J$4a75fa6c-af24-460c-9e8d-0212ee2de80b
 r
-java:S1197"*Move the array designators [] to the type.(™Éú•ùÿÿÿÿ8Úç­‡€2J$451087e8-d6ab-4c02-b920-01afd98f3033
+java:S1197"*Move the array designators [] to the type.(™Éú•ùÿÿÿÿ8Úç­‡€2J$84f00e32-eb8d-4cda-9629-1665b2e9f03d
 r
-java:S1197"*Move the array designators [] to the type.(‹Šë©ùÿÿÿÿ8Úç­‡€2J$5c77ab72-7f29-40ab-b044-6a5510e3b31d
+java:S1197"*Move the array designators [] to the type.(‹Šë©ùÿÿÿÿ8Úç­‡€2J$2ed46d5d-3371-405c-afb2-46f52861c2a8
 l
-java:S1197"*Move the array designators [] to the type.(é¾Ä8Ûç­‡€2J$85366256-d4fd-46b8-b542-b84004240706
+java:S1197"*Move the array designators [] to the type.(é¾Ä8Ûç­‡€2J$606aa048-bb49-47e8-a98c-a0a71d347ad1
 r
-java:S1197"*Move the array designators [] to the type.(•Âôÿÿÿÿÿ8Ûç­‡€2J$1ba0a2d1-11de-442c-8091-56aab3606011
-~	java:S125S"<This block of commented-out lines of code should be removed.(••ç¥8àç­‡€2J$1b0e15fc-88f1-4e69-9599-12112a16ce41
+java:S1197"*Move the array designators [] to the type.(ÂÂ¤ûøÿÿÿÿ8Ûç­‡€2J$402fadc7-c6b8-41f1-8f6b-582e9e70c3dd
+~	java:S125S"<This block of commented-out lines of code should be removed.(••ç¥8àç­‡€2J$a5b5804d-f5e8-443b-b5c3-515902371003
+J
+java:S1172]"-Remove this unused method parameter "endVar".(•”¹·8–•İ¢2
+‚
+java:S1068":Remove this unused "BORDER_CHARS_COL_WHITE" private field.(‹Šë©ùÿÿÿÿ8ñÜ¢2J$8e2b4a29-13a8-4b24-b676-8ab84ce7cd4b

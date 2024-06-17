@@ -1,6 +1,12 @@
 
 —
-java:S2095 "OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(â…ÍÆÿÿÿÿÿ8—§û¹ş1J$5ec4ad33-8ed1-45db-b426-910905d76015
+java:S2095 "OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(â…ÍÆÿÿÿÿÿ8«ÙÜÀ‚2J$e523ff03-3405-49f3-9908-a6e0a75d2ace
 }
-java:S1118":Add a private constructor to hide the implicit public one.(„°ì8™§û¹ş1J$ce642f13-f7d0-4914-8fcd-4817cef52d79
-ƒ	java:S125&"<This block of commented-out lines of code should be removed.(÷øû‡üÿÿÿÿ8›§û¹ş1J$ab3ec4d4-b6b0-40c8-85b3-c6c06a384030
+java:S1118":Add a private constructor to hide the implicit public one.(„°ì8¬ÙÜÀ‚2J$09a928f9-dd22-44c4-a615-77aea433081c
+ƒ	java:S125&"<This block of commented-out lines of code should be removed.(÷øû‡üÿÿÿÿ8®ÙÜÀ‚2J$574b0535-587f-491a-9fff-25ef09dda532
+m	java:S106("+Replace this use of System.out by a logger.(Šğš8¯ÙÜÀ‚2J$a682d88e-6bbc-4b9f-a34c-f4dd6fd36ef8
+m	java:S106)"+Replace this use of System.out by a logger.(ÕºÅã8¯ÙÜÀ‚2J$ecb0dca0-8ddc-4ede-a980-9ede9ec2bb15
+m	java:S1063"+Replace this use of System.out by a logger.(ÿê§¯8¯ÙÜÀ‚2J$f7bbcfa5-729d-4183-b0cf-17de227e7cb2
+r	java:S106f"+Replace this use of System.out by a logger.(ĞòŸ‡ûÿÿÿÿ8²ÙÜÀ‚2J$e98c6830-9cbb-43ac-8a07-da0d6354f95d
+m
+java:S2116f"%Use "Arrays.toString(array)" instead.(ĞòŸ‡ûÿÿÿÿ8³ÙÜÀ‚2J$d9c8442d-3cb9-45e5-9cb5-3997198eb7d6

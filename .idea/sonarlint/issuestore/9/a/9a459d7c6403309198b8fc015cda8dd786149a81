@@ -1,17 +1,17 @@
 
-	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¾ÜÎ¹şÿÿÿÿ8³×Ñ·‚2J$9b099a59-49ce-4ac9-8e96-01d2bf0153b7
-	java:S112$"FDefine and throw a dedicated exception instead of using a generic one.(«á»Ûúÿÿÿÿ8´×Ñ·‚2J$cffb4176-db35-420d-b904-68390cdcd8a5
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¾ÜÎ¹şÿÿÿÿ8³×Ñ·‚2J$21c1249e-b45a-4d77-a232-bfcb80a9a88d
+	java:S112$"FDefine and throw a dedicated exception instead of using a generic one.(«á»Ûúÿÿÿÿ8´×Ñ·‚2J$a03b053e-ce22-46fd-b4c8-e0baae3ddbfc
 q
-java:S3740"/Provide the parametrized type for this generic.(éì©l8´×Ñ·‚2J$fc381e6d-d3fd-4b86-a095-6fd98a8f2567
+java:S3740"/Provide the parametrized type for this generic.(éì©l8´×Ñ·‚2J$2742456d-0d53-4580-a498-01bb73475d65
 w
-java:S3740"/Provide the parametrized type for this generic.(¾ÜÎ¹şÿÿÿÿ8´×Ñ·‚2J$d14546a2-8439-4d7b-8ee9-e0c3002b63bc
+java:S3740"/Provide the parametrized type for this generic.(¾ÜÎ¹şÿÿÿÿ8´×Ñ·‚2J$1313ae94-6fcb-4950-8a92-9165f445115b
 p
-java:S1604"(Make this anonymous inner class a lambda(ÆÏ¹úÿÿÿÿ8´×Ñ·‚2J$7960bef4-a867-43b4-a5fb-26c964298912
+java:S1604"(Make this anonymous inner class a lambda(ÆÏ¹úÿÿÿÿ8´×Ñ·‚2J$ef1d0772-a845-40f5-91f8-068aa6f85879
 É
-java:S1186!"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(òø¨œøÿÿÿÿ8¸×Ñ·‚2J$c1e605bd-cc47-4628-8a00-b2918ad345fd
+java:S1186!"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(òø¨œøÿÿÿÿ8¸×Ñ·‚2J$8a9cfec0-abaf-47e6-9dcb-be99ac0d5875
 s
-java:S2446"0"notify" may not wake up the appropriate thread.(ıÕ 8»×Ñ·‚2J$84780053-cc1f-43fc-ab9e-70bab6e30bbe
+java:S2446"0"notify" may not wake up the appropriate thread.(ıÕ 8»×Ñ·‚2J$9a268851-f55a-4bf4-8e1c-3c708c36d543
 ²
-java:S2273"oMove this call to "notify()" into a synchronized block to be sure the monitor on "NotificationHandler" is held.(ıÕ 8»×Ñ·‚2J$a3ba269c-6962-4960-ba70-d2b8d3c2eeaf
+java:S2273"oMove this call to "notify()" into a synchronized block to be sure the monitor on "NotificationHandler" is held.(ıÕ 8»×Ñ·‚2J$1f1dfe0a-c0a0-471a-8ba6-4d6a76994ece
 t
-java:S1128"1Remove this unused import 'com.google.gson.Gson'.(–§8¼×Ñ·‚2J$b4e268b9-2129-491e-8606-3134b4ff68c3
+java:S1128"1Remove this unused import 'com.google.gson.Gson'.(–§8¼×Ñ·‚2J$6f08e36a-3727-439c-9126-33f4eb887384

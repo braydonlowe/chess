@@ -37,6 +37,8 @@ public class SQLUtils {
             }
             return preparedStatement; // returns .executeQuery();
         } catch (SQLException e) {
+            System.out.println(query);
+            System.out.println(parameters);
             e.printStackTrace();
             return null;
         }
@@ -46,6 +48,7 @@ public class SQLUtils {
         try {
             statement.executeUpdate();
         } catch (SQLException e) {
+            System.out.println(statement);
             e.printStackTrace();
         } finally {
             // Ensure resources are closed to prevent leaks
@@ -85,7 +88,8 @@ public class SQLUtils {
                     String white = resp.getString(name[1]);
                     String black = resp.getString(name[2]);
                     String gameName = resp.getString(name[3]);
-                    ChessGame game = JsonUtil.fromJson(resp.getString(name[4]), ChessGame.class);
+                    Game gameRecord = JsonUtil.fromJson(resp.getString(name[4]), Game.class);
+                    ChessGame game = gameRecord.game();
                     return returnClass.cast(new Game(id,white,black,gameName,game));
                 }
                 else {
@@ -95,7 +99,9 @@ public class SQLUtils {
         } catch (SQLException e) {
             throw new DataAccessException("SQL statement error");
         }
+        System.out.println(name.toString());
         throw new DataAccessException("Non persistance error");
+
     }
 
     public static void closeQuietly(AutoCloseable resource) {

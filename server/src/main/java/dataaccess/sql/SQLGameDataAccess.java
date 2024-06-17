@@ -86,7 +86,6 @@ public class SQLGameDataAccess {
         String[] params = {game.whiteUsername(), game.blackUsername(), gameData, id};
         PreparedStatement statement = SQLUtils.prepareParameterizedQuery(query, params, connection);
         SQLUtils.executeParameterizedQuery(statement);
-        SQLUtils.closeQuietly(statement);
         SQLUtils.closeQuietly(connection);
     }
 

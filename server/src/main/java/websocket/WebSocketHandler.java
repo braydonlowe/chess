@@ -102,15 +102,18 @@ public class WebSocketHandler {
             return;
         }
         thisGame.game().makeMove(move);
+
+
         if (thisGame.whiteUsername().equals(thisAuth.username())) {
-            thisGame.game().switchTeamColor(ChessGame.TeamColor.WHITE);
+            thisGame.game().setTeamTurn(ChessGame.TeamColor.BLACK);
         }
         else {
-            thisGame.game().switchTeamColor(ChessGame.TeamColor.BLACK);
+            thisGame.game().setTeamTurn(ChessGame.TeamColor.WHITE);
         }
 
-        gameDataAccess.update(thisGame.gameID(), thisGame);
-        moveUpdatesBroadcast(thisGame.gameID(), thisGame, thisAuth);
+        gameDataAccess.update(gameID, thisGame);
+        thisGame = gameDataAccess.read(gameID);
+        moveUpdatesBroadcast(gameID, thisGame, thisAuth);
     }
 
     private void resign(Session session, UserGameCommand command) throws DataAccessException, IOException {

@@ -151,7 +151,7 @@ public class PostLoginUI {
             int counter = 1;
             for (Game game : games) {
                 listOfgames.put(String.valueOf(counter), game);
-                UIUtils.printOneLiners(outThing,String.valueOf(counter) + ": " + game.gameName() + " Player 1: " + game.whiteUsername() + " Player 2: " + game.blackUsername());
+                UIUtils.printOneLiners(outThing,String.valueOf(counter) + ": " + game.gameName() + " White: " + game.whiteUsername() + " Black: " + game.blackUsername());
                 counter++;
             }
         } catch (Exception exe) {

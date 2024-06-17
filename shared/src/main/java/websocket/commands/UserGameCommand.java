@@ -24,6 +24,19 @@ public class UserGameCommand {
     protected CommandType commandType;
 
     private final String authToken;
+    private String gameID;
+
+
+    public void setType(CommandType type) {
+        this.commandType = type;
+    }
+
+    public String getGameID() {
+        return gameID;
+    }
+    public void setGameID(String newGameID) {
+        this.gameID = newGameID;
+    }
 
     public String getAuthString() {
         return authToken;

@@ -21,6 +21,7 @@ public class WebSocket extends Endpoint {
             this.session.addMessageHandler(new MessageHandler.Whole<String>() {
                 @Override
                 public void onMessage(String string) {
+                    //PetShop turned their notification here into a GSON
                     notificationHandler.notify();
                 }
             });

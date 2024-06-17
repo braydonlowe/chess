@@ -1,0 +1,13 @@
+
+ˆ	java:S1122"FDefine and throw a dedicated exception instead of using a generic one.(ÃÕ£À8µÁ®¾‚2J$fd682c49-36a8-4537-84fa-ac22acfc14f7
+‰	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¶‹ëÂ8µÁ®¾‚2J$d5ae2b14-3d1b-4047-9819-6c9b0ee59003
+‰	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¹ì³‘8µÁ®¾‚2J$b34b24a9-e783-4f4c-a7c3-3392cece9304
+‰	java:S112“"FDefine and throw a dedicated exception instead of using a generic one.(ÙèÒÏ8µÁ®¾‚2J$8a369ca5-e333-4162-aa2c-8f025dc4209b
+	java:S112Ó"FDefine and throw a dedicated exception instead of using a generic one.(¹¦ùèıÿÿÿÿ8µÁ®¾‚2J$4cd2f3cb-5322-4eea-9879-4df7331e8a14
+‰	java:S112Í"FDefine and throw a dedicated exception instead of using a generic one.(°à©8µÁ®¾‚2J$eb1c8a96-e20c-42c6-a7fe-656cfa58d745
+q
+java:S1172C".Remove this unused method parameter "session".(›‚Å˜8ËÁ®¾‚2J$67b2b775-0ebc-4831-a77d-6fb1e3ad4c61
+}
+java:S1128":Remove this unused import 'dataaccess.dao.AuthDataAccess'.(†ÿ¤¨8ÓÁ®¾‚2J$a10f914c-a14c-446e-905b-ba7a73ad4591
+‚
+java:S1128":Remove this unused import 'dataaccess.dao.GameDataAccess'.(”¿Ğ°ùÿÿÿÿ8ÓÁ®¾‚2J$bda40b4b-c6a7-4b97-aad3-f0f3b6605fa7

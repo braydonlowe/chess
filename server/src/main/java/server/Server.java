@@ -10,6 +10,7 @@ import spark.*;
 import handlers.*;
 import service.*;
 import dataaccess.DatabaseManager;
+import websocket.WebSocketHandler;
 
 public class Server {
     //Private variables
@@ -64,6 +65,7 @@ public class Server {
         }
 
         // Register your endpoints and handle exceptions here.
+        Spark.webSocket("/ws", new WebSocketHandler(authData, gameData));
         Spark.post("/user", (req, res) -> new RegistrationHandler(regService).registerUser(req, res));
         Spark.post("/session", (req, res) -> new LoginHandler(loginService).login(req, res));
         Spark.delete("/session", (req, res) -> new LogoutHandler(logoutService).logout(req, res));
@@ -71,6 +73,7 @@ public class Server {
         Spark.post("/game", (req, res) -> new CreateGameHandler(createService).createGame(req, res));
         Spark.put("/game", (req, res) -> new JoinGameHandler(joinService).joinGame(req, res));
         Spark.delete("/db", (req, res) -> new ClearHandler(clearService).handleClear(req, res));
+
 
         Spark.awaitInitialization();
         return Spark.port();

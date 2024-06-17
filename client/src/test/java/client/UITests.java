@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import ui.GameplayUI;
 import chess.ChessGame;
 import ui.PreLoginUI;
+import ui.UIUtils;
 
 public class UITests {
     private ChessGame game;
@@ -39,10 +40,5 @@ public class UITests {
         System.out.println();
         System.out.println();
         ui.printBoardWhite(board);
-    }
-
-    @Test
-    void showMenuPreLogin() {
-        login.printMenu();
     }
 }

@@ -36,12 +36,12 @@ public class UIUtils {
         }
     }
 
-    public static void resetColors(PrintStream out) {
+    private static void resetColors(PrintStream out) {
         out.print(EscapeSequences.RESET_BG_COLOR);
         out.print(EscapeSequences.RESET_TEXT_COLOR);
     }
 
-    public static void setColors(PrintStream out) {
+    private static void setColors(PrintStream out) {
         out.print(EscapeSequences.SET_TEXT_COLOR_WHITE);
         out.print(EscapeSequences.SET_TEXT_BOLD);
         out.print(EscapeSequences.SET_BG_COLOR_LIGHT_GREY);
@@ -53,7 +53,7 @@ public class UIUtils {
     }
 
 
-    public static void setMenu(PrintStream out, String[] options, boolean listOption) {
+    private static void setMenu(PrintStream out, String[] options, boolean listOption) {
         for (String op : options) {
             int length = op.length();
             if (listOption) {
@@ -79,13 +79,11 @@ public class UIUtils {
         UIUtils.resetColors(out);
     }
 
-    public static Scanner getInput() {
-        return new Scanner(System.in);
-    }
-
     public static void printMenu(PrintStream outThing, String[] options, String menuLine) {
         UIUtils.setColors(outThing);
         UIUtils.printOneLiners(outThing, menuLine);
         UIUtils.setMenu(outThing, options, true);
+        UIUtils.printOneLiners(outThing,"Please Type Selection:");
+        UIUtils.resetColors(outThing);
     }
 }

@@ -42,8 +42,8 @@ public class GamePlay {
 
     public static boolean gamePlayLoop(Scanner scan, PrintStream out) {
         boolean inGameLoop = true;
-        UIUtils.printOneLiners(out, "Game Options:");
         UIUtils.printMenu(out, menuOptions, "Game Options");
+        UIUtils.printOneLiners(out, "Please Enter Selection:");
         while(inGameLoop) {
             String input = scan.nextLine();
             String inputSwitch = input.toUpperCase();
@@ -72,8 +72,7 @@ public class GamePlay {
 
 
     private static void help(PrintStream out) {
-        UIUtils.printOneLiners(out,"Help menu");
-        UIUtils.setMenu(out, helpOptions, true);
+        UIUtils.printMenu(out, helpOptions, "Help menu");
     }
 
     private static void makeMove(PrintStream out, Scanner scan) {

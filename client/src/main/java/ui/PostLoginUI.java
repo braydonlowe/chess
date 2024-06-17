@@ -39,16 +39,12 @@ public class PostLoginUI {
 
     public void menuToInput() {
         UIUtils.printMenu(outThing, OPTIONS, "Menu");
-        String[] input = {"Please type selection"};
-        outThing.print(EscapeSequences.SET_BG_COLOR_DARK_GREY);
-        UIUtils.setMenu(outThing, input, false);
-        UIUtils.resetColors(outThing);
     }
 
     public void menuLoop(ServerFacade facade, Auth auth) throws Exception {
         this.facade = facade;
         boolean toggle = false;
-        Scanner scan = UIUtils.getInput();
+        Scanner scan = new Scanner(System.in);
         menuToInput();
         while (!toggle) {
             String line = scan.nextLine();
@@ -79,10 +75,9 @@ public class PostLoginUI {
     }
 
     public void help() {
-        String[] title = {"Available options:"};
+        String title = "Available options:";
         String[] list = {"Help - you're doing it", "Logout - leave program", "Create game - creates game", "Play game - joins game", "Observe Game - observes game"};
-        UIUtils.setMenu(outThing, title, false);
-        UIUtils.setMenu(outThing, list, true);
+        UIUtils.printMenu(outThing, list, title);
     }
 
 

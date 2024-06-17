@@ -1,8 +1,10 @@
 
 b
-java:S1640"Convert this Map to an EnumMap.(ïí»Œ8‰ØÙ¥2J$882fcc7e-4e25-41b9-8adc-03a73d864fa2
+java:S1640"Convert this Map to an EnumMap.(ïí»Œ8Š€¦2J$1b2d7f01-627f-4f14-b681-f2eff2e86023
 g
-java:S1640"Convert this Map to an EnumMap.(ÊÖ¨“ûÿÿÿÿ8‰ØÙ¥2J$ae146c27-59ae-41be-b3b6-efefbbd7dbf5
+java:S1640"Convert this Map to an EnumMap.(ÊÖ¨“ûÿÿÿÿ8‹€¦2J$9777a91b-e7bd-4434-afb0-f492494f83b5
 }
 java:S1118
-":Add a private constructor to hide the implicit public one.(®îë8ØÙ¥2J$637c91bb-dc61-447c-be2e-f3e30865bf3b
+":Add a private constructor to hide the implicit public one.(®îë8‘€¦2J$ef224405-b7ea-46b5-b77e-a33f558e76fd
+v
+java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ8êˆŠ¦2J$c051eacc-707c-44cc-a811-245c0d515b00

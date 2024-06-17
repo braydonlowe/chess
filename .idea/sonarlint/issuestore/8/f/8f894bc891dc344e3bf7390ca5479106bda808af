@@ -1,7 +1,13 @@
 
 
-java:S1192"GDefine a constant instead of duplicating this literal "RESIGN" 3 times.(µ¼ı‡úÿÿÿÿ8†‘Û¥2J$4eb9c3f0-7627-47e4-b3dc-8c301f6ddeff
- 	java:S135/"YReduce the total number of break and continue statements in this loop to use at most one.(â‘Ÿøÿÿÿÿ8‡‘Û¥2J$c0ed616e-8b24-4efa-9999-0a055dbca79c
+java:S1192"GDefine a constant instead of duplicating this literal "RESIGN" 3 times.(µ¼ı‡úÿÿÿÿ8³÷…¦‚2J$9f35244e-0a50-4703-972f-89b53043ee15
+ 	java:S135/"YReduce the total number of break and continue statements in this loop to use at most one.(â‘Ÿøÿÿÿÿ8´÷…¦‚2J$babb1444-60ee-47f4-bbc3-10ab39020779
+
+java:S2589/"7Remove this expression which always evaluates to "true"(â‘Ÿøÿÿÿÿ8â÷…¦‚2J$29acd7a9-db6b-4f3a-8d99-255db6d913eb
+{
+java:S3516+"9Refactor this method to not always return the same value.(ğÆâ8â÷…¦‚2J$0e56c74b-020f-4ad7-aa82-edf9ebe2d6be
 ‚
-java:S1118":Add a private constructor to hide the implicit public one.(„í¼–ûÿÿÿÿ8Œ‘Û¥2J$c82542c1-560a-4fb0-8f5e-02c92f55171e
-~	java:S125Q"<This block of commented-out lines of code should be removed.(Ä‰8‘Û¥2J$02dbf083-c1b9-46dc-9733-07b6dc6683eb
+java:S1118":Add a private constructor to hide the implicit public one.(„í¼–ûÿÿÿÿ8æ÷…¦‚2J$ad062dd7-3712-4356-a698-111720c06831
+~	java:S125P"<This block of commented-out lines of code should be removed.(Ä‰8ğ÷…¦‚2J$fad457d3-937c-45ce-978d-7494f079695a
+
+java:S1128"7Remove this unused import 'chess.InvalidMoveException'.(‡”óûÿÿÿÿ8ñ÷…¦‚2J$f1a605e2-23b8-4b67-87ff-5db15b8b956a

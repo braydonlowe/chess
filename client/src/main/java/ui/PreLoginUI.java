@@ -19,19 +19,9 @@ public class PreLoginUI {
         this.out = new PrintStream(System.out, true, StandardCharsets.UTF_8);
     }
 
-    public void printMenu() {
-        UIUtils.setColors(out);
-        String[] menuTitle = {"Menu"};
-        UIUtils.setMenu(out,menuTitle, false);
-        UIUtils.setMenu(out, OPTIONS, true);
-    }
-
     public void menuToInput() {
-        printMenu();
-        String[] input = {"Please type selection"};
+        UIUtils.printMenu(out, OPTIONS, "Login Menu:");
         out.print(EscapeSequences.SET_BG_COLOR_DARK_GREY);
-        UIUtils.setMenu(out, input, false);
-        UIUtils.resetColors(out);
     }
 
 
@@ -39,7 +29,7 @@ public class PreLoginUI {
     public boolean menuLoop(ServerFacade facade) {
         this.facade = facade;
         boolean stopLoop = false;
-        Scanner scan = UIUtils.getInput();
+        Scanner scan = new Scanner(System.in);
         menuToInput();
         while (!stopLoop) {
             String line = scan.nextLine();
@@ -72,10 +62,9 @@ public class PreLoginUI {
     }
 
     public void help() {
-        String[] title = {"Available options:"};
+        String title = "Available options:";
         String[] list = {"Help - you're doing it", "Quit - leave program", "Login - login user", "Register - register user"};
-        UIUtils.setMenu(out, title, false);
-        UIUtils.setMenu(out, list, true);
+        UIUtils.printMenu(out, list, title);
     }
 
 

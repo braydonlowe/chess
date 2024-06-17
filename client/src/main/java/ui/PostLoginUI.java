@@ -134,7 +134,7 @@ public class PostLoginUI {
                 ui.printBoardBlack(theGame.game().getBoard());
             }
             //This is where we go into gameplay.
-            GamePlay.gamePlayLoop(scan, outThing);
+            GamePlay.gamePlayLoop(scan, outThing, playerColor, gameID);
             menuToInput();
             return true;
         } catch (Exception e) {

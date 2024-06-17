@@ -10,8 +10,8 @@ import java.util.Scanner;
 
 public class GamePlay {
     //Set variables here
-    private static final String[] menuOptions = {"HELP", "REDRAW CHESS BOARD", "LEAVE", "MAKEMOVE","RESIGN","HIGHLIGHT LEGAL MOVES"};
-    private static final String[] helpOptions = {"HELP - you're doing it.", "REDRAW CHESS BOARD - redraws an updated board", "LEAVE - leaves the game", "MAKEMOVE - makes a move. Format: ","RESIGN","HIGHLIGHT LEGAL MOVES: give a piece, get shown moves."};
+    private static final String[] menuOptions = {"HELP", "REDRAW CHESS BOARD", "LEAVE", "MAKE MOVE","RESIGN","HIGHLIGHT LEGAL MOVES"};
+    private static final String[] helpOptions = {"HELP - you're doing it.", "REDRAW CHESS BOARD - redraws an updated board", "LEAVE - leaves the game", "MAKE MOVE - makes a move.","RESIGN - Forfeit the game.","HIGHLIGHT LEGAL MOVES: give a piece, get shown moves."};
 
     private static final HashMap<String, Integer> lettersToInt = new HashMap<>();
     static {
@@ -40,16 +40,18 @@ public class GamePlay {
         return new ChessPosition(rowNumber, Integer.valueOf(rowColumns[1]));
     }
 
-    public static boolean gamePlayLoop(Scanner scan, PrintStream out) {
+    public static boolean gamePlayLoop(Scanner scan, PrintStream out, String teamColorString, String gameID) {
         boolean inGameLoop = true;
         UIUtils.printMenu(out, menuOptions, "Game Options");
-        UIUtils.printOneLiners(out, "Please Enter Selection:");
         while(inGameLoop) {
             String input = scan.nextLine();
             String inputSwitch = input.toUpperCase();
             switch (inputSwitch) {
                 case "HELP":
                     help(out);
+                    continue;
+                case "REDRAW CHESS BOARD":
+                    redraw(teamColorString);
                     continue;
                 case "LEAVE":
                     return true;
@@ -73,6 +75,10 @@ public class GamePlay {
 
     private static void help(PrintStream out) {
         UIUtils.printMenu(out, helpOptions, "Help menu");
+    }
+
+    private static void redraw(String teamColor) {
+
     }
 
     private static void makeMove(PrintStream out, Scanner scan) {

@@ -36,7 +36,7 @@ public class UIUtils {
         }
     }
 
-    private static void resetColors(PrintStream out) {
+    public static void resetColors(PrintStream out) {
         out.print(EscapeSequences.RESET_BG_COLOR);
         out.print(EscapeSequences.RESET_TEXT_COLOR);
     }
@@ -82,6 +82,7 @@ public class UIUtils {
     public static void printMenu(PrintStream outThing, String[] options, String menuLine) {
         UIUtils.setColors(outThing);
         UIUtils.printOneLiners(outThing, menuLine);
+        UIUtils.setColors(outThing);
         UIUtils.setMenu(outThing, options, true);
         UIUtils.printOneLiners(outThing,"Please Type Selection:");
         UIUtils.resetColors(outThing);

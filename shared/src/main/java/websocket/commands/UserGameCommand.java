@@ -16,8 +16,6 @@ public class UserGameCommand {
 
     public enum CommandType {
         CONNECT, //There's an error in the tests otherwize.
-        JOIN_PLAYER,
-        JOIN_OBSERVER,
         MAKE_MOVE,
         LEAVE,
         RESIGN

@@ -1,30 +1,32 @@
 package websocket;
 
-import chess.ChessGame;
-import chess.ChessMove;
 import dataaccess.DataAccessException;
-import dataaccess.dao.AuthDataAccess;
-import dataaccess.dao.GameDataAccess;
 import dataaccess.sql.SQLAuthDataAccess;
 import dataaccess.sql.SQLGameDataAccess;
+import chess.ChessGame;
+import chess.ChessMove;
 import model.Auth;
 import model.Game;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketMessage;
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.annotations.WebSocket;
 import server.JsonUtil;
-import websocket.commands.MakeMoveCommand;
+import websocket.commands.MakeMove;
 import websocket.commands.UserGameCommand;
 import websocket.messages.*;
-
 import java.io.IOException;
 import java.util.Objects;
 
 @WebSocket
 public class WebSocketHandler {
     private final ConnectionManager connectionManager = new ConnectionManager();
-    private final SQLAuthDataAccess authDataAccess;
-    private final SQLGameDataAccess gameDataAccess;
+    private SQLAuthDataAccess authDataAccess = null;
+    private SQLGameDataAccess gameDataAccess = null;
+
+    private String team;
+
+    private Game thisGame;
+    private Auth thisAuth;
 
     public WebSocketHandler(SQLAuthDataAccess auth, SQLGameDataAccess game) {
         this.authDataAccess = auth;
@@ -37,10 +39,18 @@ public class WebSocketHandler {
         try {
             UserGameCommand command = JsonUtil.fromJson(clientJson, UserGameCommand.class);
             switch (command.getCommandType()) {
-                case CONNECT -> connect(session, command);
-                case MAKE_MOVE -> makeMove(session, JsonUtil.fromJson(clientJson, MakeMoveCommand.class));
-                case LEAVE -> leaveGame(session, command);
-                case RESIGN -> resign(session, command);
+                case CONNECT:
+                    connect(session, command);
+                    break;
+                case MAKE_MOVE:
+                    makeMove(session, JsonUtil.fromJson(clientJson, MakeMove.class));
+                    break;
+                case LEAVE:
+                    leaveGame(command);
+                    break;
+                case RESIGN:
+                    resign(session, command);
+                    break;
             }
         } catch (Exception e ) {
             session.getRemote().sendString(JsonUtil.toJson(new ErrorMessage(e.getMessage())));
@@ -48,10 +58,7 @@ public class WebSocketHandler {
     }
 
     private void connect(Session session, UserGameCommand command) throws Exception {
-        String auth = command.getAuthString();
-        String gameID = command.getGameID();
-        Game thisGame = gameDataAccess.read(gameID);
-        Auth thisAuth = authDataAccess.read(auth);
+        setAuthGame(command);
         if (thisGame == null) {
             session.getRemote().sendString(JsonUtil.toJson(new ErrorMessage("Incorrect GameID")));
             return;
@@ -59,68 +66,15 @@ public class WebSocketHandler {
         String username = thisAuth.username();
         connectionManager.add(thisGame.gameID(), thisAuth.authToken(), session);
         String message = formatJoinMessage(thisGame, username);
-        session.getRemote().sendString(JsonUtil.toJson(new LoadGameMessage(thisGame)));
+        LoadGameMessage loadGame = new LoadGameMessage(thisGame);
+        loadGame.setTeam(team);
+        session.getRemote().sendString(JsonUtil.toJson(loadGame));
         Notification notification = new Notification(message);
         connectionManager.broadcast(thisGame.gameID(), thisAuth.authToken(), notification);
     }
 
-    private void leaveGame(Session session, UserGameCommand command) throws DataAccessException, IOException {
-        String token = command.getAuthString();
-        String gameID = command.getGameID();
-
-        Auth currentUser = authDataAccess.read(token);
-        Game currentGame = gameDataAccess.read(gameID);
-
-        if (Objects.equals(currentGame.whiteUsername(), currentUser.username())) {
-            currentGame = new Game(currentGame.gameID(), null, currentGame.blackUsername(), currentGame.gameName(), currentGame.game());
-            gameDataAccess.update(gameID, currentGame);
-        } else if (Objects.equals(currentGame.blackUsername(), currentUser.username())) {
-            currentGame = new Game(currentGame.gameID(), currentGame.whiteUsername(), null, currentGame.gameName(), currentGame.game());
-            gameDataAccess.update(gameID, currentGame);
-        }
-
-        connectionManager.remove(gameID, token);
-        String message = String.format("%s has left the Game", currentUser.username());
-        Notification notification = new Notification(message);
-        connectionManager.broadcast(gameID, token, notification);
-    }
-
-    private void makeMove(Session session, MakeMoveCommand command) throws Exception {
-        String auth = command.getAuthString();
-        String gameID = command.getGameID();
-        Game thisGame = gameDataAccess.read(gameID);
-        Auth thisAuth = authDataAccess.read(auth);
-        ChessMove move = command.getMove();
-        if (!isPlayer(thisGame, thisAuth.username())) {
-            session.getRemote().sendString(JsonUtil.toJson(new ErrorMessage("Observers cannot move. They are objects.")));
-            return;
-        }
-        try {
-            validateMove(thisGame, thisAuth, move);
-        } catch (Exception e) {
-            session.getRemote().sendString(JsonUtil.toJson(new ErrorMessage(e.getMessage())));
-            return;
-        }
-        thisGame.game().makeMove(move);
-
-
-        if (thisGame.whiteUsername().equals(thisAuth.username())) {
-            thisGame.game().setTeamTurn(ChessGame.TeamColor.BLACK);
-        }
-        else {
-            thisGame.game().setTeamTurn(ChessGame.TeamColor.WHITE);
-        }
-
-        gameDataAccess.update(gameID, thisGame);
-        thisGame = gameDataAccess.read(gameID);
-        moveUpdatesBroadcast(gameID, thisGame, thisAuth);
-    }
-
     private void resign(Session session, UserGameCommand command) throws DataAccessException, IOException {
-        String auth = command.getAuthString();
-        String gameID = command.getGameID();
-        Game thisGame = gameDataAccess.read(gameID);
-        Auth thisAuth = authDataAccess.read(auth);
+        setAuthGame(command);
         if (!isPlayer(thisGame, thisAuth.username())) {
             session.getRemote().sendString(JsonUtil.toJson(new ErrorMessage("You're an observer and cannot resign")));
             return;
@@ -131,20 +85,60 @@ public class WebSocketHandler {
         }
         thisGame.game().setGameOver(true);
         gameDataAccess.update(thisGame.gameID(), thisGame);
-        String message = String.format("%s has resigned", thisAuth.username());
+        String message = thisAuth.username() + " has resigned";
         Notification notification = new Notification(message);
         connectionManager.broadcastAll(thisGame.gameID(), notification);
     }
 
-    private void validateMove(Game thisGame, Auth currentUser, ChessMove move) throws Exception {
-        String userName = currentUser.username();
+    private void leaveGame(UserGameCommand command) throws DataAccessException, IOException {
+        setAuthGame(command);
+        if (thisGame.whiteUsername() == thisAuth.username()) {
+            thisGame = new Game(thisGame.gameID(), null, thisGame.blackUsername(), thisGame.gameName(), thisGame.game());
+            gameDataAccess.update(thisGame.gameID(), thisGame);
+        } else if (thisGame.blackUsername() == thisAuth.username()) {
+            thisGame = new Game(thisGame.gameID(), thisGame.whiteUsername(), null, thisGame.gameName(), thisGame.game());
+            gameDataAccess.update(thisGame.gameID(), thisGame);
+        }
+        connectionManager.remove(thisGame.gameID(), thisAuth.authToken());
+        String message = thisAuth.username() +" is no longer playing";
+        Notification notification = new Notification(message);
+        connectionManager.broadcast(thisGame.gameID(), thisAuth.authToken(), notification);
+    }
+
+    private void makeMove(Session session, MakeMove command) throws Exception {
+        setAuthGame(command);
+        ChessMove move = command.getMove();
+        if (!isPlayer(thisGame, thisAuth.username())) {
+            session.getRemote().sendString(JsonUtil.toJson(new ErrorMessage("Observers cannot move. They are objects.")));
+            return;
+        }
+        try {
+            validateMove(move);
+        } catch (Exception e) {
+            session.getRemote().sendString(JsonUtil.toJson(new ErrorMessage(e.getMessage())));
+            return;
+        }
+        thisGame.game().makeMove(move);
+        if (thisGame.whiteUsername().equals(thisAuth.username())) {
+            thisGame.game().setTeamTurn(ChessGame.TeamColor.BLACK);
+        }
+        else {
+            thisGame.game().setTeamTurn(ChessGame.TeamColor.WHITE);
+        }
+        gameDataAccess.update(thisGame.gameID(), thisGame);
+        thisGame = gameDataAccess.read(thisGame.gameID());
+        moveUpdatesBroadcast(thisGame.gameID(), thisGame, thisAuth);
+    }
+
+    private void validateMove(ChessMove move) throws Exception {
+        String userName = thisAuth.username();
         ChessGame.TeamColor turn = thisGame.game().getTeamTurn();
         ChessGame.TeamColor currentUsersTeam = getUserTeam(thisGame, userName);
         if (thisGame.game().isGameOver()) {
             throw new Exception("Game is over");
         }
         if (!thisGame.game().validMoves(move.getStartPosition()).contains(move)) {
-            throw new Exception("Not a valid move");
+            throw new Exception("Illegal Move");
         }
         if (turn != currentUsersTeam) {
             throw new Exception("Not your turn.");
@@ -152,38 +146,38 @@ public class WebSocketHandler {
 
     }
 
-    private void moveUpdatesBroadcast(String gameID, Game currentGame, Auth currentUser) throws DataAccessException, IOException {
-        connectionManager.broadcastAll(gameID, new LoadGameMessage(currentGame));
-        String message = String.format("%s has made a move", currentUser.username());
+    private void moveUpdatesBroadcast(String gameID, Game game, Auth currentUser) throws DataAccessException, IOException {
+        connectionManager.broadcastAll(gameID, new LoadGameMessage(game));
+        String message = currentUser.username() + " has made a move";
         Notification notification = new Notification(message);
         connectionManager.broadcast(gameID, currentUser.authToken(), notification);
-        postMoveUpdate(currentGame, gameID);
+        moveUpdate(game, gameID);
     }
 
-    private void postMoveUpdate(Game currentGame, String gameID) throws DataAccessException, IOException {
-        if (currentGame.game().isInCheckmate(ChessGame.TeamColor.WHITE)) {
-            announceGameResult(currentGame, gameID, String.format("%s has won the game! White is in checkmate", currentGame.blackUsername()));
-            currentGame.game().setGameOver(true);
-            gameDataAccess.update(gameID, currentGame);
-        } else if (currentGame.game().isInCheckmate(ChessGame.TeamColor.BLACK)) {
-            announceGameResult(currentGame, gameID, String.format("%s has won the game! Black is in checkmate", currentGame.whiteUsername()));
-            currentGame.game().setGameOver(true);
-            gameDataAccess.update(gameID, currentGame);
-        } else if (currentGame.game().isInStalemate(ChessGame.TeamColor.WHITE) || currentGame.game().isInStalemate(ChessGame.TeamColor.BLACK)) {
-            announceGameResult(currentGame, gameID, "Tie! Stalemate!");
-            currentGame.game().setGameOver(true);
-            gameDataAccess.update(gameID, currentGame);
+    private void moveUpdate(Game game, String gameID) throws DataAccessException, IOException {
+        if (game.game().isInCheckmate(ChessGame.TeamColor.WHITE)) {
+            gameResult(game, gameID, (game.blackUsername() + " has won!"));
+            game.game().setGameOver(true);
+            gameDataAccess.update(gameID, game);
+        } else if (game.game().isInCheckmate(ChessGame.TeamColor.BLACK)) {
+            gameResult(game, gameID, (game.whiteUsername() + " has won!"));
+            game.game().setGameOver(true);
+            gameDataAccess.update(gameID, game);
+        } else if (game.game().isInStalemate(ChessGame.TeamColor.WHITE) || game.game().isInStalemate(ChessGame.TeamColor.BLACK)) {
+            gameResult(game, gameID, "Stalemate");
+            game.game().setGameOver(true);
+            gameDataAccess.update(gameID, game);
         } else {
-            if (currentGame.game().isInCheck(ChessGame.TeamColor.WHITE)) {
-                connectionManager.broadcastAll(gameID, new Notification("White is in check!"));
+            if (game.game().isInCheck(ChessGame.TeamColor.WHITE)) {
+                connectionManager.broadcastAll(gameID, new Notification("White is in check"));
             }
-            if (currentGame.game().isInCheck(ChessGame.TeamColor.BLACK)) {
-                connectionManager.broadcastAll(gameID, new Notification("Black is in check!"));
+            if (game.game().isInCheck(ChessGame.TeamColor.BLACK)) {
+                connectionManager.broadcastAll(gameID, new Notification("Black is in check"));
             }
         }
     }
 
-    private void announceGameResult(Game currentGame, String gameID, String message) throws DataAccessException, IOException {
+    private void gameResult(Game currentGame, String gameID, String message) throws DataAccessException, IOException {
         Notification notification = new Notification(message);
         currentGame.game().setGameOver(true);
         gameDataAccess.update(gameID, currentGame);
@@ -192,11 +186,14 @@ public class WebSocketHandler {
 
     private String formatJoinMessage(Game game, String username) {
         if (Objects.equals(game.blackUsername(), username)) {
+            team = "BLACK";
             return username + " is now playing as Black";
 
         } else if (Objects.equals(game.whiteUsername(), username)) {
+            team = "WHITE";
             return username + " is now playing as White";
         } else {
+            team = "WHITE";
             return username + " is now an observer";
         }
     }
@@ -213,6 +210,14 @@ public class WebSocketHandler {
         } else {
             throw new Exception("Not a player in the game");
         }
+    }
+
+
+    private void setAuthGame(UserGameCommand command) throws DataAccessException {
+        String auth = command.getAuthString();
+        String gameID = command.getGameID();
+        thisGame = gameDataAccess.read(gameID);
+        thisAuth = authDataAccess.read(auth);
     }
 
 }

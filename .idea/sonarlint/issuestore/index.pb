@@ -157,3 +157,9 @@ e
 5src/main/java/websocket/messages/LoadGameMessage.java,f\b\fbd5b6be0c8563422e1116e98be71989896a91ce
 b
 2src/main/java/websocket/messages/Notification.java,7\7\77c1c6a96fc5c4274520ce2cefee4c638b4e16b9
+g
+7src/main/java/websocket/NotificationImplementation.java,6\c\6ca00f5c1bbf169de177455042491b60ac6fea48
+X
+(src/main/java/websocket/NoteHandler.java,5\f\5f41ffbd0d59da64a5b87f87eccdc1dbb63ba724
+^
+.src/main/java/websocket/commands/MakeMove.java,e\d\ed4c005c34b3787a69c417a8c2e31ff8b5e87964

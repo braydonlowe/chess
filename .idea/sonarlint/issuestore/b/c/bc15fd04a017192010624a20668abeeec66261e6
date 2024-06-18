@@ -1,13 +1,11 @@
 
-ˆ	java:S1122"FDefine and throw a dedicated exception instead of using a generic one.(ÃÕ£À8µÁ®¾‚2J$b3128efe-9d78-4ee8-ab2c-e74ef8584c99
-‰	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¶‹ëÂ8µÁ®¾‚2J$bed9df81-5eb7-4f87-900d-b62818d7933f
-‰	java:S112“"FDefine and throw a dedicated exception instead of using a generic one.(¹ì³‘8µÁ®¾‚2J$f0ed5860-ae32-40ca-b93d-8245c2a60ce8
-‰	java:S112–"FDefine and throw a dedicated exception instead of using a generic one.(ÙèÒÏ8µÁ®¾‚2J$e1965959-940e-4c05-b923-163f5c8817e9
-	java:S112Ö"FDefine and throw a dedicated exception instead of using a generic one.(¹¦ùèıÿÿÿÿ8µÁ®¾‚2J$43335835-27f9-47c5-99ef-215cfb9581ce
-‰	java:S112Ğ"FDefine and throw a dedicated exception instead of using a generic one.(°à©8›ÕÛ¾‚2J$88447d9a-da80-4484-a09d-1df4bb6e2d71
-q
-java:S1172C".Remove this unused method parameter "session".(›‚Å˜8ËÁ®¾‚2J$24567eb9-7ced-4bdb-b5aa-a701a896c783
-}
-java:S1128":Remove this unused import 'dataaccess.dao.AuthDataAccess'.(†ÿ¤¨8¿ˆç¿‚2J$78889536-8bc1-4b25-aff3-a2488e227953
-‚
-java:S1128":Remove this unused import 'dataaccess.dao.GameDataAccess'.(”¿Ğ°ùÿÿÿÿ8¿ˆç¿‚2J$a4695f5c-801f-4678-98ed-46c2c4c1abd1
+ˆ	java:S112<"FDefine and throw a dedicated exception instead of using a generic one.(ÃÕ£À8Åµ¶Æ‚2J$4e74d50f-af82-4afc-b3e6-91607d90c6c7
+‰	java:S112Š"FDefine and throw a dedicated exception instead of using a generic one.(¶‹ëÂ8Æµ¶Æ‚2J$c2ff4ad6-0ffd-4efb-883b-00b7cfb39ce7
+‰	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(‚ìí‘8Æµ¶Æ‚2J$0a7508bc-ea19-4621-9818-e62238fb0db9
+‰	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ÙèÒÏ8Æµ¶Æ‚2J$a6e08265-d5c3-4382-92b7-c588341bc87f
+	java:S112Ó"FDefine and throw a dedicated exception instead of using a generic one.(¹¦ùèıÿÿÿÿ8Æµ¶Æ‚2J$0d681ca1-a43f-48bb-9504-ae18938e541a
+‰	java:S112Í"FDefine and throw a dedicated exception instead of using a generic one.(°à©8Æµ¶Æ‚2J$76f5752b-a3cf-41db-9723-5667538769df
+„
+java:S4973_"<Strings and Boxed types should be compared using "equals()".(“°šºıÿÿÿÿ8Çµ¶Æ‚2J$204a9fa5-8b26-4700-aa75-ca4ebf5684fd
+„
+java:S4973b"<Strings and Boxed types should be compared using "equals()".(€‰§¨øÿÿÿÿ8Çµ¶Æ‚2J$22693aff-60a5-4b41-a199-9eb270003d16

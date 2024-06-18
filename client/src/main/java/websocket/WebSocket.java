@@ -9,10 +9,10 @@ import java.net.URI;
 public class WebSocket extends Endpoint {
 
     Session session;
-    NotificationHandler notificationHandler;
+    NoteHandler notificationHandler;
 
 
-    public WebSocket(String url, NotificationHandler notificationHandler) throws Exception {
+    public WebSocket(String url, NoteHandler notificationHandler) throws Exception {
             url = url.replace("http", "ws");
             URI socketURI = new URI(url + "/ws");
             this.notificationHandler = notificationHandler;
@@ -22,7 +22,7 @@ public class WebSocket extends Endpoint {
                 @Override
                 public void onMessage(String string) {
                     //PetShop turned their notification here into a GSON
-                    notificationHandler.notify();
+                    notificationHandler.notify(string);
                 }
             });
             this.notificationHandler = notificationHandler;

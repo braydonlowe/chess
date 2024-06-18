@@ -3,6 +3,7 @@ package ui;
 import chess.ChessBoard;
 import model.*;
 import websocket.GamePlay;
+import websocket.WebSocket;
 
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
@@ -20,7 +21,10 @@ public class PostLoginUI {
     public HashMap<String, Game> listOfgames;
     private GameplayUI ui;
 
-    public PostLoginUI(Auth auth) {
+    private WebSocket socket;
+
+    public PostLoginUI(Auth auth, WebSocket socket) {
+        this.socket = socket;
         this.outThing = new PrintStream(System.out, true, StandardCharsets.UTF_8);
         listOfgames = new HashMap<>();
         ui = new GameplayUI();
@@ -134,7 +138,7 @@ public class PostLoginUI {
                 ui.printBoardBlack(theGame.game().getBoard());
             }
             //This is where we go into gameplay.
-            GamePlay.gamePlayLoop(scan, outThing, playerColor, gameID);
+            GamePlay.gamePlayLoop(scan, outThing, playerColor, theGame, auth, this.socket, gameID);
             menuToInput();
             return true;
         } catch (Exception e) {
